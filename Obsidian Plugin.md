@@ -1,0 +1,6 @@
+- [Git](https://publish.obsidian.md/git-doc/Start+here)
+	- LinuxでObsidianをインストールするときは、FlatpakやSnapは使わんほうがええで．(AppImageがオヌヌメ)
+		- AppImageを推奨
+		- SnapはGitにアクセスできない
+		- FlatpakはGItにアクセスできるが全てのシステムファイルにはアクセスできない．
+	- 
