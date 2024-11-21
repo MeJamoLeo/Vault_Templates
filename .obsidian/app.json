@@ -4,5 +4,7 @@
   "alwaysUpdateLinks": true,
   "trashOption": "local",
   "livePreview": false,
-  "showUnsupportedFiles": true
+  "showUnsupportedFiles": true,
+  "newFileLocation": "current",
+  "promptDelete": false
 }
