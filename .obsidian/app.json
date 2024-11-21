@@ -2,5 +2,7 @@
   "strictLineBreaks": true,
   "vimMode": true,
   "alwaysUpdateLinks": true,
-  "trashOption": "local"
+  "trashOption": "local",
+  "livePreview": false,
+  "showUnsupportedFiles": true
 }
