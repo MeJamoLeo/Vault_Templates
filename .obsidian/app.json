@@ -6,5 +6,6 @@
   "livePreview": false,
   "showUnsupportedFiles": true,
   "newFileLocation": "current",
-  "promptDelete": false
+  "promptDelete": false,
+  "attachmentFolderPath": "/"
 }
