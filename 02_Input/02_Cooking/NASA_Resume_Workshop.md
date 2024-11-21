@@ -19,4 +19,19 @@
 	- **Acronyms** (頭字語) は基本的に略語は初手では使うべきではない `NASA Community College Aerospace Scholars (NCAS)`の様に最初に書くべき
 	- **Abbreviations** (略語)は基本的には使わない方が良い
 	  `Nov, Feb, Dr., etc.,`
-	  - 
+ - # RESUMEの構造
+	 - ## RESUME
+		 - ### Contact info
+			 - phone number
+				 - 携帯なら_Cellphone_って明記する(テキストを可能にする)
+			 - Email
+			 - LinkedIn
+		 - ### Education
+		 
+		 - ### Licenses/Certification & Training
+		 - ### Skills (Technical and Professional)
+		 - ### Job Experiences and Relevant Experiences
+		 - ### Honors & Awards
+		 - ### Publications & Presentations
+		 - ### Professional Affiliations & Memberships
+		 - ### Leadership Activities, Volunteer Work
