@@ -20,5 +20,6 @@
 			> 全ての情報が入ったやつを作って，
 			> その後に削るためのbaseline version?
 	- **"Show" rather than strictly tell** for skills or duties part.
-		1. monn
-		2. monn
+		1. 直面した問題の紹介
+		2. 解決するためのStepsを書く
+		3. 
