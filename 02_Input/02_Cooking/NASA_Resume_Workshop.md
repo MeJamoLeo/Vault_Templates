@@ -13,8 +13,10 @@
 			- extracurriculars(課外活動)
 		- NASA internships&jobsにおいては1-2枚にまとめる必要ない．
 - # General Resume Tips
-- 複数のバージョンやフォーマットを持っておくと良い
-	- ファイル名をパターン化しておく
-	- baseline version
-	  >![]
-
+	- **複数のバージョンやフォーマットを持っておくと良い
+		- ファイル名をパターン化しておく
+		- baseline version
+			> [!question] 全ての情報を集めるやつ？
+			> 全ての情報が入ったやつを作って，
+			> その後に削るためのbaseline version?
+	- #### "Show"
