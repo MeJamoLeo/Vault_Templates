@@ -23,6 +23,14 @@
 	 - ## 鉄則
 		 -  Specific but in a concise way
 		 - *Active voice* not Passive
+		 - 定量的事実を書く（「チームを率いた」ではなく，「12人からなるチームを率いた」）
+			 - さらに飛躍させると「1ヶ月のプロジェクトのために毎週のミーティングで12人からなるチームを率いた」
+		 - Scanしやすい形で
+		 - PDFフォーマット
+		 - シンプルなデザインが長く生きる
+		 - 少ない単語，明確に，必要な情報を伝える(concise)
+		 - 時系列は逆順で（最新が一番上）
+		 - 一人称はだめ
 	 - ## 具体的な構成
 		 - ### Contact info
 			 - Phone number (CellPhoneを明記る)
@@ -47,3 +55,5 @@
 		 - ### Publications & Presentations
 		 - ### Professional Affiliations & Memberships
 		 - ### Leadership Activities, Volunteer Work
+- # AIについて
+	- 
