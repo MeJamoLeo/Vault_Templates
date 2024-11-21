@@ -18,10 +18,10 @@ trdl;
 - Obsidian Community Plugins
 	- git
 	- [PDF関連のプラグイン](https://publish.obsidian.md/hub/02+-+Community+Expansions/02.01+Plugins+by+Category/Plugins+to+manage+or+annotate+PDF+files)
-		- [ ] [Annotator](https://publish.obsidian.md/hub/02+-+Community+Expansions/02.05+All+Community+Expansions/Plugins/obsidian-annotator): This is a sample plugin for Obsidian. It allows you to open and annotate PDF and EPUB files.
+		- [x] [Annotator](https://publish.obsidian.md/hub/02+-+Community+Expansions/02.05+All+Community+Expansions/Plugins/obsidian-annotator): This is a sample plugin for Obsidian. It allows you to open and annotate PDF and EPUB files.
 		- [ ] [Better PDF Plugin](https://publish.obsidian.md/hub/02+-+Community+Expansions/02.05+All+Community+Expansions/Plugins/better-pdf-plugin): Goal of this Plugin in to implement a native PDF handling workflow
-		- [ ] [Extract PDF Annotations](https://publish.obsidian.md/hub/02+-+Community+Expansions/02.05+All+Community+Expansions/Plugins/obsidian-extract-pdf-annotations): Extract PDF Annotations (Notes and Highlights) and sort them by topics
-		- [ ] [Obsidian markmind](https://publish.obsidian.md/hub/02+-+Community+Expansions/02.05+All+Community+Expansions/Plugins/obsidian-markmind): This is a mindmap，outline and pdf annotate tool for obsidian.
+		- [x] [Extract PDF Annotations](https://publish.obsidian.md/hub/02+-+Community+Expansions/02.05+All+Community+Expansions/Plugins/obsidian-extract-pdf-annotations): Extract PDF Annotations (Notes and Highlights) and sort them by topics
+		- [x] [Obsidian markmind](https://publish.obsidian.md/hub/02+-+Community+Expansions/02.05+All+Community+Expansions/Plugins/obsidian-markmind): This is a mindmap，outline and pdf annotate tool for obsidian.
 		- [x] [Ozan's Image in Editor Plugin](https://publish.obsidian.md/hub/02+-+Community+Expansions/02.05+All+Community+Expansions/Plugins/oz-image-plugin): View Images, Transclusions, iFrames and PDF Files within the Editor without a necessity to switch to Preview.
 			> [!NOTE] プレビューをしたいわけではない
 			> プレビューなら他のプラグインを見てみる
