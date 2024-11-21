@@ -22,4 +22,14 @@
 	- **"Show" rather than strictly tell** for skills or duties part.
 		1. 直面した問題の紹介
 		2. 解決するためのStepsを書く
-		3. 
+		3. 結果を書く
+	- **Projects**
+		- プロジェクトを書け
+		- 種類は問わない
+			- 個人プロジェクト
+			- 授業でのプロジェクト
+			- organizationでのプロジェクト
+			- 仕事でのプロジェクト
+	- **Acronyms** (略語)
+		- 基本的に略語は初出では使うべきではない
+			- NASA Community College Aerospace Scholars (NCAS)
