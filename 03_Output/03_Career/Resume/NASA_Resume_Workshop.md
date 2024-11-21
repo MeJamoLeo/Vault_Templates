@@ -32,6 +32,17 @@
 		 - 時系列は逆順で（最新が一番上）
 		 - 一人称はだめ
 	 - ## 具体的な構成
+		 ```
+		 - Contact info
+		 - Education
+		 - Licenses/Certification
+		 - Skills
+		 - Job Experiences
+		 - Honors & Awards
+		 - Publications & Presentations
+		 - Professional Affiliations
+		 - Leadership Activities
+		```
 		 - ### Contact info
 			 - Phone number (CellPhoneを明記る)
 			 - Email
@@ -42,7 +53,6 @@
 			 - カレッジ，Universityを学位や卒業日を書く
 			 - 関係あるコースワーク
 			 - GPAはいらん(4.0なら書いても良い)
-		 - ### Licenses/Certification & Training
 		 - ### Skills (Technical and Professional)
 			 - Technical Examples
 			 - Professional Examples
@@ -51,9 +61,6 @@
 			 - Work
 			 - Internship
 			 - Reserch experiences
-		 - ### Honors & Awards
-		 - ### Publications & Presentations
-		 - ### Professional Affiliations & Memberships
-		 - ### Leadership Activities, Volunteer Work
 - # AIについて
-	- 
+	- 基本的に推奨されていないが，その明記はない
+	- NASAはAIの使用に否定的
