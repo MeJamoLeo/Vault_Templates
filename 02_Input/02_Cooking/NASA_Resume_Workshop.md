@@ -3,7 +3,7 @@
 
 - # はじめに
 	- 一般的に
-j		- レジュメは主観
+		- レジュメは主観
 		- 相手にアジャストしていく
 			- LinkedIn とかに載ってる
 	- NASAにおいて
@@ -19,3 +19,4 @@ j		- レジュメは主観
 	- **Acronyms** (頭字語) は基本的に略語は初手では使うべきではない `NASA Community College Aerospace Scholars (NCAS)`の様に最初に書くべき
 	- **Abbreviations** (略語)は基本的には使わない方が良い
 	  `Nov, Feb, Dr., etc.,`
+	  - 
