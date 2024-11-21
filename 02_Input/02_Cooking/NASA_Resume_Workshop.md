@@ -6,11 +6,11 @@
 		- レジュメは主観
 		- 相手にアジャストしていく
 			- LinkedIn とかに載ってる
-	- NASAにおいて
+	- NASA
 		- **熱量**を**時系列順に**知りたい
 		- employmentやeducation以外の経験**も**共有してほしい
-			- volunteerism
-			- extracurriculars(課外活動)
+			- ボランティア
+			- 課外活動
 		- NASA internships&jobsにおいては1-2枚にまとめる必要ない．
 - # General Resume Tips
 	- **複数パターンを持つ** そして **全部のせ**も用意しておく
@@ -20,17 +20,29 @@
 	- **Abbreviations** (略語)は基本的には使わない方が良い
 	  `Nov, Feb, Dr., etc.,`
  - # RESUMEの構造
-	 - ## RESUME
+	 - ## 鉄則
+		 -  Specific but in a concise way
+		 - *Active voice* not Passive
+	 - ## 具体的な構成
 		 - ### Contact info
-			 - phone number
-				 - 携帯なら_Cellphone_って明記する(テキストを可能にする)
+			 - Phone number (CellPhoneを明記る)
 			 - Email
+			 > [!caution] メアドを変えた方が良い
+			 > 自分のドメインを取ろうかな．
 			 - LinkedIn
 		 - ### Education
-		 
+			 - カレッジ，Universityを学位や卒業日を書く
+			 - 関係あるコースワーク
+			 - GPAはいらん(4.0なら書いても良い)
 		 - ### Licenses/Certification & Training
 		 - ### Skills (Technical and Professional)
+			 - Technical Examples
+			 - Professional Examples
+			 - 具体的なエピソードと共に書く
 		 - ### Job Experiences and Relevant Experiences
+			 - Work
+			 - Internship
+			 - Reserch experiences
 		 - ### Honors & Awards
 		 - ### Publications & Presentations
 		 - ### Professional Affiliations & Memberships
