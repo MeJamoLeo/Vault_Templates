@@ -1,1 +1,1 @@
-[[Orthogonal Vectors]]
+[[Perpendicular]]
