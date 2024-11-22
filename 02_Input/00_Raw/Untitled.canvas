@@ -4,7 +4,7 @@
 		{"id":"fbdf2db528c05583","type":"text","text":"## Orthogonal\n\n> Definition\n> Two vectors $\\boldsymbol{u}$ and $\\boldsymbol{v}$ in $\\boldsymbol{R^n}$ are **orthogonal** to each other","x":80,"y":-80,"width":1440,"height":920},
 		{"id":"30f03730f0e3ff15","type":"text","text":"# $\\boldsymbol{R^2, R^3}$\n矢印ベクトルは幾何ベクトルでのNotation\n","x":2040,"y":240,"width":1100,"height":600,"color":"4"},
 		{"id":"22a0df8c9f138754","x":1994,"y":952,"width":440,"height":120,"type":"text","text":"## Perpendicular\n\nnonzero vectors, **$\\vec{u}, \\vec{v}$**の内角が90º($\\frac{\\pi}{2}$)である."},
-		{"id":"d7d064fac7088df6","x":2860,"y":982,"width":500,"height":358,"type":"text","text":"## Projection\n\n> [!cite] 証明\n> $\\vec{u}$ と $\\vec{v}$について考える．\n> \n> Let $\\vec{p}$ be the vector obtained by dropping a perpendicular from the tip of $\\vec{v}$ onto $\\vec{u}$\n> \n> And let $\\theta$ be the angle between $\\vec{u}$ and $\\vec{v}$\n> \n> \n$$$\n\\[\n\\mathbf{p} = \\|\\mathbf{v}\\| \n\\left( \\frac{\\mathbf{u} \\cdot \\mathbf{v}}{\\|\\mathbf{u}\\| \\|\\mathbf{v}\\|} \\right)\n\\left( \\frac{1}{\\|\\mathbf{u}\\|} \\right) \\mathbf{u}\n\\]\n\\[\n= \\left( \\frac{\\mathbf{u} \\cdot \\mathbf{v}}{\\|\\mathbf{u}\\|^2} \\right) \\mathbf{u}\n\\]\n\\[\n= \\left( \\frac{\\mathbf{u} \\cdot \\mathbf{v}}{\\mathbf{u} \\cdot \\mathbf{u}} \\right) \\mathbf{u}\n\\]\n\n\n"}
+		{"id":"d7d064fac7088df6","x":2680,"y":952,"width":500,"height":358,"type":"text","text":"## Projection\n\nConsider two nonzero vectors $\\vec{u}$ and $\\vec{v}$\n\nLet $"}
 	],
 	"edges":[
 		{"id":"cc1708c9bd3664da","fromNode":"22a0df8c9f138754","fromSide":"right","toNode":"d7d064fac7088df6","toSide":"left"}
