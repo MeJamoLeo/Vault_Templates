@@ -4,4 +4,3 @@
 [[Game Object]]
 [[Property Object]]
 [[Card Object]]
-[[]]
