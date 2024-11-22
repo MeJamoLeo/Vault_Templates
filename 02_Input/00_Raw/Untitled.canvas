@@ -8,13 +8,15 @@
 		{"id":"30f03730f0e3ff15","type":"text","text":"# $\\boldsymbol{R^2, R^3}$\n矢印ベクトルは幾何ベクトルでのNotation\n","x":1972,"y":-260,"width":394,"height":140,"color":"4"},
 		{"id":"8833d83571470c19","x":-160,"y":1275,"width":170,"height":70,"type":"text","text":"# Vectors"},
 		{"id":"afe4f6e6d1a8c317","x":106,"y":1275,"width":520,"height":70,"type":"text","text":"## 1.1 The Geometry and Algebra of Vectors"},
-		{"id":"4090a8b66c9c27f9","type":"text","text":"## 1.3 Lines and Planes","x":202,"y":2320,"width":520,"height":70},
 		{"id":"b2a67b5f4d60d2d6","type":"text","text":"## 1.2 Length and Angle: The Dot Product\n## 線と角度","x":202,"y":2120,"width":500,"height":100},
-		{"id":"2584069adee084f0","x":1005,"y":2190,"width":385,"height":410,"type":"text","text":"### The Dot Product\n"},
 		{"id":"f62f49400e1d88b7","x":890,"y":1800,"width":500,"height":290,"type":"text","text":"### Linear Combinations\n> [!danger] Linear Combinations\n> Let $\\mathbf{v}_1, \\mathbf{v}_2, \\ldots, \\mathbf{v}_k \\in \\mathbb{R}^n$. <br>\n> A vector $\\mathbf{v} \\in \\mathbb{R}^n$ is called  $\\textbf{linear combination}$ <br>\n> if there exists a set of scalars $c_1, c_2, \\ldots, c_k \\in \\mathbb{R}$ such that:\n> $$\n> \\mathbf{v} = c_1 \\mathbf{v}_1 + c_2 \\mathbf{v}_2 + \\cdots + c_k \\mathbf{v}_k.\n> $$"},
 		{"id":"8aac3df908ad63c0","x":1442,"y":845,"width":619,"height":860,"type":"text","text":"#### Theorem 1.1\n> [!important] Algebraic Properties of Vector in $\\mathbb{R}^n$\n> Let $\\vec{u}$, $\\vec{v}$, and $\\vec{w}$ be vectors in $\\mathbb{R}^n$\n> Let $c$ and $d$ be scalars.<br>\n> Then:\n> 1. **Commutativity:**\n>    $$\n>    \\vec{u} + \\vec{v} = \\vec{v} + \\vec{u}\n>    $$\n> \n> 2. **Associativity:**\n>    $$\n>    (\\vec{u} + \\vec{v}) + \\vec{w} = \\vec{u} + (\\vec{v} + \\vec{w})\n>    $$\n> \n> 3. **Identity Element:**\n>    $$\n>    \\vec{u} + \\vec{0} = \\vec{u}\n>    $$\n> \n> 4. **Inverse Element:**\n>    $$\n>    \\vec{u} + (-\\vec{u}) = \\vec{0}\n>    $$\n> \n> 5. **Distributivity of Scalars over Vector Addition:**\n>    $$\n>    c(\\vec{u} + \\vec{v}) = c\\vec{u} + c\\vec{v}\n>    $$\n> \n> 6. **Distributivity of Scalars over Scalar Addition:**\n>    $$\n>    (c + d)\\vec{u} = c\\vec{u} + d\\vec{u}\n>    $$\n> \n> 7. **Associativity of Scalar Multiplication:**\n>    $$\n>    c(d\\vec{u}) = (cd)\\vec{u}\n>    $$\n> \n> 8. **Identity Scalar:**\n>    $$\n>    1\\vec{u} = \\vec{u}\n>    $$"},
 		{"id":"39ae9f27a0b3906d","x":1023,"y":1275,"width":200,"height":70,"type":"text","text":"### Vectors in $\\mathbb{R}^n$"},
-		{"id":"3ff3bf252eab0d04","x":2169,"y":1160,"width":250,"height":230,"type":"text","text":"##### Proof\n方針：それぞれのベクトルをコンポーネントで表現して，左辺から右辺，もしくはその反対が成り立つかを証明する．"}
+		{"id":"2584069adee084f0","x":890,"y":2170,"width":437,"height":370,"type":"text","text":"### The Dot Product\n> [!error] Dot Product\n> If\n> $$\n> \\mathbf{u} = \\begin{bmatrix} u_1 \\\\ u_2 \\\\ \\vdots \\\\ u_n \\end{bmatrix}, \\quad\n> \\mathbf{v} = \\begin{bmatrix} v_1 \\\\ v_2 \\\\ \\vdots \\\\ v_n \\end{bmatrix},\n> $$\n> then the **dot product** is defined as\n> $$\n> \\mathbf{u} \\cdot \\mathbf{v} = u_1v_1 + u_2v_2 + \\cdots + u_nv_n.\n> $$\n> "},
+		{"id":"3ff3bf252eab0d04","x":2360,"y":1345,"width":250,"height":230,"type":"text","text":"##### Proof\n方針：それぞれのベクトルをコンポーネントで表現して，左辺から右辺，もしくはその反対が成り立つかを証明する．"},
+		{"id":"2533422c74c97d56","x":1512,"y":2120,"width":549,"height":510,"type":"text","text":"#### Theorem 1.2\n> [!important] Theorem 1.2\n> Let $\\mathbf{u}$, $\\mathbf{v}$, and $\\mathbf{w}$ be vectors in $\\mathbb{R}^n$, and let $c$ be a scalar. Then:\n> \n> 1. **Commutativity**  \n>    $$\n>    \\mathbf{u} \\cdot \\mathbf{v} = \\mathbf{v} \\cdot \\mathbf{u}\n>    $$\n> \n> 2. **Distributivity**  \n>    $$\n>    \\mathbf{u} \\cdot (\\mathbf{v} + \\mathbf{w}) = \\mathbf{u} \\cdot \\mathbf{v} + \\mathbf{u} \\cdot \\mathbf{w}\n>    $$\n> \n> 3. **Scalar Multiplication**  \n>    $$\n>    (c\\mathbf{u}) \\cdot \\mathbf{v} = c(\\mathbf{u} \\cdot \\mathbf{v})\n>    $$\n> \n> 4. **Non-Negativity and Zero Condition**  \n>    $$\n>    \\mathbf{u} \\cdot \\mathbf{u} \\geq 0, \\quad \\mathbf{u} \\cdot \\mathbf{u} = 0 \\text{ if and only if } \\mathbf{u} = \\mathbf{0}.\n>    $$\n"},
+		{"id":"4090a8b66c9c27f9","type":"text","text":"## 1.3 Lines and Planes","x":202,"y":2630,"width":520,"height":70},
+		{"id":"a663a8355b44526b","x":873,"y":2760,"width":250,"height":60,"type":"text","text":"### Length\n\n> [!error]"}
 	],
 	"edges":[
 		{"id":"cc1708c9bd3664da","fromNode":"22a0df8c9f138754","fromSide":"right","toNode":"d7d064fac7088df6","toSide":"left"},
@@ -23,6 +25,7 @@
 		{"id":"e88672281aa2f158","fromNode":"afe4f6e6d1a8c317","fromSide":"right","toNode":"39ae9f27a0b3906d","toSide":"left"},
 		{"id":"eafa7d878728a55e","fromNode":"39ae9f27a0b3906d","fromSide":"right","toNode":"8aac3df908ad63c0","toSide":"left"},
 		{"id":"3fe2c2cfc343c142","fromNode":"afe4f6e6d1a8c317","fromSide":"right","toNode":"f62f49400e1d88b7","toSide":"left"},
-		{"id":"4c7d2603421fc753","fromNode":"b2a67b5f4d60d2d6","fromSide":"right","toNode":"2584069adee084f0","toSide":"left"}
+		{"id":"4c7d2603421fc753","fromNode":"b2a67b5f4d60d2d6","fromSide":"right","toNode":"2584069adee084f0","toSide":"left"},
+		{"id":"1c62e92101c42f06","fromNode":"2584069adee084f0","fromSide":"right","toNode":"2533422c74c97d56","toSide":"left"}
 	]
 }
