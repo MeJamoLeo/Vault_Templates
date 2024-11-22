@@ -1,8 +1,8 @@
 {
 	"nodes":[
-		{"id":"11435de4752327cd","x":-440,"y":-400,"width":1910,"height":1452,"color":"5","type":"text","text":"# $\\boldsymbol{R^n}$"},
-		{"id":"30f03730f0e3ff15","x":-346,"y":-234,"width":861,"height":1120,"color":"4","type":"text","text":"# $\\boldsymbol{R^2, R^3}$\n# 実生活の世界（幾何ベクトルの世界）"},
-		{"id":"fab75c32d57b5650","x":-240,"y":80,"width":580,"height":680,"type":"file","file":"02_Input/00_Raw/Perpendicular.md"}
+		{"id":"11435de4752327cd","type":"text","text":"# $\\boldsymbol{R^n}$","x":-3,"y":-380,"width":1910,"height":1452,"color":"5"},
+		{"id":"30f03730f0e3ff15","type":"text","text":"# $\\boldsymbol{R^2, R^3}$","x":-1220,"y":-500,"width":686,"height":334,"color":"4"},
+		{"id":"22a0df8c9f138754","x":-1040,"y":-380,"width":440,"height":120,"type":"text","text":"## Perpendicular\n\nnonzero vectors, **$\\vec{u}, \\vec{v}$**の内角が90º($\\frac{\\pi}{2}$)である."}
 	],
 	"edges":[]
 }
