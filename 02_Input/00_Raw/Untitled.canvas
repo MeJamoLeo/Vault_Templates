@@ -4,7 +4,7 @@
 		{"id":"fbdf2db528c05583","type":"text","text":"## Orthogonal\n\n> Definition\n> Two vectors $\\boldsymbol{u}$ and $\\boldsymbol{v}$ in $\\boldsymbol{R^n}$ are **orthogonal** to each other","x":80,"y":-80,"width":1440,"height":920},
 		{"id":"30f03730f0e3ff15","type":"text","text":"# $\\boldsymbol{R^2, R^3}$\n矢印ベクトルは幾何ベクトルでのNotation\n","x":2040,"y":240,"width":1100,"height":600,"color":"4"},
 		{"id":"22a0df8c9f138754","x":1994,"y":952,"width":440,"height":120,"type":"text","text":"## Perpendicular\n\nnonzero vectors, **$\\vec{u}, \\vec{v}$**の内角が90º($\\frac{\\pi}{2}$)である."},
-		{"id":"d7d064fac7088df6","x":2860,"y":982,"width":500,"height":358,"type":"text","text":"## Projection\n\nLet two nonzero vectors, "}
+		{"id":"d7d064fac7088df6","x":2860,"y":982,"width":500,"height":358,"type":"text","text":"## Projection\n\nConsider $\\vec{u}$ and $\\vec{v}$\n\nLet $\\vec{p}$ be the vector \n"}
 	],
 	"edges":[
 		{"id":"cc1708c9bd3664da","fromNode":"22a0df8c9f138754","fromSide":"right","toNode":"d7d064fac7088df6","toSide":"left"}
