@@ -1,3 +1,8 @@
+> [!note]
+> > [!todo]
+> > 何をすべきかを明記する
+> > その後、Cooking終了
+
 #NASA #resume #internship #application
 ![[NASA_RESUME_Advise_Session.pdf]]
 
