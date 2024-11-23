@@ -24,8 +24,9 @@
 		{"id":"2584069adee084f0","x":1117,"y":1810,"width":437,"height":370,"type":"text","text":"### The Dot Product\n> [!error] Dot Product\n> If\n> $$\n> \\mathbf{u} = \\begin{bmatrix} u_1 \\\\ u_2 \\\\ \\vdots \\\\ u_n \\end{bmatrix}, \\quad\n> \\mathbf{v} = \\begin{bmatrix} v_1 \\\\ v_2 \\\\ \\vdots \\\\ v_n \\end{bmatrix},\n> $$\n> then the **dot product** is defined as\n> $$\n> \\mathbf{u} \\cdot \\mathbf{v} = u_1v_1 + u_2v_2 + \\cdots + u_nv_n.\n> $$\n> "},
 		{"id":"0b42723ecde3a0fc","x":1132,"y":3285,"width":609,"height":220,"type":"text","text":"### Orthogonal Vectors\n\n> [!error] Orthogonal Vectors\n> Two vectors $\\mathbf{u}$ and $\\mathbf{v}$ in $\\mathbb{R}^n$ are **orthogonal** to each other if:\n> $$\n> \\mathbf{u} \\cdot \\mathbf{v} = 0.\n> $$\n"},
 		{"id":"f2faf3e9f5c1ff86","x":1840,"y":3268,"width":480,"height":255,"type":"text","text":"> [!important] Theorem 1.6\n> #### Pythagoras' Theorem  (ピタゴラスの定理)\n> For all vectors $\\mathbf{u}$ and $\\mathbf{v}$ in $\\mathbb{R}^n$, \n> \n> $$\n> \\|\\mathbf{u} + \\mathbf{v}\\|^2 = \\|\\mathbf{u}\\|^2 + \\|\\mathbf{v}\\|^2\n> $$\n> \n> if and only if $\\mathbf{u}$ and $\\mathbf{v}$ are orthogonal.\n"},
-		{"id":"20a028c8a7848aaf","x":1771,"y":2640,"width":469,"height":345,"type":"text","text":"> [!important] Theorem 1.4\n> #### The Cauch-schwarz Inequality\n> For all vectors $\\mathbf{u}$ and $\\mathbf{v}$ in $\\mathbb{R}^n$, \n>\n> $$\n> |\\mathbf{u} \\cdot \\mathbf{v}| \\leq \\|\\mathbf{u}\\| \\|\\mathbf{v}\\|.\n> $$\n\n"},
-		{"id":"58911c58cb510c61","x":2040,"y":2895,"width":250,"height":60,"type":"text","text":"> [!todo] 理解してない 💩"}
+		{"id":"20a028c8a7848aaf","x":1771,"y":2640,"width":469,"height":220,"type":"text","text":"> [!important] Theorem 1.4\n> #### The Cauch-schwarz Inequality\n> For all vectors $\\mathbf{u}$ and $\\mathbf{v}$ in $\\mathbb{R}^n$, \n>\n> $$\n> |\\mathbf{u} \\cdot \\mathbf{v}| \\leq \\|\\mathbf{u}\\| \\|\\mathbf{v}\\|.\n> $$\n\n"},
+		{"id":"58911c58cb510c61","x":2115,"y":2830,"width":250,"height":60,"type":"text","text":"> [!todo] 理解してない 💩"},
+		{"id":"3d5b418e6fec6764","x":1795,"y":2960,"width":421,"height":213,"type":"text","text":"> [!important] Theorem 1.5\n> #### The Triangle Inequlity\n> For all vectors $\\mathbf{u}$ and $\\mathbf{v}$ in $\\mathbb{R}^n$, \n> \n> $$\n> \\|\\mathbf{u} + \\mathbf{v}\\| \\leq \\|\\mathbf{u}\\| + \\|\\mathbf{v}\\|.\n> $$"}
 	],
 	"edges":[
 		{"id":"cc1708c9bd3664da","fromNode":"22a0df8c9f138754","fromSide":"right","toNode":"d7d064fac7088df6","toSide":"left"},
@@ -44,6 +45,8 @@
 		{"id":"b55bbc21996045c8","fromNode":"b2a67b5f4d60d2d6","fromSide":"right","toNode":"a663a8355b44526b","toSide":"left"},
 		{"id":"c4aaae09d034dc5f","fromNode":"b2a67b5f4d60d2d6","fromSide":"right","toNode":"78bab4ed6f7caf9d","toSide":"left"},
 		{"id":"9da49961b05dae21","fromNode":"b2a67b5f4d60d2d6","fromSide":"right","toNode":"3219b07f43b22a12","toSide":"left"},
-		{"id":"69ca22651a3feab3","fromNode":"b2a67b5f4d60d2d6","fromSide":"right","toNode":"0b42723ecde3a0fc","toSide":"left"}
+		{"id":"69ca22651a3feab3","fromNode":"b2a67b5f4d60d2d6","fromSide":"right","toNode":"0b42723ecde3a0fc","toSide":"left"},
+		{"id":"d695f6fb2d00e504","fromNode":"a663a8355b44526b","fromSide":"right","toNode":"20a028c8a7848aaf","toSide":"left"},
+		{"id":"3744f8809f6fd32a","fromNode":"a663a8355b44526b","fromSide":"right","toNode":"3d5b418e6fec6764","toSide":"left"}
 	]
 }
