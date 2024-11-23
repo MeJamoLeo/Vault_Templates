@@ -24,7 +24,9 @@
 		{"id":"2584069adee084f0","type":"text","text":"### The Dot Product\n> [!error] Dot Product\n> If\n> $$\n> \\mathbf{u} = \\begin{bmatrix} u_1 \\\\ u_2 \\\\ \\vdots \\\\ u_n \\end{bmatrix}, \\quad\n> \\mathbf{v} = \\begin{bmatrix} v_1 \\\\ v_2 \\\\ \\vdots \\\\ v_n \\end{bmatrix},\n> $$\n> then the **dot product** is defined as\n> $$\n> \\mathbf{u} \\cdot \\mathbf{v} = u_1v_1 + u_2v_2 + \\cdots + u_nv_n.\n> $$\n> ","x":3151,"y":840,"width":437,"height":370},
 		{"id":"3ff3bf252eab0d04","type":"text","text":"##### Proof\n方針：それぞれのベクトルをコンポーネントで表現して，左辺から右辺，もしくはその反対が成り立つかを証明する．","x":2252,"y":1275,"width":250,"height":230},
 		{"id":"4090a8b66c9c27f9","type":"text","text":"## 1.3 Lines and Planes","x":48,"y":2197,"width":318,"height":70},
-		{"id":"0f560b2e1a6094fb","x":440,"y":2097,"width":540,"height":340,"type":"text","text":"The **normal form of the equation of a line** $\\ell$ in $\\mathbb{R}^2$ is:\n\n$$\n\\mathbf{n} \\cdot (\\mathbf{x} - \\mathbf{p}) = 0\n$$\n\nor equivalently:\n\n$$\n\\mathbf{n} \\cdot \\mathbf{x} = \\mathbf{n} \\cdot \\mathbf{p},\n$$\n\nwhere $\\mathbf{p}$ is a specific point on $\\ell$ and $\\mathbf{n} \\neq \\mathbf{0}$ is a normal vector for $\\ell$.\n\nThe **general form of the equation of $\\ell$** is:\n\n$$\nax + by = c,\n$$\n\nwhere $\\mathbf{n} = \\begin{bmatrix} a \\\\ b \\end{bmatrix}$ is a normal vector for $\\ell$.\n"}
+		{"id":"0f560b2e1a6094fb","x":1115,"y":1995,"width":637,"height":623,"type":"text","text":"### Normal Form of a Line  \n> [!caution] $\\mathbb{R}^2$\n> \n> > [!error] Normal Form\n> > The **normal form of the equation of a line** $\\ell$ in $\\mathbb{R}^2$ is:\n> > \n> > $$\n> > \\mathbf{n} \\cdot (\\mathbf{x} - \\mathbf{p}) = 0\n> > $$\n> > \n> > or equivalently:\n> > \n> > $$\n> > \\mathbf{n} \\cdot \\mathbf{x} = \\mathbf{n} \\cdot \\mathbf{p},\n> > $$\n> > \n> > where $\\mathbf{p}$ is a specific point on $\\ell$ and $\\mathbf{n} \\neq \\mathbf{0}$ is a normal vector for $\\ell$.\n> \n> > [!tip] General Form\n> > The **general form of the equation of $\\ell$** is:\n> > \n> > $$\n> > ax + by = c,\n> > $$\n> > \n> > where $\\mathbf{n} = \\begin{bmatrix} a \\\\ b \\end{bmatrix}$ is a normal vector for $\\ell$.\n> "},
+		{"id":"b7078196d6c5aa74","x":1115,"y":2639,"width":621,"height":504,"type":"text","text":"### Vector Form of a Line\n> [!caution] $\\mathbb{R}^2$ and $\\mathbb{R}^3$\n> \n> > [!error] Vector Form\n> > The **vector form of the equation of a line** $\\ell$ in $\\mathbb{R}^2$ or $\\mathbb{R}^3$ is:\n> > \n> > $$\n> > \\mathbf{x} = \\mathbf{p} + t \\mathbf{d},\n> > $$\n> > \n> > where $\\mathbf{p}$ is a specific point on $\\ell$ and $\\mathbf{d} \\neq \\mathbf{0}$ is a direction vector for $\\ell$.\n>  \n> > [!tip] Parametric Equations\n> > The equations corresponding to the components of the vector form of the equation are called **parametric equations** of $\\ell$.\n"},
+		{"id":"7821604b06949d71","x":588,"y":2245,"width":212,"height":62,"type":"text","text":"## Lines in $\\mathbb{R}^2$, $\\mathbb{R}^3$"}
 	],
 	"edges":[
 		{"id":"97e6bc1cd3659040","fromNode":"8833d83571470c19","fromSide":"right","toNode":"afe4f6e6d1a8c317","toSide":"left","label":"幾何ベクトルと加法の話"},
@@ -47,6 +49,9 @@
 		{"id":"3744f8809f6fd32a","fromNode":"a663a8355b44526b","fromSide":"right","toNode":"3d5b418e6fec6764","toSide":"left"},
 		{"id":"8194875cc02be835","fromNode":"3d5b418e6fec6764","fromSide":"right","toNode":"8f99bae5dbb985e8","toSide":"left"},
 		{"id":"23eef5d7dcd827e1","fromNode":"0b42723ecde3a0fc","fromSide":"right","toNode":"f2faf3e9f5c1ff86","toSide":"left"},
-		{"id":"82a313fb293fb997","fromNode":"b2a67b5f4d60d2d6","fromSide":"right","toNode":"696e413b6a7aee6c","toSide":"left"}
+		{"id":"82a313fb293fb997","fromNode":"b2a67b5f4d60d2d6","fromSide":"right","toNode":"696e413b6a7aee6c","toSide":"left"},
+		{"id":"8805538e2f271928","fromNode":"4090a8b66c9c27f9","fromSide":"right","toNode":"7821604b06949d71","toSide":"left"},
+		{"id":"243373b5848e7160","fromNode":"7821604b06949d71","fromSide":"right","toNode":"0f560b2e1a6094fb","toSide":"left"},
+		{"id":"f45f9115c4526538","fromNode":"7821604b06949d71","fromSide":"right","toNode":"b7078196d6c5aa74","toSide":"left"}
 	]
 }
