@@ -168,6 +168,7 @@
 		{"id":"78c5210f5a711d08","fromNode":"4ded22cbe82a3ab3","fromSide":"right","toNode":"88584b7db335d6ac","toSide":"top","toEnd":"none","color":"6"},
 		{"id":"5d1c62016d825226","fromNode":"921e676f8c0c19d5","fromSide":"right","toNode":"feee36a19b552471","toSide":"top","toEnd":"none","color":"5"},
 		{"id":"e680e819967aa3ed","fromNode":"aaeeed1e2b5b4a8b","fromSide":"bottom","toNode":"b1ca56510c7dcb45","toSide":"top","toEnd":"none","color":"6"},
-		{"id":"c51dcd4c1a6de018","fromNode":"0d9d8a10a260ce79","fromSide":"right","toNode":"cea6515eb2eaa635","toSide":"left"}
+		{"id":"c51dcd4c1a6de018","fromNode":"0d9d8a10a260ce79","fromSide":"right","toNode":"cea6515eb2eaa635","toSide":"left"},
+		{"id":"8bb654dfa3f9418d","fromNode":"408ea514ecdd2a0b","fromSide":"right","toNode":"92e56ea91c672fee","toSide":"left","label":"standard basis\ne1, e2, e3, .... , en in R^n"}
 	]
 }
