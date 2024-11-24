@@ -122,7 +122,7 @@
 		{"id":"b4568121d8c03310","x":7320,"y":6889,"width":598,"height":380,"type":"text","text":"### Rank\n> [!note] Definition\n> \n> The **rank** of a matrix $A$ is the dimension of its row and column spaces\n> and is denoted by $$rank(A)$$\n\n> [!cite] コメント\n> 行列に定義されるもの\n> だから，基底とかの概念とは直接関係ない．"},
 		{"id":"ebb6cd7ad5cc169b","x":7320,"y":7300,"width":459,"height":163,"type":"text","text":"> [!tip] Theorem 3.25\n> \n> For any matrix $A$,\n> \n> $$\n> \\text{rank}(A^T) = \\text{rank}(A).\n> $$\n> "},
 		{"id":"45f57a5e5c4b982e","x":7940,"y":6889,"width":540,"height":220,"type":"text","text":"### Nullity\n> [!note] Definition\n> The **nullity** of a matrix $A$ is the dimension of its null space and is denoted by $\\text{nullity}(A)$.\n> "},
-		{"id":"97aead549af006c6","x":8007,"y":7336,"width":553,"height":324,"type":"text","text":"## Theorem 3.26: The Rank Theorem\n\nIf \\( A \\) is an \\( m \\times n \\) matrix, then:\n\n\\[\n\\text{rank}(A) + \\text{nullity}(A) = n\n\\]\n\nThis theorem states that the sum of the rank and nullity of a matrix equals the number of columns in the matrix. It provides a fundamental relationship between the column space and null space of a matrix.\n"}
+		{"id":"97aead549af006c6","x":7994,"y":7290,"width":433,"height":173,"type":"text","text":"> [!tip] Theorem 3.26: The Rank Theorem\n> \n> If $A$ is an $m \\times n$ matrix, then:\n> \n> $$\n> \\text{rank}(A) + \\text{nullity}(A) = n\n> $$\n"}
 	],
 	"edges":[
 		{"id":"27e3857078cd53b0","fromNode":"8aac3df908ad63c0","fromSide":"right","toNode":"3ff3bf252eab0d04","toSide":"left"},
