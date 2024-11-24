@@ -108,7 +108,8 @@
 		{"id":"04bb1535b901137d","type":"text","text":"> [!tip] Theorem\n> Let $B$ be any matrix that is row equivalent to a matrix $A$. Then \n> \n> $$\n> \\text{row}(B) = \\text{row}(A).\n> $$\n> \n\n行基本変形を行った結果が同じなら，Row space","x":613,"y":7777,"width":521,"height":249},
 		{"id":"d1a14f4994db99e3","type":"text","text":"  $$\n  S = \\{(x, y, 0) \\mid x, y \\in \\mathbb{R}\\}\n  $$\n- **理由**:\n  1. ゼロベクトル $(0, 0, 0)$ を含む。\n  2. 加法に閉じている: $(x_1, y_1, 0) + (x_2, y_2, 0) = (x_1+x_2, y_1+y_2, 0) \\in S$。\n  3. スカラー倍に閉じている: $c(x, y, 0) = (cx, cy, 0) \\in S$。","x":473,"y":5917,"width":496,"height":241},
 		{"id":"bd265e541203289d","type":"text","text":"**Symmetry Matrix からなる空間**","x":1073,"y":6033,"width":281,"height":60},
-		{"id":"77058909374dc990","x":1882,"y":7026,"width":576,"height":281,"type":"text","text":"> [!theorem] Theorem 3.22\n> Let $A$ be a matrix whose entries are real numbers. For any system of linear equations $A\\mathbf{x} = \\mathbf{b}$, exactly one of the following is true:\n> \n> a. There is no solution.\n> \n> b. There is a unique solution.\n> \n> c. There are infinitely many solutions.\n"}
+		{"id":"77058909374dc990","x":2339,"y":7245,"width":576,"height":314,"type":"text","text":"> [!theorem] Theorem 3.22\n> Let $A$ be a matrix whose entries are real numbers.\n> For any system of linear equations $A\\mathbf{x} = \\mathbf{b}$, exactly one of the following is true:\n> \n> a. There is no solution.\n> \n> b. There is a unique solution.\n> \n> c. There are infinitely many solutions.\n"},
+		{"id":"1f99904c1ee13df7","x":2710,"y":7453,"width":433,"height":387,"type":"text","text":"Ax = bにおいて, 行列Aが実数からなる場合，\nxは3パターンからなる\n\n- xに解なし\n\t- 矛盾\n- xにユニークな解がある\n\t- 線型独立\n- xに無限の解がある\n\t- 線形従属\n\n> [!question]\n> ここをふかぼる必要がある"}
 	],
 	"edges":[
 		{"id":"27e3857078cd53b0","fromNode":"8aac3df908ad63c0","fromSide":"right","toNode":"3ff3bf252eab0d04","toSide":"left"},
