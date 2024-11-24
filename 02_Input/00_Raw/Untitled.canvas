@@ -2,7 +2,7 @@
 	"nodes":[
 		{"id":"4472ca3d2cb384a9","x":-540,"y":3280,"width":6516,"height":4337,"color":"5","type":"group","label":"Matrix"},
 		{"id":"43c94965f5225f6b","type":"group","x":86,"y":100,"width":4894,"height":2862,"color":"5","label":"# Vectors"},
-		{"id":"e3f7b2a377736c4d","type":"group","x":1274,"y":5389,"width":4682,"height":2208,"color":"3","label":"Inverse"},
+		{"id":"e3f7b2a377736c4d","type":"group","x":1274,"y":5389,"width":4682,"height":2208,"color":"3","label":"3.3 Inverse"},
 		{"id":"fb38bf205352f2e2","type":"group","x":2140,"y":285,"width":2840,"height":1685,"color":"3","label":"## 1.2 Length and Angle: The Dot Product## 線と角度"},
 		{"id":"8137fc4b9b6eabad","type":"group","x":-312,"y":3440,"width":2452,"height":1875,"color":"3","label":"3.1 Matrix Operations"},
 		{"id":"9ae32d649267b42c","type":"group","x":3600,"y":6440,"width":2356,"height":1157,"color":"1","label":"Invertible??"},
