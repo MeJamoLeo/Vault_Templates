@@ -38,9 +38,10 @@
 		{"id":"eaf5b76747edc089","type":"text","text":"2024_11_25_Ch. 7 Polling article quiz","x":-456,"y":-518,"width":336,"height":50},
 		{"id":"fb1b9c0d62f52bab","type":"text","text":"2024_11_25_Ch. 8 Assignment Quiz","x":-456,"y":-448,"width":336,"height":50},
 		{"id":"197b1b92e9d042ba","x":1080,"y":-240,"width":320,"height":50,"type":"text","text":"The Elements of Computing Systems"},
-		{"id":"c8e997a4ca404251","x":1500,"y":-240,"width":250,"height":60,"type":"text","text":"[Land of Lisp](http://landoflisp.com)"},
-		{"id":"f7a05e1bb22f4a34","x":1080,"y":-160,"width":250,"height":60,"type":"text","text":"OS自作入門(みかん本)"},
-		{"id":"e6625292ce26c634","x":1080,"y":-80,"width":320,"height":60,"type":"text","text":"[Web Browser Engineering](https://browser.engineering)"}
+		{"id":"c8e997a4ca404251","x":1500,"y":-240,"width":250,"height":50,"type":"text","text":"[Land of Lisp](http://landoflisp.com)"},
+		{"id":"f7a05e1bb22f4a34","x":1080,"y":-180,"width":250,"height":50,"type":"text","text":"OS自作入門(みかん本)"},
+		{"id":"e6625292ce26c634","x":1080,"y":-120,"width":320,"height":50,"type":"text","text":"[Web Browser Engineering](https://browser.engineering)"},
+		{"id":"df268e42b6d22c99","x":1500,"y":-180,"width":250,"height":60,"type":"text","text":"AtCoder"}
 	],
 	"edges":[]
 }
