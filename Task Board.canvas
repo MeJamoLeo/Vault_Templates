@@ -1,6 +1,6 @@
 {
 	"nodes":[
-		{"id":"ee5edccc7b40ca18","type":"group","x":-520,"y":-800,"width":1500,"height":1480,"color":"6","label":"ACC"},
+		{"id":"ee5edccc7b40ca18","type":"group","x":-520,"y":-800,"width":1513,"height":1480,"color":"6","label":"ACC"},
 		{"id":"827a436907082c14","type":"group","x":1020,"y":-313,"width":1460,"height":993,"color":"1","label":"Private Projects"},
 		{"id":"d482121fcfdcf16c","type":"group","x":-480,"y":-220,"width":880,"height":860,"label":"Linear Algebra and Matrix Theory"},
 		{"id":"37177d34f2952b60","type":"group","x":1020,"y":-800,"width":860,"height":402,"color":"3","label":"Transfer Application"},
@@ -46,7 +46,7 @@
 		{"id":"b37448d9a289788e","type":"link","url":"https://beta.web.structured.app","x":-543,"y":720,"width":1023,"height":3558},
 		{"id":"a2cab6e900003169","x":480,"y":720,"width":1025,"height":3558,"type":"link","url":"https://beta.web.structured.app"},
 		{"id":"62fe0f282ac7a611","type":"link","url":"https://beta.web.structured.app","x":1505,"y":720,"width":1025,"height":3558},
-		{"id":"56d8d2c184b71206","type":"link","url":"https://beta.web.structured.app","x":2530,"y":720,"width":1025,"height":3558}
+		{"id":"56d8d2c184b71206","type":"link","url":"https://beta.web.structured.app","x":2530,"y":720,"width":1030,"height":3558}
 	],
 	"edges":[]
 }
