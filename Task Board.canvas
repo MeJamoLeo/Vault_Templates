@@ -1,15 +1,20 @@
 {
 	"nodes":[
-		{"id":"25323f31e3b2cd3b","type":"group","x":2,"y":-656,"width":638,"height":616,"label":"United States Government"},
-		{"id":"ee5edccc7b40ca18","type":"group","x":-780,"y":-620,"width":540,"height":480,"color":"6","label":"ACC"},
-		{"id":"6d50e073b3e4b6be","type":"group","x":-720,"y":-1060,"width":480,"height":400,"label":"Programming Fundamentals I"},
-		{"id":"720cf2055ba3921c","type":"text","text":"2024_12_03_Monopoly player view","x":-700,"y":-1040,"width":320,"height":60},
-		{"id":"5e0ccea93397891f","type":"text","text":"COMPLETE: \"Under 21\" game app\n\n> [!cite] Requirement\n> Create an app that uses a deck of 40 cards with four sets of each of the values 1 to 10.  These are shuffled and the player has a board in which up to 5 cards can be displayed.\n> \n> The goal of the game is to select cards until which time you believe the total of all cards wil be greater than 21.   The player gets two starting cards and then with a button press adds another card and as long as the total of all cards is 21 or under they are still in the hunt to win.  Another button titled HOLD will indicate that the player wants to stop and then a message from the app indicates whether the next card will cause the total of all cards to exceed 21.\n> \n> You have til the eginning of the first class after the Holiday to complete it.","x":-700,"y":-960,"width":320,"height":80},
-		{"id":"fa93316e31984ed2","type":"text","text":"2024_12_12_Elections Project Assignments 7-9","x":20,"y":-620,"width":420,"height":60},
-		{"id":"3ea507e7ca9eac6f","type":"text","text":"2024_12_12_Civil Rights & Liberties Assignment","x":20,"y":-540,"width":420,"height":60},
-		{"id":"eaf5b76747edc089","type":"text","text":"2024_12_12_Ch. 7 Polling article quiz","x":20,"y":-460,"width":420,"height":50},
-		{"id":"88430ce1b15237f4","x":20,"y":-300,"width":420,"height":60,"type":"text","text":"2024_12_04_Election Project Presentation"},
-		{"id":"fb1b9c0d62f52bab","type":"text","text":"2024_12_12_Ch. 8 Assignment Quiz","x":20,"y":-380,"width":420,"height":50}
+		{"id":"ee5edccc7b40ca18","type":"group","x":-780,"y":-620,"width":1060,"height":1040,"color":"6","label":"ACC"},
+		{"id":"25323f31e3b2cd3b","type":"group","x":-740,"y":-516,"width":480,"height":416,"label":"United States Government"},
+		{"id":"6d50e073b3e4b6be","type":"group","x":-240,"y":-508,"width":480,"height":400,"label":"Programming Fundamentals I"},
+		{"id":"d482121fcfdcf16c","type":"group","x":-740,"y":-40,"width":400,"height":400,"label":"Linear Algebra and Matrix Theory"},
+		{"id":"85c36f3ee29a4bdf","x":-280,"y":-40,"width":400,"height":400,"type":"group","label":"Introduction to Engineering"},
+		{"id":"482a46001421ea1d","x":-1014,"y":134,"width":250,"height":60,"type":"text","text":""},
+		{"id":"eaf5b76747edc089","type":"text","text":"2024_12_12_Ch. 7 Polling article quiz","x":-720,"y":-400,"width":420,"height":50},
+		{"id":"fb1b9c0d62f52bab","type":"text","text":"2024_12_12_Ch. 8 Assignment Quiz","x":-720,"y":-330,"width":420,"height":50},
+		{"id":"fa93316e31984ed2","type":"text","text":"2024_12_12_Elections Project Assignments 7-9","x":-720,"y":-260,"width":420,"height":52},
+		{"id":"3ea507e7ca9eac6f","type":"text","text":"2024_12_12_Civil Rights & Liberties Assignment","x":-720,"y":-180,"width":420,"height":60},
+		{"id":"88430ce1b15237f4","type":"text","text":"2024_12_04_Election Project Presentation","x":-720,"y":-480,"width":420,"height":60},
+		{"id":"3cd82937bbcf10e0","type":"text","text":"2024_12_02_QC_6.1","x":-720,"y":-20,"width":250,"height":50},
+		{"id":"7362f2ac36df4a6d","type":"text","text":"2024_12_02_QC_6.2","x":-720,"y":51,"width":250,"height":50},
+		{"id":"720cf2055ba3921c","type":"text","text":"2024_12_03_Monopoly player view","x":-220,"y":-488,"width":320,"height":60},
+		{"id":"5e0ccea93397891f","type":"text","text":"2024_12_03COMPLETE: \"Under 21\" game app\n\n> [!cite] Requirement\n> Create an app that uses a deck of 40 cards with four sets of each of the values 1 to 10.  These are shuffled and the player has a board in which up to 5 cards can be displayed.\n> \n> The goal of the game is to select cards until which time you believe the total of all cards wil be greater than 21.   The player gets two starting cards and then with a button press adds another card and as long as the total of all cards is 21 or under they are still in the hunt to win.  Another button titled HOLD will indicate that the player wants to stop and then a message from the app indicates whether the next card will cause the total of all cards to exceed 21.\n> \n> You have til the eginning of the first class after the Holiday to complete it.","x":-220,"y":-408,"width":420,"height":50}
 	],
 	"edges":[]
 }
