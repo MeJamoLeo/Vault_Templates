@@ -1,6 +1,11 @@
 {
 	"nodes":[
-		{"id":"720cf2055ba3921c","x":-197,"y":-246,"width":250,"height":60,"type":"text","text":""}
+		{"id":"ee5edccc7b40ca18","x":-780,"y":-620,"width":540,"height":480,"color":"6","type":"group","label":"ACC"},
+		{"id":"6d50e073b3e4b6be","x":-720,"y":-1060,"width":400,"height":400,"type":"group","label":"Programming Fundamentals I"},
+		{"id":"25323f31e3b2cd3b","x":2,"y":-656,"width":400,"height":400,"type":"group","label":"Untitled group"},
+		{"id":"720cf2055ba3921c","x":-700,"y":-1040,"width":320,"height":60,"type":"text","text":"Monopoly player view"},
+		{"id":"5e0ccea93397891f","x":-700,"y":-960,"width":320,"height":80,"type":"text","text":"COMPLETE: \"Under 21\" game app\n\n> [!cite] Requirement\n> Create an app that uses a deck of 40 cards with four sets of each of the values 1 to 10.  These are shuffled and the player has a board in which up to 5 cards can be displayed.\n> \n> The goal of the game is to select cards until which time you believe the total of all cards wil be greater than 21.   The player gets two starting cards and then with a button press adds another card and as long as the total of all cards is 21 or under they are still in the hunt to win.  Another button titled HOLD will indicate that the player wants to stop and then a message from the app indicates whether the next card will cause the total of all cards to exceed 21.\n> \n> You have til the eginning of the first class after the Holiday to complete it."},
+		{"id":"fa93316e31984ed2","x":-165,"y":-831,"width":250,"height":60,"type":"text","text":"Elections Project Assignments 7-9"}
 	],
 	"edges":[]
 }
