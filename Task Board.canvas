@@ -11,6 +11,7 @@
 		{"id":"2b2cbcb63504911f","x":1050,"y":-260,"width":400,"height":400,"type":"group","label":"Computer Scienceの土台"},
 		{"id":"ba2cfdfcc71a72d7","x":1480,"y":-260,"width":400,"height":400,"type":"group","label":"Language"},
 		{"id":"02d5a483ce39382f","type":"group","x":-60,"y":-167,"width":400,"height":254,"label":"Quick Check"},
+		{"id":"f88d591387c7b898","x":108,"y":103,"width":250,"height":60,"type":"text","text":""},
 		{"id":"77e6c4feb0c29854","type":"text","text":"Transfer Meeting : Reo T. and Ram V. (IN-PERSON)<br>\nThursday, December 5⋅11:00 – 11:45am","x":1040,"y":-784,"width":420,"height":64},
 		{"id":"fa93316e31984ed2","type":"text","text":"2024_10_28_Elections Project Assignments 7-9","x":-456,"y":-678,"width":416,"height":52},
 		{"id":"482a46001421ea1d","type":"text","text":"2024_12_05_5.3_WebAssign","x":-420,"y":-147,"width":280,"height":60},
@@ -41,7 +42,8 @@
 		{"id":"c8e997a4ca404251","x":1500,"y":-240,"width":250,"height":50,"type":"text","text":"[Land of Lisp](http://landoflisp.com)"},
 		{"id":"f7a05e1bb22f4a34","x":1080,"y":-180,"width":250,"height":50,"type":"text","text":"OS自作入門(みかん本)"},
 		{"id":"e6625292ce26c634","x":1080,"y":-120,"width":320,"height":50,"type":"text","text":"[Web Browser Engineering](https://browser.engineering)"},
-		{"id":"df268e42b6d22c99","x":1060,"y":160,"width":250,"height":60,"type":"text","text":"AtCoder Navisteps"}
+		{"id":"df268e42b6d22c99","x":1060,"y":160,"width":250,"height":60,"type":"text","text":"AtCoder Navisteps"},
+		{"id":"b37448d9a289788e","x":166,"y":157,"width":777,"height":782,"type":"link","url":"https://beta.web.structured.app"}
 	],
 	"edges":[]
 }
