@@ -54,8 +54,8 @@
 	4. Explain who would be most influenced or convinced by the fallacy and why
 1. Red Herring
 	1. Fallacy Description
-	2. The moderator asked the question "Do you believe Americans are better off than they were four years ago?." Her first sentence from her answer was ""
-	3. Explanation of how the quote meets the requirements for this fallacy
+	2. The moderator asked the question "Do you believe Americans are better off than they were four years ago?." Harris's first sentence from her answer was "So I was raised as a middle-class kid, and i am actually the only person on this stage who has a plan that is about lifting up the middle class and working people of America."
+	3. The moderator asked closed question, which is called YES/NO question. This question was asking about result from past four years polices. However, she start having speech for her background and her vision. This means she does not answer the initial question the moderator asked, which ma
 	4. Explain who would be most influenced or convinced by the fallacy and why
 1. False Dilemma
 	1. 誤った二分法を使うこと．
