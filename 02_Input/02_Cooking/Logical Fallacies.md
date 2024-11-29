@@ -59,6 +59,6 @@
 	4. This logical fallacy would influence supporters of Harris or those who care about the middle class because they may not notice that the original question was not directory addressed. They might feel connected to her plan.
 1. False Dilemma
 	1. 誤った二分法を使うこと．
-	2. Economists have said that Trump Sales Tax would actually result for middle-class families in about $4000 more a year because of his polices and his ideas about what should be the backs of middle-class people paying for tax records for billing there is.
+	2. My plan is to give a $50,000 tax reduction to start up small businesses, knowing they are part of the backbone of America
 	3. Explanation of how the quote meets the requirements for this fallacy
 	4. Explain who would be most influenced or convinced by the fallacy and why
