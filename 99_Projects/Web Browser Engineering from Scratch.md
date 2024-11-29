@@ -1,25 +1,20 @@
 > [!cite]
 > [Web Browser Engineering](https://browser.engineering)
+> 
+> Githubソースコード
+> [browserengineering/book](https://github.com/browserengineering/book)
 
-## Reading This Book
-Ch1-3で1000行ほど，4-6時間の読書，実装，デバッグで終わる見込み<br>
-Ch4は若干高度な内容になる, 3000行ほど
-- TLS connections
-	- Pythonは標準である
-- Graphics
-	- Tk, Skia, and SDL
-- JavaScript Evaluation
-	- DukPy
+# このプロジェクトから期待すること
 
-ブラウザの要件
-- HTML, CSS, JavaScript の一部
-- エラーハンドリングはカス
-- 遅せぇ
-- **でも設計は1000万行のコードと一緒**
+## 公式の見解
+> After finishing the book, you should be able to dig into the source code of Chromium, Gecko, or WebKit and understand it without too much trouble.<br>
+> _ブラウザをコードにすることでミステリーではなくする．_
+> _Chromium, Gecko, WebKitのソースコードをそれほどの苦悩なく読めるようになる_
 
-## ブラウザとウェブ
-### 筆者とブラウザ
-ウェブが商業化された時に筆者が大学に入学<br>
-ドットコムバブルのタイミングで卒業<br>
-WebとLinuxにとって質の良いブラウザは必要だった．<br>
-### ウェブの歴史
+## 私がこのプロジェクトから期待すること
+CPU, OS, Network，Browserの表面にあるブラウザを知りたい．
+
+
+
+
+
