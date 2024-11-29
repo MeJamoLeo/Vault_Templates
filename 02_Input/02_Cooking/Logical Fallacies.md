@@ -52,21 +52,13 @@
 	2. The quote and who said it
 	3. Explanation of how the quote meets the requirements for this fallacy
 	4. Explain who would be most influenced or convinced by the fallacy and why
-0. False Dilemma
+1. Red Herring
+	1. Fallacy Description
+	2. The moderator asked the question "Do you believe Americans are better off than they were four years ago?." Her first sentence from her answer was ""
+	3. Explanation of how the quote meets the requirements for this fallacy
+	4. Explain who would be most influenced or convinced by the fallacy and why
+1. False Dilemma
 	1. 誤った二分法を使うこと．
-	2. Economists have said that Trump Sales Tax would actually result for middle-class families in about $4000 more a year because of his polices and his ideas about what should be the back 
-	3. ECONOMISTS HAVE SAID THAT THAT TRUMP SALES TAX WOULD ACTUALLY
-
-4:50
-
-RESULT FOR MIDDLE-CLASS FAMILIES IN ABOUT $4,000 MORE A YEAR
-
-4:55
-
-BECAUSE OF HIS POLICIES AND HIS IDEAS ABOUT WHAT SHOULD BE THE
-
-5:01
-
-BACKS OF MIDDLE-CLASS PEOPLE PAYING FOR TAX RECORDS FOR BILLING THERE IS.
+	2. Economists have said that Trump Sales Tax would actually result for middle-class families in about $4000 more a year because of his polices and his ideas about what should be the backs of middle-class people paying for tax records for billing there is.
 	3. Explanation of how the quote meets the requirements for this fallacy
 	4. Explain who would be most influenced or convinced by the fallacy and why
