@@ -62,3 +62,8 @@
 	2. Trump respond that "She does not have a plan. She copied Biden's plan. and it is like the four sentences, like run spot run. four sentences that it just, okay we will try to lower taxes. She does not have a plan. Take a look at our plan. She does not have a plan."
 	4. They were supposed to debate about economics, but once Harris said "Trump doesn't have plan for you" , later, he respond such that. There two parts. The first ad hominem is Trump rejected Harries's polices because he think it was copied from Biden's policy. As a policy, no one matter it was copied or not because the point is the policy is critical solution for citizens, but he argued about that. The other is simplifying the opponent's plan to an extreme and mocking it shows a lack of respect and an intention to ridicule them. Trump offended Harris ability or character instead of debating economics.
 	5. Voters who do not know the details of Harris's policies might get the impression that "she has no plan," even though there are various policies that could be considered.
+0. False Cause
+	1. A logical fallacy where someone assumes that because one event happened before another, the first event must have caused the second.
+	2. Harris said "What he ended up doing is under Donald Trump's presidency, he ended up selling American chips to China to help them improve and modernize their military"
+	3. 時系列順ではアメリカが半導体を中国に輸出した後に，中国の軍隊の近代化が始まったかもしれない．しかし，その輸出によって引き起こされたという中国の軍隊の近代化には様々な要因が絡んでいる．中国の研究開発，他国からの技術取得など．アメリカの半導体輸出が直接的な要因と断言するのはあまりにも単純すぎる．また，それをトランプが意図的に助けたかのように主張するのはミスリードを引き起こす．
+	4. 中国をてき
