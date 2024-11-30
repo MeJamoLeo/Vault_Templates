@@ -59,6 +59,6 @@
 	4. This logical fallacy would influence supporters of Harris or those who care about the middle class because they may not notice that the original question was not directory addressed. They might feel connected to her plan.
 1. Ad Hominem
 	1. 議論の内容ではなく，相手の人格などを対象に言及することで，あたかも論点を否定しているように見せること．
-	2. Trump 
-	3. 
-	4. Explain who would be most influenced or convinced by the fallacy and why
+	2. Trump respond that "She does not have a plan. She copied Biden's plan. and it is like the four sentences, like run spot run. four sentences that it just, okay we will try to lower taxes. She does not have a plan. Take a look at our plan. She does not have a plan."
+	4. They were supposed to debate about economics, but once Harris said "Trump doesn't have plan for you" , later, he respond such that.
+	5. Explain who would be most influenced or convinced by the fallacy and why
