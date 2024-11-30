@@ -60,5 +60,5 @@
 1. Ad Hominem
 	1. 議論の内容ではなく，相手の人格などを対象に言及することで，あたかも論点を否定しているように見せること．
 	2. Trump respond that "She does not have a plan. She copied Biden's plan. and it is like the four sentences, like run spot run. four sentences that it just, okay we will try to lower taxes. She does not have a plan. Take a look at our plan. She does not have a plan."
-	4. They were supposed to debate about economics, but once Harris said "Trump doesn't have plan for you" , later, he respond such that.
+	4. They were supposed to debate about economics, but once Harris said "Trump doesn't have plan for you" , later, he respond such that. There two parts. The first ad hominem is Trump 
 	5. Explain who would be most influenced or convinced by the fallacy and why
