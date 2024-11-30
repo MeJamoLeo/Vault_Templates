@@ -54,11 +54,11 @@
 	4. Explain who would be most influenced or convinced by the fallacy and why
 1. Red Herring
 	1. A Red Herring is a fallacy where someone talks about something unrelated to the main question or topic. This is done to distract people and avoid answering the original question or issue.
-	2. The moderator asked the question "Do you believe Americans are better off than they were four years ago?." Harris's first sentence from her answer was "So... I was raised as a middle-class kid, and I am actually the only person on this stage who has a plan that is about lifting up the middle class and working people of America."
+	2. The moderator asked the question "Do you believe Americans are better off than they were four years ago?" Harris's first sentence from her answer was "So... I was raised as a middle-class kid, and I am actually the only person on this stage who has a plan that is about lifting up the middle class and working people of America."
 	3. The moderator asked closed question, which is called YES/NO question, and this question was asking about result from past four years polices. However, she start having speech for her background and her vision. This means she does not answer the initial question the moderator asked, she changed the topic from evaluation from past four years result to introducing her polices. This situation matches the definition of Red Herring.
 	4. This logical fallacy would influence supporters of Harris or those who care about the middle class because they may not notice that the original question was not directory addressed. They might feel connected to her plan.
 1. False Dilemma
 	1. 誤った二分法を使うこと．
-	2. Harris said, "my plan is to give a $50,000 tax reduction to start up small businesses, knowing they are part of the backbone of America's economy." Also she explained that "His plan is to do what he has done before, which is to provide a tax cut for billionaire and big corporations which will result in $5 trillions to America's deficit"
+	2. Harris said, "my plan is to give a $50,000 tax reduction to start up small businesses, knowing they are part of the backbone of America's economy." Also she explained Trump's policy such that "His plan is to do what he has done before, which is to provide a tax cut for billionaire and big corporations which will result in $5 trillions to America's deficit"
 	3. 
 	4. Explain who would be most influenced or convinced by the fallacy and why
