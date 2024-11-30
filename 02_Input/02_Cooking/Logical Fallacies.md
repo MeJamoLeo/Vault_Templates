@@ -59,6 +59,6 @@
 	4. This logical fallacy would influence supporters of Harris or those who care about the middle class because they may not notice that the original question was not directory addressed. They might feel connected to her plan.
 1. False Dilemma
 	1. 誤った二分法を使うこと．
-	2. Harris said, "my plan is to give a $50,000 tax reduction to start up small businesses, knowing they are part of the backbone of America's economy." Also she explained that "His plan is to do what he has done before, which is to provide a tax cut for billionares and big corporations which will result in $5 trillions to America's deficit"
-	3. Explanation of how the quote meets the requirements for this fallacy
+	2. Harris said, "my plan is to give a $50,000 tax reduction to start up small businesses, knowing they are part of the backbone of America's economy." Also she explained that "His plan is to do what he has done before, which is to provide a tax cut for billionaire and big corporations which will result in $5 trillions to America's deficit"
+	3. 
 	4. Explain who would be most influenced or convinced by the fallacy and why
