@@ -1,7 +1,7 @@
 ![14 Logical Fallacies in 14 Minutes - YouTube](https://www.youtube.com/watch?v=4QepFGJj74o)
 このLogical Fallaciesは死ぬほどある．
 この動画ではいくつか紹介している.
-1. Ad Hominem
+- [x] 1. Ad Hominem
 	- 相手の主張を論破するのではなく，相手個人を攻撃することで論点から注意を逸らすこと．
 1. Appeal to Authority
 	 - 権威者や専門家の意見を根拠に主張するが，その権威や専門が論点に関連性を持たないこと．
@@ -24,12 +24,12 @@
 	-  難しい専門用語をいっぱい使ってわかりにくくすること
 1. Bandwagon
 	- みんなやってるから正しい．
-1. Red Herring
+- [x] 1. Red Herring
 	- 議論の焦点を逸らすために無関係な話題を持ち出す手法
 	- 質問に適切に答えてない
 1. Personal Incredulity
 	- 「思考停止しているテメェが悪い．ちゃんと考えればまともなことを主張している．」
-1. False Cause
+- [x] 1. False Cause
 	- 因果関係を間違っているパターン
 	- 時系列が常に因果関係となるとは限らない
 		- 朝にお祈りしたら，風邪が治った．
