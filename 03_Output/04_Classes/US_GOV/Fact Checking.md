@@ -65,7 +65,7 @@
 - [Apnews.com/ap-fact-check](http://3.apnews.com/ap-fact-check)
 	- [A video shows a former employee of the Harris County Democratic Party in Texas screaming at a small child outside of Vice President Kamala Harris’ Houston rally on Friday](https://apnews.com/article/fact-check-misinformation-houston-rally-confrontation-99af1f80eb43d31966cae8e68dbc3415)
 	- False
-	- c.Summarize the explanation given.
+	- AP News debunked the claim that Jordan Bowen, a former director for the Harris County Democratic Party (HCDP), was the woman shouting at a child outside Kamala Harris's rally in Houston. The HCDP clarified on Facebook that the woman in the video was not Bowen and had no connection to the party. Bowen attended the rally but was dressed differently, wearing a gray shirt, glasses, and a rainbow “HOU” cap, while the woman in the video wore a crop top, shorts, and had braided hair. The false claim led to harassment, including death threats and Bowen’s mother’s private information being shared online. Bowen, shocked by the misinformation, is now working with a lawyer to explore legal action. The HCDP also reported that false accusations disrupted their work and prompted armed security visits due to threatening messages. HCDP’s chief of staff called the claims “completely fake” and emphasized the harm caused by spreading unverified information.
 
 
 
