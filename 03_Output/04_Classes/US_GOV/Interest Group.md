@@ -37,9 +37,11 @@
 - [o] Navigate to the "About Us" or "Our Mission" section of the group's website.
 	- https://restaurant.org/about-us/what-we-do/our-mission/
 - [o] Summarize its founding history and mission in a few sentences.
-- [ ] Write down key details, such as founding year, purpose, and notable achievements.
-- [ ] Browse the site for their key focus areas or issues (look under menus like “Issues,” “Advocacy,” or “What We Do”).
+	- The National Restaurant Association (NRA) was founded in 1919 during a period of significant national growth and transformation. Initially established to support a burgeoning foodservice industry, the NRA has spent over a century championing the interests of the restaurant sector. Its mission is to strengthen operations, mitigate risks, develop talent, advocate for business vitality at all governmental levels, and foster knowledge and collaboration. Today, the association represents one of the nation's largest private-sector industries, serving as a cornerstone of community development and economic growth.
+- [o] Write down key details, such as founding year, purpose, and notable achievements.
+- [o] Browse the site for their key focus areas or issues (look under menus like “Issues,” “Advocacy,” or “What We Do”).
 - [ ] Choose one or two issues the group focuses on and read the related content.
+	- 
 - [ ] Summarize the group’s position on these issues, including any evidence or arguments they provide.
 - [ ] Look for sections that urge users to "Take Action" or “Get Involved.”
 - [ ] Identify how the group persuades readers to care about their causes (e.g., emotional language, statistics, success stories).
