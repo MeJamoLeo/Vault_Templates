@@ -75,5 +75,5 @@
 0. False Dilemma
 	1. A logical fallacy that is presented as having only two options, ignoring other possibilities or alternatives.
 	2. Harris said "Understand, if Donald Trump were to be reelected, he will sign the initial abortion ban. Understand in his Project 2025, there would be a national abortion ban, a monitor that would be monitoring your pregnancies, your miscarriages."
-	3. Explanation of how the quote meets the requirements for this fallacy
-	4. Explain who would be most influenced or convinced by the fallacy and why
+	3. Harris presents a condition. If Trump is reelected, there will be a nationwide abortion ban, and pregnancies and miscarriages will be monitored. If not, abortion rights would be restored. This false dilemma may ignore other possibilities, such as individual states continuing to decide their own abortion laws. By presenting only these two extreme outcomes, Harris simplifies the debate, leaving no room for alternative scenarios. This fits the definition of false dilemma.
+	4. Voters who 
