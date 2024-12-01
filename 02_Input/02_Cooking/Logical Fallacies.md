@@ -77,3 +77,8 @@
 	2. Harris said "Understand, if Donald Trump were to be reelected, he will sign the initial abortion ban. Understand in his Project 2025, there would be a national abortion ban, a monitor that would be monitoring your pregnancies, your miscarriages."
 	3. Harris presents a condition. If Trump is reelected, there will be a nationwide abortion ban, and pregnancies and miscarriages will be monitored. If not, abortion rights would be restored. This false dilemma may ignore other possibilities, such as individual states continuing to decide their own abortion laws. By presenting only these two extreme outcomes, Harris simplifies the debate, leaving no room for alternative scenarios. This fits the definition of false dilemma.
 	4. Voters who strongly support abortion rights and rights and fear losing those rights under stricter federal policies. In addition to such people, voters who are uncertain about the issue but are concerned about government overreach might be convinced by the imagery of monitored pregnancies. The emotional weight of the claim creates fear and urgency. This fear is amplified for those who value personal freedoms and privacy.
+1. Bandwagon
+	1. Bandwagon is a logical fallacy where someone argues that an idea or belief is true or correct because many people agree with it or believe it. Instead of providing evidence to support the argument, they rely on popularity or common opinion to convince others.
+	2. The quote and who said it
+	3. Explanation of how the quote meets the requirements for this fallacy
+	4. Explain who would be most influenced or convinced by the fallacy and why
