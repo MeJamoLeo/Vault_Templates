@@ -52,12 +52,12 @@
 	2. The quote and who said it
 	3. Explanation of how the quote meets the requirements for this fallacy
 	4. Explain who would be most influenced or convinced by the fallacy and why
-1. Red Herring
+0. Red Herring
 	1. A Red Herring is a fallacy where someone talks about something unrelated to the main question or topic. This is done to distract people and avoid answering the original question or issue.
 	2. The moderator asked the question "Do you believe Americans are better off than they were four years ago?" Harris's first sentence from her answer was "So... I was raised as a middle-class kid, and I am actually the only person on this stage who has a plan that is about lifting up the middle class and working people of America."
 	3. The moderator asked closed question, which is called YES/NO question, and this question was asking about result from past four years polices. However, she start having speech for her background and her vision. This means she does not answer the initial question the moderator asked, she changed the topic from evaluation from past four years result to introducing her polices. This situation matches the definition of Red Herring.
 	4. This logical fallacy would influence supporters of Harris or those who care about the middle class because they may not notice that the original question was not directory addressed. They might feel connected to her plan.
-1. Ad Hominem
+0. Ad Hominem
 	1. Focusing on the character instead of the argument itself creates the illusion of disproving their point
 	2. Trump respond that "She does not have a plan. She copied Biden's plan. and it is like the four sentences, like run spot run. four sentences that it just, okay we will try to lower taxes. She does not have a plan. Take a look at our plan. She does not have a plan."
 	4. They were supposed to debate about economics, but once Harris said "Trump doesn't have plan for you" , later, he respond such that. There two parts. The first ad hominem is Trump rejected Harries's polices because he think it was copied from Biden's policy. As a policy, no one matter it was copied or not because the point is the policy is critical solution for citizens, but he argued about that. The other is simplifying the opponent's plan to an extreme and mocking it shows a lack of respect and an intention to ridicule them. Trump offended Harris ability or character instead of debating economics.
@@ -69,6 +69,6 @@
 	4. Voters who see China as a rival, especially supporters of Trump, might misunderstand this statement. They could misunderstand the context of the semiconductor exports and believe that Trump increased China's military power and betrayed the United States because of how the statement is framed.
 0. Straw Figure
 	1. A logical fallacy where someone misrepresents, exaggerates, or distorts an opponents's argument to make it easier to attack. Instead of engaging with the actual position or argument, the speaker creates a "straw figure"
-	2. The quote and who said it
-	3. Explanation of how the quote meets the requirements for this fallacy
-	4. Explain who would be most influenced or convinced by the fallacy and why
+	2. Trump had debate about abortion, and he said "The Democrats are radical in that. And her vice president -- by Springer to pick who I thought was a horrible. Our country because he is really out of it. But her vice presidential picked says abortion in the ninth month is absolutely fine. He also says, execution after birth, execution can no longer abortion because the baby is born, is okay. And that is not okay with me."
+	3. First of all Trump altered Democrats and Harris's position and opinion. He illustrated incorrectly such that "abortion in the ninth month is absolutely fine." "execution after birth, execution can no longer abortion because the baby is born, is okay."
+	4. Explain who would be most influenced or convinced by the fallacy and why 
