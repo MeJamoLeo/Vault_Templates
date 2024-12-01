@@ -29,7 +29,7 @@
 > 
 > Find an item on this website that deals with Donald Trump, Kamala Harris, JD Vance or Tim Walz. 
 > 
->k a.Copy the quote
+> a.Copy the quote
 > 
 > b.Did the fact check site declare it true, mostly true, false, very false.
 > 
@@ -46,15 +46,19 @@
 > c.False
 > 
 > d.Politifact found the quote false saying the claim that people were being paid to attend events for Harris and events to protest Trump are not new. They have been made before apparently many times, and those claims were also determined to be false. In this one, someone said their nail tech told them someone’s cousin was being paid $100 per day to go wherever Harris’s campaign asked them to go. And the post said the person is “not even a citizen”, which I guess was meant to make it worse. Politifact searched Nexus, Reuters and Google and found no support for this. They also found that the person who posted it also posts other false pro-Trump claims which they suggested further brings doubt on its truthfulness.  
-k> 
+> 
 > (Notice that in my example above answer d is about 120 words, and your explanations for each fallacy should as well.)
 
 - Politifact.com
-	- a.What is the quote they are fact-checking. 
-	- b.What social media platform was this shared on?
+	 - [PolitiFact | No, Elon Musk's Starlink wasn’t used to rig the 2024 presidential election for Donald Trump](https://www.politifact.com/factchecks/2024/nov/12/threads-posts/no-elon-musks-starlink-wasnt-used-to-rig-the-2024/)
+	- Threads
 	- c. What rating did they give the story (true, false, pants on fire false)
 	- d.Summarize the explanation given for the rating (each explanation should be 100 words or more).
 - [Factcheck.org](https://acconline.austincc.edu/webapps/blackboard/content/factcheck.org) 
+	- a.Copy the quote
+	- b.Did the fact check site declare it true, mostly true, false, very false.
+	- c.Summarize the explanation given.
+- [Apnews.com/ap-fact-check](http://3.apnews.com/ap-fact-check)
 	- a.Copy the quote
 	- b.Did the fact check site declare it true, mostly true, false, very false.
 	- c.Summarize the explanation given.
@@ -62,7 +66,13 @@ k>
 
 
 
-
+> a. [In South Philadelphia, people are “getting paid $700 a week to go to wherever Kamala’s campaign tells them to go to.”](https://www.politifact.com/factchecks/2024/sep/26/tiktok-posts/kamala-harris-campaign-isnt-paying-people-700-a-we/)
+> 
+> b.TikTok
+> 
+> c.False
+> 
+> d.Politifact found the quote false saying the claim that people were being paid to attend events for Harris and events to protest Trump are not new. They have been made before apparently many times, and those claims were also determined to be false. In this one, someone said their nail tech told them someone’s cousin was being paid $100 per day to go wherever Harris’s campaign asked them to go. And the post said the person is “not even a citizen”, which I guess was meant to make it worse. Politifact searched Nexus, Reuters and Google and found no support for this. They also found that the person who posted it also posts other false pro-Trump claims which they suggested further brings doubt on its truthfulness.  
 
 
 
