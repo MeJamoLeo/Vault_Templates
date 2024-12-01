@@ -61,24 +61,11 @@
 - [Factcheck.org](https://acconline.austincc.edu/webapps/blackboard/content/factcheck.org) 
 	- [Typo in Trump's Name on Ballot Review Screen Is Not 'Election Fraud' - FactCheck.org](https://www.factcheck.org/2024/11/typo-in-trumps-name-on-ballot-review-screen-is-not-election-fraud/)
 	- False
-	- On Instagram, there is a post that shows a video former President Donald Trump's name is misspelled as "Triump" on a ballot review screen. The accompanying text questions, "Why is there an I in Donald J Trump's name?" The error was claimed on social media as "election fraud". FactCheck.org determined this claim to be false. The misspelling occurred on an optional ballot review screen in Washington County, Virginia, due to a typographical error. Election officials clarified that this error appeared only on the review screen, not on the actual paper ballots, and did not affect vote tabulation or results. The optional review screen is activated only if a voter specifically requests it before inserting their ballot. Out of over 10,000 voters in the county, fewer than twenty used this 
+	- On Instagram, there is a post that shows a video former President Donald Trump's name is misspelled as "Triump" on a ballot review screen. The accompanying text questions, "Why is there an I in Donald J Trump's name?" The error was claimed on social media as "election fraud". FactCheck.org determined this claim to be false. The misspelling occurred on an optional ballot review screen in Washington County, Virginia, due to a typographical error. Election officials clarified that this error appeared only on the review screen, not on the actual paper ballots, and did not affect vote tabulation or results. The optional review screen is activated only if a voter specifically requests it before inserting their ballot. Out of over 10,000 voters in the county, fewer than twenty used this feature. The error was discovered too late to reprogram the equipment before the election, but all voting equipment was thoroughly tested and operated as intended, ensuring accurate vote counting.
 - [Apnews.com/ap-fact-check](http://3.apnews.com/ap-fact-check)
 	- a.Copy the quote
 	- b.Did the fact check site declare it true, mostly true, false, very false.
 	- c.Summarize the explanation given.
-
-
-
-
-> a. [In South Philadelphia, people are “getting paid $700 a week to go to wherever Kamala’s campaign tells them to go to.”](https://www.politifact.com/factchecks/2024/sep/26/tiktok-posts/kamala-harris-campaign-isnt-paying-people-700-a-we/)
-> 
-> b.TikTok
-> 
-> c.False
-> 
-> d.Politifact found the quote false saying the claim that people were being paid to attend events for Harris and events to protest Trump are not new. They have been made before apparently many times, and those claims were also determined to be false. In this one, someone said their nail tech told them someone’s cousin was being paid $100 per day to go wherever Harris’s campaign asked them to go. And the post said the person is “not even a citizen”, which I guess was meant to make it worse. Politifact searched Nexus, Reuters and Google and found no support for this. They also found that the person who posted it also posts other false pro-Trump claims which they suggested further brings doubt on its truthfulness.  
-
-
 
 
 
