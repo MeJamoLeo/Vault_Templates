@@ -36,22 +36,23 @@
 - [o] Save the website link for reference.
 - [o] Navigate to the "About Us" or "Our Mission" section of the group's website.
 	- https://restaurant.org/about-us/what-we-do/our-mission/
-- [o] Summarize its founding history and mission in a few sentences.
+- [o] Summarize its founding history and mission in a few sentences.**Part A**
 	- The National Restaurant Association (NRA) was founded in 1919 during a period of significant national growth and transformation. Initially established to support a burgeoning foodservice industry, the NRA has spent over a century championing the interests of the restaurant sector. Its mission is to strengthen operations, mitigate risks, develop talent, advocate for business vitality at all governmental levels, and foster knowledge and collaboration. Today, the association represents one of the nation's largest private-sector industries, serving as a cornerstone of community development and economic growth.
 - [o] Write down key details, such as founding year, purpose, and notable achievements.
 - [o] Browse the site for their key focus areas or issues (look under menus like “Issues,” “Advocacy,” or “What We Do”).
-- [ ] Choose one or two issues the group focuses on and read the related content.
-	- 
-- [ ] Summarize the group’s position on these issues, including any evidence or arguments they provide.
+- [o] Choose one or two issues the group focuses on and read the related content.
+	- [Swipe Fees | National Restaurant Association](https://restaurant.org/issues-and-advocacy/policy-agenda/swipefees/)
+	- [Tip Credit | National Restaurant Association](https://restaurant.org/issues-and-advocacy/policy-agenda/tipping/)
+- [ ] Summarize the group’s position on these issues, including any evidence or arguments they provide. **Part B**
 - [ ] Look for sections that urge users to "Take Action" or “Get Involved.”
-- [ ] Identify how the group persuades readers to care about their causes (e.g., emotional language, statistics, success stories).
+- [ ] Identify how the group persuades readers to care about their causes (e.g., emotional language, statistics, success stories). **Part C**
 - [ ] Write a brief analysis of the tone and strategies used in their messaging.
 - [ ] Search the website for endorsements (check menus like “News,” “Endorsements,” or “Campaigns”).
-- [ ] Note whether the group has endorsed a candidate in the current election campaign.
-- [ ] they have, summarize their reasoning for the endorsement.
-- [ ] not, deduce which political party or candidate their views align with, and explain your reasoning.
+- [ ] Note whether the group has endorsed a candidate in the current election campaign. **Part 3**
+	- [ ] if they have, summarize their reasoning for the endorsement.
+	- [ ] if not, deduce which political party or candidate their views align with, and explain your reasoning.
 - [ ] Consider whether you support the group's goals and why.
-- [ ] Write a brief paragraph explaining your stance, based on what you’ve learned about the group and its activities.
+- [ ] Write a brief paragraph explaining your stance, based on what you’ve learned about the group and its activities. **Part 4**
 - [ ] Combine your answers from Tasks 1-6 into a single document.
 - [ ] Ensure the word count exceeds 400 words.
 - [ ] Proofread for clarity and coherence.
