@@ -68,3 +68,7 @@
 	3. In this example, the United States may have exported semiconductors to China before China's military modernization began. However, saying that the export caused China's military modernization is too simple and cause misunderstand. Many factors of China's military modernization are involved, like China's own research and development or getting technology from other countries. By ignoring these other factors, the statement risks misleading people into thinking the semiconductor exports were the sole or primary cause of China’s military advancements.
 	4. Voters who see China as a rival, especially supporters of Trump, might misunderstand this statement. They could misunderstand the context of the semiconductor exports and believe that Trump increased China's military power and betrayed the United States because of how the statement is framed.
 0. Straw Figure
+	1. A logical fallacy where someone misrepresents, exaggerates, or distorts an opponents's argument to make it easier to attack. Instead of engaging with the actual position or argument, the speaker creates a "straw figure"
+	2. The quote and who said it
+	3. Explanation of how the quote meets the requirements for this fallacy
+	4. Explain who would be most influenced or convinced by the fallacy and why
