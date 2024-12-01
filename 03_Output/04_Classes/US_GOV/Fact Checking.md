@@ -63,8 +63,8 @@
 	- False
 	- On Instagram, there is a post that shows a video former President Donald Trump's name is misspelled as "Triump" on a ballot review screen. The accompanying text questions, "Why is there an I in Donald J Trump's name?" The error was claimed on social media as "election fraud". FactCheck.org determined this claim to be false. The misspelling occurred on an optional ballot review screen in Washington County, Virginia, due to a typographical error. Election officials clarified that this error appeared only on the review screen, not on the actual paper ballots, and did not affect vote tabulation or results. The optional review screen is activated only if a voter specifically requests it before inserting their ballot. Out of over 10,000 voters in the county, fewer than twenty used this feature. The error was discovered too late to reprogram the equipment before the election, but all voting equipment was thoroughly tested and operated as intended, ensuring accurate vote counting.
 - [Apnews.com/ap-fact-check](http://3.apnews.com/ap-fact-check)
-	- a.Copy the quote
-	- b.Did the fact check site declare it true, mostly true, false, very false.
+	- [A video shows a former employee of the Harris County Democratic Party in Texas screaming at a small child outside of Vice President Kamala Harris’ Houston rally on Friday](https://apnews.com/article/fact-check-misinformation-houston-rally-confrontation-99af1f80eb43d31966cae8e68dbc3415)
+	- False
 	- c.Summarize the explanation given.
 
 
