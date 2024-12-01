@@ -83,5 +83,4 @@
 	3. The repeated phrase "It is well known" in Harris's statement is used to suggest that her claims about Trump are widely accepted and therefore true. However, this argument relies on the assumption of popularity or common belief rather than providing specific evidence or reasoning to support the claims.
 	4. Voters who tend to be swayed by social proof, the idea that if many others believe something, it must be true. Harris’s statement appeals to this tendency by framing her claims as part of a collective understanding, persuading those who trust majority opinion over critical analysis.
 
-
-[Fact Checking]
+[[Fact Checking]]
