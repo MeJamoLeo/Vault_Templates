@@ -27,7 +27,32 @@
 > Answers 1-4 above should add to 400 or more words
 
 
-
+- [o] Research a list of interest groups based on your interests or future profession.
+- [o] Select one interest group that you want to focus on.
+	- [National Restaurant Association | National Restaurant Association](https://restaurant.org)
+- [o] Note the name of the group and find its official website.
+	- National Restaurant Association
+	- https://restaurant.org
+- [o] Save the website link for reference.
+- [o] Navigate to the "About Us" or "Our Mission" section of the group's website.
+	- https://restaurant.org/about-us/what-we-do/our-mission/
+- [o] Summarize its founding history and mission in a few sentences.
+- [ ] Write down key details, such as founding year, purpose, and notable achievements.
+- [ ] Browse the site for their key focus areas or issues (look under menus like “Issues,” “Advocacy,” or “What We Do”).
+- [ ] Choose one or two issues the group focuses on and read the related content.
+- [ ] Summarize the group’s position on these issues, including any evidence or arguments they provide.
+- [ ] Look for sections that urge users to "Take Action" or “Get Involved.”
+- [ ] Identify how the group persuades readers to care about their causes (e.g., emotional language, statistics, success stories).
+- [ ] Write a brief analysis of the tone and strategies used in their messaging.
+- [ ] Search the website for endorsements (check menus like “News,” “Endorsements,” or “Campaigns”).
+- [ ] Note whether the group has endorsed a candidate in the current election campaign.
+- [ ] they have, summarize their reasoning for the endorsement.
+- [ ] not, deduce which political party or candidate their views align with, and explain your reasoning.
+- [ ] Consider whether you support the group's goals and why.
+- [ ] Write a brief paragraph explaining your stance, based on what you’ve learned about the group and its activities.
+- [ ] Combine your answers from Tasks 1-6 into a single document.
+- [ ] Ensure the word count exceeds 400 words.
+- [ ] Proofread for clarity and coherence.
 
 
 
