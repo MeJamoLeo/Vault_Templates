@@ -61,7 +61,7 @@
 - [Factcheck.org](https://acconline.austincc.edu/webapps/blackboard/content/factcheck.org) 
 	- [Typo in Trump's Name on Ballot Review Screen Is Not 'Election Fraud' - FactCheck.org](https://www.factcheck.org/2024/11/typo-in-trumps-name-on-ballot-review-screen-is-not-election-fraud/)
 	- False
-	- FactCheck investigated
+	- On Instagram, there is a post that shows a video former President Donald Trump's name is misspelled as "Triump" on a ballot review screen. The accompanying text questions, "Why is there an I in Donald J Trump's name?" The error was claimed on social media as "election fraud". FactCheck.org determined this claim to be false. The misspelling occurred on an optional ballot review screen in Washington County, Virginia, due to a typographical error. Election officials clarified that this error appeared only on the review screen, not on the actual paper ballots, and did not affect vote tabulation or results. The optional review screen is activated only if a voter specifically requests it before inserting their ballot. Out of over 10,000 voters in the county, fewer than twenty used this 
 - [Apnews.com/ap-fact-check](http://3.apnews.com/ap-fact-check)
 	- a.Copy the quote
 	- b.Did the fact check site declare it true, mostly true, false, very false.
