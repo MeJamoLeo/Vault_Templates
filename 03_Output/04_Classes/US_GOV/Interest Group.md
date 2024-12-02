@@ -44,6 +44,9 @@
 	- [Swipe Fees | National Restaurant Association](https://restaurant.org/issues-and-advocacy/policy-agenda/swipefees/)
 	- [Tip Credit | National Restaurant Association](https://restaurant.org/issues-and-advocacy/policy-agenda/tipping/)
 - [ ] Summarize the group’s position on these issues, including any evidence or arguments they provide. **Part B**
+	- The National Restaurant Association (NRA) advocates for two critical issues affecting the restaurant industry.
+	  The first issue is Credit Card Swipe Fees. The NRA supports the Credit Card Competition Act (CCCA) to lower swipe fees, which are very high in the U.S. because only two companies control most of the credit card market. These fees have doubled in the last ten years and are the third biggest cost for restaurants, after food and labor. The CCCA will reduce fees, improve security, and save businesses and customers about $15 billion a year. Without this law, the fees will keep rising, which is a big problem for small restaurants.
+	  
 - [ ] Look for sections that urge users to "Take Action" or “Get Involved.”
 - [ ] Identify how the group persuades readers to care about their causes (e.g., emotional language, statistics, success stories). **Part C**
 - [ ] Write a brief analysis of the tone and strategies used in their messaging.
