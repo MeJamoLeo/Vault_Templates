@@ -1,6 +1,0 @@
-[[Data Structure]]
-[[Logic]]
-[[UI Design Draft]]
-[[Game Object]]
-[[Property Object]]
-[[Card Object]]
