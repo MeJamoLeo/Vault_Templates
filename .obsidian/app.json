@@ -3,7 +3,7 @@
   "vimMode": true,
   "alwaysUpdateLinks": true,
   "trashOption": "local",
-  "livePreview": true,
+  "livePreview": false,
   "showUnsupportedFiles": true,
   "newFileLocation": "current",
   "promptDelete": false,
