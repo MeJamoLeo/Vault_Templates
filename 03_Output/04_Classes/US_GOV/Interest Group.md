@@ -49,6 +49,7 @@
 	  
 - [ ] Look for sections that urge users to "Take Action" or “Get Involved.”
 - [ ] Identify how the group persuades readers to care about their causes (e.g., emotional language, statistics, success stories). **Part C**
+	- [ ] [Get Involved | National Restaurant Association](https://restaurant.org/issues-and-advocacy/get-involved/)
 - [ ] Write a brief analysis of the tone and strategies used in their messaging.
 - [ ] Search the website for endorsements (check menus like “News,” “Endorsements,” or “Campaigns”).
 - [ ] Note whether the group has endorsed a candidate in the current election campaign. **Part 3**
