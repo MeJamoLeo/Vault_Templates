@@ -55,6 +55,11 @@
 - [ ] Note whether the group has endorsed a candidate in the current election campaign. **Part 3**
 	- [ ] if they have, summarize their reasoning for the endorsement.
 	- [ ] if not, deduce which political party or candidate their views align with, and explain your reasoning.
+	      共和党支持者が好きそうな支持が多い．
+	      まず，最低賃金の引き上げには否定的．
+	      労働者の保護政策にっは慎重．
+	      チップの非課税．
+	      基本的に規制や税制を緩和し，人件費や規制コスト増を抑えようとするため，中小規模レストランの経営者にとっては有利に働く可能性が高い．
 - [ ] Consider whether you support the group's goals and why.
 - [ ] Write a brief paragraph explaining your stance, based on what you’ve learned about the group and its activities. **Part 4**
 - [ ] Combine your answers from Tasks 1-6 into a single document.
