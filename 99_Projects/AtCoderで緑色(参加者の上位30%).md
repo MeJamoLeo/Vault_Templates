@@ -1,0 +1,61 @@
+- ## [[AtCoderで緑色(参加者の上位30%)]]
+	- ### 現状の把握
+		- 現状LP：155
+		- 今のペースだと最低でも64回コンテストに参加する必要がある．
+			- (800 - 155)/10 > 64
+			- 448日 = 1年2ヶ月ちょっと`
+	- ### 時間の見積もり
+		- 緑色になるために必要なLP:  800
+		- 平均的なLPの上昇値:  10
+		- 直近のLPの上昇値:  8
+	- ###  ランク別の戦略
+		- #### 灰色〜茶色 (~400)
+			- **方針**
+				- [rng\_58がおすすめする練習の仕方 - 茶色になるために - AtCoderInfo](https://info.atcoder.jp/entry/2024/03/18/160342)
+			- **手段**
+				- [NaviSteps](https://docs.google.com/spreadsheets/d/1p4rGvtYcqk9hfsl8PSeMlsNqFu34o8DOGM78MBn7dg4/edit?gid=0#gid=0)
+		- #### 茶色〜緑 (~800)
+			- **方針**
+				- [レッドコーダーが教える、競プロ・AtCoder上達のガイドライン【中級編：目指せ水色コーダー！】 #競技プログラミング - Qiita](https://qiita.com/e869120/items/eb50fdaece12be418faa#2-3-%E5%88%86%E9%87%8E%E5%88%A5%E5%88%9D%E4%B8%AD%E7%B4%9A%E8%80%85%E3%81%8C%E8%A7%A3%E3%81%8F%E3%81%B9%E3%81%8D%E9%81%8E%E5%8E%BB%E5%95%8F%E7%B2%BE%E9%81%B8-100-%E5%95%8F)
+			- **手段**
+				- 優先度の高いアルゴリズムから練習していく
+					- [全探索：全列挙](https://qiita.com/e869120/items/eb50fdaece12be418faa#%E5%85%A8%E6%8E%A2%E7%B4%A2%E5%85%A8%E5%88%97%E6%8C%99)
+					- [全探索：工夫して通り数を減らす全列挙](https://qiita.com/e869120/items/eb50fdaece12be418faa#%E5%85%A8%E6%8E%A2%E7%B4%A2%E5%B7%A5%E5%A4%AB%E3%81%97%E3%81%A6%E9%80%9A%E3%82%8A%E6%95%B0%E3%82%92%E6%B8%9B%E3%82%89%E3%81%99%E5%85%A8%E5%88%97%E6%8C%99)
+					- [全探索：ビット全探索](https://qiita.com/e869120/items/eb50fdaece12be418faa#%E5%85%A8%E6%8E%A2%E7%B4%A2%E3%83%93%E3%83%83%E3%83%88%E5%85%A8%E6%8E%A2%E7%B4%A2)
+					- [全探索：順列全探索](https://qiita.com/e869120/items/eb50fdaece12be418faa#%E5%85%A8%E6%8E%A2%E7%B4%A2%E9%A0%86%E5%88%97%E5%85%A8%E6%8E%A2%E7%B4%A2)
+					- [二分探索](https://qiita.com/e869120/items/eb50fdaece12be418faa#%E4%BA%8C%E5%88%86%E6%8E%A2%E7%B4%A2-1)
+					- [深さ優先探索](https://qiita.com/e869120/items/eb50fdaece12be418faa#%E6%B7%B1%E3%81%95%E5%84%AA%E5%85%88%E6%8E%A2%E7%B4%A2)
+					- [幅優先探索](https://qiita.com/e869120/items/eb50fdaece12be418faa#%E5%B9%85%E5%84%AA%E5%85%88%E6%8E%A2%E7%B4%A2)
+					- [動的計画法：ナップザック DP](https://qiita.com/e869120/items/eb50fdaece12be418faa#%E5%8B%95%E7%9A%84%E8%A8%88%E7%94%BB%E6%B3%95%E3%83%8A%E3%83%83%E3%83%97%E3%82%B6%E3%83%83%E3%82%AF-dp)
+					- [動的計画法：区間 DP](https://qiita.com/e869120/items/eb50fdaece12be418faa#%E5%8B%95%E7%9A%84%E8%A8%88%E7%94%BB%E6%B3%95%E5%8C%BA%E9%96%93-dp)
+					- [動的計画法：bit DP](https://qiita.com/e869120/items/eb50fdaece12be418faa#%E5%8B%95%E7%9A%84%E8%A8%88%E7%94%BB%E6%B3%95bit-dp)
+					- [動的計画法：その他](https://qiita.com/e869120/items/eb50fdaece12be418faa#%E5%8B%95%E7%9A%84%E8%A8%88%E7%94%BB%E6%B3%95%E3%81%9D%E3%81%AE%E4%BB%96)
+					- [最短経路問題：ダイクストラ法](https://qiita.com/e869120/items/eb50fdaece12be418faa#%E6%9C%80%E7%9F%AD%E7%B5%8C%E8%B7%AF%E5%95%8F%E9%A1%8C%E3%83%80%E3%82%A4%E3%82%AF%E3%82%B9%E3%83%88%E3%83%A9%E6%B3%95)
+					- [最短経路問題：ワーシャルフロイド法](https://qiita.com/e869120/items/eb50fdaece12be418faa#%E6%9C%80%E7%9F%AD%E7%B5%8C%E8%B7%AF%E5%95%8F%E9%A1%8C%E3%83%AF%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%95%E3%83%AD%E3%82%A4%E3%83%89%E6%B3%95)
+					- [最小全域木問題](https://qiita.com/e869120/items/eb50fdaece12be418faa#%E6%9C%80%E5%B0%8F%E5%85%A8%E5%9F%9F%E6%9C%A8%E5%95%8F%E9%A1%8C)
+					- [高速な素数判定法](https://qiita.com/e869120/items/eb50fdaece12be418faa#%E9%AB%98%E9%80%9F%E3%81%AA%E7%B4%A0%E6%95%B0%E5%88%A4%E5%AE%9A%E6%B3%95-1)
+					- [高速なべき乗計算](https://qiita.com/e869120/items/eb50fdaece12be418faa#%E9%AB%98%E9%80%9F%E3%81%AA%E3%81%B9%E3%81%8D%E4%B9%97%E8%A8%88%E7%AE%97)
+					- [逆元を使う問題](https://qiita.com/e869120/items/eb50fdaece12be418faa#%E9%80%86%E5%85%83%E3%82%92%E4%BD%BF%E3%81%86%E5%95%8F%E9%A1%8C)
+					- [累積和](https://qiita.com/e869120/items/eb50fdaece12be418faa#%E7%B4%AF%E7%A9%8D%E5%92%8C-1)
+					- [Union-Find](https://qiita.com/e869120/items/eb50fdaece12be418faa#union-find-1)
+					- [その他のテクニック](https://qiita.com/e869120/items/eb50fdaece12be418faa#%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AE%E3%83%86%E3%82%AF%E3%83%8B%E3%83%83%E3%82%AF)
+					- [実装問題](https://qiita.com/e869120/items/eb50fdaece12be418faa#%E5%AE%9F%E8%A3%85%E5%95%8F%E9%A1%8C)
+					- [数学的な問題](https://qiita.com/e869120/items/eb50fdaece12be418faa#%E6%95%B0%E5%AD%A6%E7%9A%84%E3%81%AA%E5%95%8F%E9%A1%8C)
+					- [ ] [[全探索]]
+					- [ ] [[二分探索]]
+					- [ ] [[組み合わせの全探索]]
+					- [ ] [[素数判定法]]
+					- [ ] [[役数列挙]]
+					- [ ] [[ユークリッドの互除法]]
+					- [ ] [[モンテカルロ法]]
+					- [ ] [[選択ソート]]
+					- [ ] [[再帰関数]]
+					- [ ] [[分割統治法]]
+					- [ ] [[マージソート]]
+					- [ ] [[動的計画法]]
+					- [ ] [[配列の二分探索]]
+					- [ ] [[計算幾何]]
+					- [ ] [[累積話]]
+					- [ ] [[幅優先探索]]
+					- [ ] [[深さ優先探索]]
+					- [ ] [[繰り返し2乗法]]
