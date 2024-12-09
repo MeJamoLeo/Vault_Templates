@@ -25,9 +25,6 @@
 
 1. Secure Scheduling, July 1, 2017
 2. On September 19, 2016, the Seattle City Council passed the Secure Scheduling Ordinance (SSO), CB 118765, by a unanimous vote.
-3. This rule tells big retail and food companies how to give workers clear and fair work schedules. There are four main points. Advance Notice of Schedules: Employers must tell workers their schedule at least 14 days before it starts. Compensation for Schedule Changes: If employers change the schedule with less than 14 days' notice, they must pay workers extra money. Rest Between Shifts: Workers must have at least 10 hours off between shifts. If they work with less than 10 hours of rest, they should get extra pay (time-and-a-half).
-- **Access to Extra Hours:** Employers must give extra work hours to current part-time workers before hiring new people.
-
-**Who Does It Cover?**  
-This rule applies to retail and food businesses with 500 or more employees worldwide. For full-service restaurants, the rule only applies if they have 40 or more restaurants worldwide.
+3. This rule tells big retail and food companies how to give workers clear and fair work schedules. There are four main points. Advance Notice of Schedules: Employers must tell workers their schedule at least 14 days before it starts. Compensation for Schedule Changes: If employers change the schedule with less than 14 days' notice, they must pay workers extra money. Rest Between Shifts: Workers must have at least 10 hours off between shifts. If they work with less than 10 hours of rest, they should get extra pay (time-and-a-half). Access to Extra Hours: Employers must give extra work hours to current part-time workers before hiring new people. This rule applies to retail and food businesses with 500 or more employees worldwide. For full-service restaurants, the rule only applies if they have 40 or more restaurants worldwide.
+4. 
 [[Ch7 Polling]]
