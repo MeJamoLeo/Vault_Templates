@@ -26,9 +26,12 @@
 > ```
 > - 3.Still on the group’s website, look for any endorsements (look in every menu link because it is not always titled “endorsements”, and find whether the interest group has endorsed any presidential candidate in the current election campaign. If they have, include the following: The candidate they endorsed and a summary of what they wrote about that candidate, or the opposing candidate. If they have not, explain whether you think their views would most likely be consistent with the Democratic candidate or the Republican candidate and explain why.
 > ```
-> このAssosiationは全体的に労働者保護よりも，経営者側の視点の政策が多いため
+> このAssosiationは全体的に労働者保護よりも，経営者側の視点の政策が多いため共和党の思想に近いと言えるだろう．この団体は最低賃金の引き上げに対して慎重な姿勢を示し，チップ制度を支持している．これは人件費を抑えることに繋がり，ビジネスオーナーにとっては有利に働く．従って共和党の思想に近い．
 > ```
 > - 4.Explain your thinking: Do you support what the group’s goals are, explain.
+> ```
+> 私はこの団体に同意できる部分もあるが，全体的にはサポートしない．なぜなら全ての主張が経営者目線であり，消費者目線ではないからだ．チップ制度は消費者に
+> ```
 > 
 >   
 > Answers 1-4 above should add to 400 or more words
