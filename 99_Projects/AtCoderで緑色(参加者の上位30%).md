@@ -59,3 +59,6 @@
 					- [ ] [[幅優先探索]]
 					- [ ] [[深さ優先探索]]
 					- [ ] [[繰り返し2乗法]]
+> [!cite]
+> [AtCoderProblems](https://kenkoooo.com/atcoder/#/table/)<br>
+> [個人的なデータ](https://kenkoooo.com/atcoder/#/user/MeJamoLeo?userPageTab=All)
