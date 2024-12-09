@@ -10,10 +10,20 @@
 >  <br><br> 
 > 
 > - 1.Name the interest group you chose and include a link to its website.
+> ```
+> National Restaurant Association
+> ```
 > - 2.Research the Interest Group. Go to its website and look around in the various menu sections and 
 > 	- a.Provide a brief overview of the interest group you have selected, including its founding and mission
 > 	- b.Explain the interest group’s position on one or two issues. For example, a group that’s focused on ending the death penalty might discuss issues within that area such as unreliable eyewitness testimony, jury bias, etc. A broad group like the NAACP might discuss criminal justice, health care and other topics.
 > 	- c.Analyze the language used for the issue or issues you looked at. We know that the group needs people to care about their issues, and see that working on those issues is urgently needed, and that accept the groups’ recommendations. Explain how the group seeks to do this (this could be in a section called “Take Action” or “Get Involved” but look in every menu link so you don’t overlook it.
+> ```
+> National Restaurant Association was founded in 1919 and represents the restaurant and foodservice industry in United States. Its mission is to support the success of restaurants and related businesses.
+> 
+> National Restaurant Association is concerned about high credit card processing fees (called “swipe fees”). In the United States, just two companies control 80% of the credit card market, which makes these fees very expensive. These costs are so high that, for many restaurants, paying swipe fees is their third biggest expense after food and labor. To fix this problem, the Association supports the Credit Card Competition Act. This law would create more competition in the credit card market, lower swipe fees, improve security, and save businesses and consumers about $15 billion a year.
+>
+> The Association also supports keeping the current “tip credit” system. In full-service restaurants, the tip credit allows servers to earn good wages through tips, often more than the minimum wage, and helps restaurants keep prices affordable. Because servers can earn a high hourly rate from tips, many prefer this system. Most restaurant customers also like the tip credit because it keeps their favorite dining experiences more affordable.
+> ```
 > - 3.Still on the group’s website, look for any endorsements (look in every menu link because it is not always titled “endorsements”, and find whether the interest group has endorsed any presidential candidate in the current election campaign. If they have, include the following: The candidate they endorsed and a summary of what they wrote about that candidate, or the opposing candidate. If they have not, explain whether you think their views would most likely be consistent with the Democratic candidate or the Republican candidate and explain why.
 > - 4.Explain your thinking: Do you support what the group’s goals are, explain.
 > 
