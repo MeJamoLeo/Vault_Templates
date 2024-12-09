@@ -57,7 +57,7 @@
 	  Federal and state election officials have refuted allegations of widespread fraud in the 2024 election, including assertions that Starlink interfered with vote counts. They emphasized that established systems ensure votes are accurately and fairly tabulated.
 	  In key swing states such as Arizona, Georgia, Michigan, Nevada, North Carolina, Pennsylvania, and Wisconsin, election security protocols mandate that voting equipment remains disconnected from the internet during ballot counting. Experts confirm that, generally, voting machines are not connected to the internet, making external manipulation via technologies like Starlink implausible.
 	  Additionally, reports of a Starlink satellite reentering Earth's atmosphere and exploding on November 10 were noted. Some people spread false information by linking its reentry to election interference. They claimed that the "Starlink satellite was destroyed" as proof of election manipulation. However, experts clarified that such reentries occur almost daily and are not unusual, further debunking the notion that this event was linked to election interference.
-	  In sum, PolitiFact rated the claim as "Pants on Fire," signifying it as a blatantly false statement.
+	  In sum, Politifact rated the claim as "Pants on Fire," signifying it as a blatantly false statement.
 - [Factcheck.org](https://acconline.austincc.edu/webapps/blackboard/content/factcheck.org) 
 	- [Typo in Trump's Name on Ballot Review Screen Is Not 'Election Fraud' - FactCheck.org](https://www.factcheck.org/2024/11/typo-in-trumps-name-on-ballot-review-screen-is-not-election-fraud/)
 	- False
