@@ -26,7 +26,5 @@
 1. Secure Scheduling, July 1, 2017
 2. On September 19, 2016, the Seattle City Council passed the Secure Scheduling Ordinance (SSO), CB 118765, by a unanimous vote.
 3. This rule tells big retail and food companies how to give workers clear and fair work schedules. There are four main points. Advance Notice of Schedules: Employers must tell workers their schedule at least 14 days before it starts. Compensation for Schedule Changes: If employers change the schedule with less than 14 days' notice, they must pay workers extra money. Rest Between Shifts: Workers must have at least 10 hours off between shifts. If they work with less than 10 hours of rest, they should get extra pay (time-and-a-half). Access to Extra Hours: Employers must give extra work hours to current part-time workers before hiring new people. This rule applies to retail and food businesses with 500 or more employees worldwide. For full-service restaurants, the rule only applies if they have 40 or more restaurants worldwide.
-4. シアトルのセキュアスケジューリング条例は、労働者のスケジュールの予測可能性と安定性を高めることを目的としています。このような法律をテキサス州で導入することについて、経営者，消費者，労働者，政府の視点で考える．
-   経営者にとって，テキサス州はビジネスがしやすい地域になっている．最低賃金は連邦法のままである．また，人的リソースも人口が多いため不足しにくい．人口が多いことはより多くの売り上げが期待できる．このセキュアスケジューリングは経営者に追加のコストを与え，商品の値段の上昇につながり，それは経営者と消費者に悪影響が予想される．
-   消費者にとっては，大企業の商品の値上げは一時的には生活を苦しめるだろう．しかし，大企業
+4. シアトルのセキュアスケジューリング条例は、労働者のスケジュールの予測可能性と安定性を高めることを目的としています。経営者にとって，人件費や管理コストの増加，需要変動への柔軟な対応が難しくなるだろう．また労務管理の改善が求められるだろう．また，テキサスの一部地域ではハリケーンの被害が多くあり，それは14日前に予知できるものではないかもしれない．消費者にとっては商品やサービスの価格上昇，ピーク時の対応力の低下が懸念されるだろう．しかし，従業員の安定したスケジュールがサービス品質向上につながる可能性もあるだろう．労働者にとってはスケジュールの安定による生活の質の向上が期待される一方で，非正規，移民労働者が敬遠される可能性や法的保護の不均一性が顕著になるだろう．これらより，テキサス州にSecure Schedulingを導入するのは慎重になる必要があると考える．
 [[Ch7 Polling]]
