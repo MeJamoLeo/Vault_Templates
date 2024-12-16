@@ -3,4 +3,14 @@
 
 ## 重要なポイント
 - Waylandはウィンドウシステムのひとつ。
-	- 
+	- Linuxでは
+		- Wayland, X11
+	- Windows
+		- DWM
+	- MacOS
+		- Quartz Compositor
+	- 他にも
+		- Mir, IoTとかに使われる
+		- SurfaceFlinger, Android
+		- Photon MicroGUI(QNX)
+		- などなど
