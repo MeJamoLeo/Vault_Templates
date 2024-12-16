@@ -3,6 +3,9 @@
 
 ## 共通
 - git
+- zathura
+- chromium
+- kitty
 - 
 ## MacOS
 ## NixOS
