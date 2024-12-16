@@ -1,0 +1,1 @@
+[](https://noghartt.dev/blog/set-up-nix-on-macos-using-flakes-nix-darwin-and-home-manager/?utm_source=chatgpt.com)
