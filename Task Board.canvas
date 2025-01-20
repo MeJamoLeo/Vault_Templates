@@ -19,7 +19,8 @@
 		{"id":"f7a05e1bb22f4a34","type":"text","text":"OS自作入門(みかん本)","x":1080,"y":-667,"width":250,"height":50},
 		{"id":"9a78b2751f4ba740","type":"file","file":"99_Projects/Web Browser Engineering from Scratch.md","x":1080,"y":-607,"width":320,"height":50},
 		{"id":"110c0d5bd56a93e5","type":"text","text":"nix-darwin","x":1949,"y":-720,"width":250,"height":60},
-		{"id":"28778a4bf01714aa","type":"text","text":"nix-os","x":1949,"y":-620,"width":250,"height":60}
+		{"id":"28778a4bf01714aa","type":"text","text":"nix-os","x":1949,"y":-620,"width":250,"height":60},
+		{"id":"ad23892b5d5a436a","x":2420,"y":-690,"width":250,"height":60,"type":"text","text":"余白を作るメモアプリ"}
 	],
 	"edges":[]
 }
