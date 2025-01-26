@@ -1,0 +1,3 @@
+使ったもの
+- Ollama
+	- Brew
