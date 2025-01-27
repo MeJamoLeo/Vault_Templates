@@ -2,15 +2,7 @@
 # 日時を取得
 # 変数に保存（YYYY.MMを保存）
 # 既存のスプレッドシートを取得 - 新規帳 2025（高の原）
-# セルの値を取得
-+get_cells_1:
-  action>: GetCells
-  display_name>: 'セルの値を取得'
-  spreadsheet: +get_spreadsheet_2
-  range: '${sheetname}!C7:AJ'
-  findAll: true
-  private: false
-
+# セルの値を取得 - C7:AJ
 # テーブルデータ（二次元配列）を変換
 +convert_table_1:
   action>: ConvertTable
