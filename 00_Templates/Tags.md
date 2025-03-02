@@ -1,3 +1,10 @@
+---
+tags:
+  - "#thinking"
+  - "#productivity"
+  - "#tag-management"
+  - "#knowledge-organization"
+---
 タグの設計と命名規則
 
 # 1. 一貫性のある命名

@@ -1,3 +1,12 @@
+---
+tags:
+  - "#thinking"
+  - "#productivity"
+  - "#time-management"
+  - "#action-oriented-thinking"
+  - "#strategic-thinking"
+  - "#motivation"
+---
 - すぐやれという主張
 	- 動いてみないとわからない
 		- 動いてみないとわからないと言う主張は同意する
