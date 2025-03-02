@@ -1,9 +1,11 @@
-# #web-browser-engineering  
-# #browser-internals  
-# #react-foundation  
-# #web-development  
-# #rendering-pipeline  
-
+---
+tags:
+  - "#web-browser-engineering"
+  - "#browser-internals"
+  - "#web-development"
+  - "#rendering-pipeline"
+  - "#browser-architecture"
+---
 > [!cite]
 > [Web Browser Engineering](https://browser.engineering)
 > 

@@ -1,3 +1,12 @@
+---
+tags:
+  - "#strategic-thinking"
+  - "#political-discourse"
+  - "#debate-analysis"
+  - "#interest-groups"
+  - "#political-advocacy"
+  - "#restaurant-industry"
+---
 > **Activity #9 – Interest Groups** 
 > 
 > Interest groups want to influence governmental policy and most also want to influence who wins election to the national and state political offices. For this activity,  choose one interest group to focus on and write up answers to questions 1-5. Examples of interest groups include these below, and [groups on this list](https://usapoliticaldatabase.weebly.com/list-of-interest-groups.html) :
