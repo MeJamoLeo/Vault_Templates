@@ -9,78 +9,78 @@ tags:
 
 ```js
 function extractPropertyData() {
-    let data = {};
+	let data = {};
 
-    // h2 タグの下のすべてのデータを取得する関数
-    function getSectionData(h2Text) {
-        let sections = document.querySelectorAll("h2");
-        for (let h2 of sections) {
-            if (h2.innerText.trim() === h2Text) {
-                let sectionData = {};
-                let nextElement = h2.nextElementSibling;
-                
-                while (nextElement && nextElement.tagName !== "H2") {
-                    if (nextElement.classList.contains("card")) {
-                        let labels = nextElement.querySelectorAll(".p-label-title");
-                        labels.forEach(label => {
-                            let valueElement = label.closest(".p-label").nextElementSibling;
-                            sectionData[label.innerText.trim()] = valueElement ? valueElement.innerText.trim() : "";
-                        });
-                    }
-                    nextElement = nextElement.nextElementSibling;
-                }
-                return sectionData;
-            }
-        }
-        return {};
-    }
+	// h2 タグの下のすべてのデータを取得する関数
+	function getSectionData(h2Text) {
+		let sections = document.querySelectorAll("h2");
+		for (let h2 of sections) {
+			if (h2.innerText.trim() === h2Text) {
+				let sectionData = {};
+				let nextElement = h2.nextElementSibling;
 
-    // 各セクションごとにデータを取得
-    data.basic_info = getSectionData("基本情報");
-    data.category = getSectionData("分類");
-    data.transaction = getSectionData("取引");
-    data.contact = getSectionData("担当");
-    data.price = getSectionData("価格");
-    data.dimensions = getSectionData("面積・不動産ＩＤ");
-    data.location = getSectionData("所在");
-    data.transport = getSectionData("交通");
-    data.floor_plan = getSectionData("間取");
-    data.building = getSectionData("建物");
-    data.maintenance = getSectionData("維持");
-    data.parking = getSectionData("駐車場");
-    data.current_status = getSectionData("現況");
-    data.delivery = getSectionData("引渡");
-    data.fees = getSectionData("報酬・負担割合");
-    data.regulations = getSectionData("法規");
-    data.ownership = getSectionData("権利");
-    data.land = getSectionData("土地");
-    data.roads = getSectionData("接道");
-    data.environment = getSectionData("環境");
-    data.equipment = getSectionData("設備・条件・住宅性能等");
-    data.remarks = getSectionData("備考");
+				while (nextElement && nextElement.tagName !== "H2") {
+					if (nextElement.classList.contains("card")) {
+						let labels = nextElement.querySelectorAll(".p-label-title");
+						labels.forEach(label => {
+							let valueElement = label.closest(".p-label").nextElementSibling;
+							sectionData[label.innerText.trim()] = valueElement ? valueElement.innerText.trim() : "";
+						});
+					}
+					nextElement = nextElement.nextElementSibling;
+				}
+				return sectionData;
+			}
+		}
+		return {};
+	}
 
-    // 画像取得
-    data.images = [];
-    document.querySelectorAll(".col-image").forEach(el => {
-        let fileEl = el.querySelector(".p-label-title");
-        if (fileEl && fileEl.innerText.includes("ファイル名")) {
-            let file = fileEl.closest(".p-label").nextElementSibling?.innerText.trim();
-            let img = el.querySelector("div[style*='background']")?.style.backgroundImage;
-            let url = img ? img.match(/url\("(.*?)"\)/)[1] : null;
-            if (file && url) {
-                data.images.push({ file, url });
-            }
-        }
-    });
+	// 各セクションごとにデータを取得
+	data["基本情報"] = getSectionData("基本情報");
+	data["分類"] = getSectionData("分類");
+	data["取引"] = getSectionData("取引");
+	data["担当"] = getSectionData("担当");
+	data["価格"] = getSectionData("価格");
+	data["面積・不動産ＩＤ"] = getSectionData("面積・不動産ＩＤ");
+	data["所在"] = getSectionData("所在");
+	data["交通"] = getSectionData("交通");
+	data["間取"] = getSectionData("間取");
+	data["建物"] = getSectionData("建物");
+	data["維持"] = getSectionData("維持");
+	data["駐車場"] = getSectionData("駐車場");
+	data["現況"] = getSectionData("現況");
+	data["引渡"] = getSectionData("引渡");
+	data["報酬・負担割合"] = getSectionData("報酬・負担割合");
+	data["法規"] = getSectionData("法規");
+	data["権利"] = getSectionData("権利");
+	data["土地"] = getSectionData("土地");
+	data["接道"] = getSectionData("接道");
+	data["環境"] = getSectionData("環境");
+	data["設備・条件・住宅性能等"] = getSectionData("設備・条件・住宅性能等");
+	data["備考"] = getSectionData("備考");
 
-    // PDF図面取得
-    data.documents = [];
-    let pdfFile = getSectionData("物件図面")["ファイル名"];
-    if (pdfFile) {
-        data.documents.push({ file: pdfFile, url: "#" });
-    }
+	// 画像取得
+	data.images = [];
+	document.querySelectorAll(".col-image").forEach(el => {
+		let fileEl = el.querySelector(".p-label-title");
+		if (fileEl && fileEl.innerText.includes("ファイル名")) {
+			let file = fileEl.closest(".p-label").nextElementSibling?.innerText.trim();
+			let img = el.querySelector("div[style*='background']")?.style.backgroundImage;
+			let url = img ? img.match(/url\("(.*?)"\)/)[1] : null;
+			if (file && url) {
+				data.images.push({ file, url });
+			}
+		}
+	});
 
-    return data;
+	// PDF図面取得
+	data.documents = [];
+	let pdfFile = getSectionData("物件図面")["ファイル名"];
+	if (pdfFile) {
+		data.documents.push({ file: pdfFile, url: "#" });
+	}
+
+	return data;
 }
 ```
 
