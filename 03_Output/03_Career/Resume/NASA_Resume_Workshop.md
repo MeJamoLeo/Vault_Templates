@@ -1,3 +1,13 @@
+---
+tags:
+  - "#NASA"
+  - "#resume"
+  - "#internship"
+  - "#application"
+  - "#resume-writing"
+  - "#job-search"
+  - "#career-advice"
+---
 > [!note]
 > > [!todo]
 > > 何をすべきかを明記する

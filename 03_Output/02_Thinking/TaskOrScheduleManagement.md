@@ -1,3 +1,12 @@
+---
+tags:
+  - "#thinking"
+  - "#productivity"
+  - "#time-management"
+  - "#motivation-sustainment"
+  - "#japanese-thought-patterns"
+  - "#procrastination-analysis"
+---
 - 思考ポルノ vs すぐやれ派閥
 	- 思考ポルノ
 		- 何かを考えることで，目の前の具体的な作業ややるべきことの手を止めること．

@@ -1,3 +1,12 @@
+---
+tags:
+  - "#political-discourse"
+  - "#debate-analysis"
+  - "#political-advocacy"
+  - "#fact-checking"
+  - "#misinformation"
+  - "#social-media-analysis"
+---
 > **Activity #8 – Fact checking**
 > 
 > There has likely never been more lying and misinformation in politics in America than there is today. This is because groups and individuals seem to make stuff up and post it on social media and other people then spread that misinformation thinking it’s true because they heard it or read it somewhere. 

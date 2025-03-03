@@ -1,3 +1,11 @@
+---
+tags:
+  - "#political-discourse"
+  - "#political-advocacy"
+  - "#labor-law"
+  - "#workers-rights"
+  - "#texas-politics"
+---
 > [Civil Rights & Liberties Assignment](https://acconline.austincc.edu/webapps/blackboard/content/listContent.jsp?course_id=_922732_1&content_id=_27006412_1# "Alternative formats")
 > 
 > **This was initially going to be part of Module 4 on civil rights and liberties but it did not get posted properly so we'll move it to this module.**

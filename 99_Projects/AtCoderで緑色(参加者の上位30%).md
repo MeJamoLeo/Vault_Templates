@@ -1,3 +1,10 @@
+---
+tags:
+  - "#strategic-thinking"
+  - "#skill-development"
+  - "#algorithm-practice"
+  - "#atcoder-green-coder"
+---
 - ## [[AtCoderで緑色(参加者の上位30%)]]
 	- ### 現状の把握
 		- 現状LP：155

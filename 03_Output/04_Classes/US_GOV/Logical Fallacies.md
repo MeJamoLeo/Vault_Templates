@@ -1,3 +1,11 @@
+---
+tags:
+  - "#thinking"
+  - "#strategic-thinking"
+  - "#logical-fallacies"
+  - "#political-discourse"
+  - "#debate-analysis"
+---
 ![14 Logical Fallacies in 14 Minutes - YouTube](https://www.youtube.com/watch?v=4QepFGJj74o)
 このLogical Fallaciesは死ぬほどある．
 この動画ではいくつか紹介している.
