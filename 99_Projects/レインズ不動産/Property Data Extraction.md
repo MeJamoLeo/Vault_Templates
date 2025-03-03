@@ -1,4 +1,89 @@
+---
+tags:
+  - "#web-development"
+  - "#web-scraping"
+  - "#real-estate-data"
+  - "#javascript"
+---
 # **JavaScript ドキュメント: 不動産データ取得スクリプト**
+
+```js
+function extractPropertyData() {
+    let data = {};
+
+    // h2 タグの下のすべてのデータを取得する関数
+    function getSectionData(h2Text) {
+        let sections = document.querySelectorAll("h2");
+        for (let h2 of sections) {
+            if (h2.innerText.trim() === h2Text) {
+                let sectionData = {};
+                let nextElement = h2.nextElementSibling;
+                
+                while (nextElement && nextElement.tagName !== "H2") {
+                    if (nextElement.classList.contains("card")) {
+                        let labels = nextElement.querySelectorAll(".p-label-title");
+                        labels.forEach(label => {
+                            let valueElement = label.closest(".p-label").nextElementSibling;
+                            sectionData[label.innerText.trim()] = valueElement ? valueElement.innerText.trim() : "";
+                        });
+                    }
+                    nextElement = nextElement.nextElementSibling;
+                }
+                return sectionData;
+            }
+        }
+        return {};
+    }
+
+    // 各セクションごとにデータを取得
+    data.basic_info = getSectionData("基本情報");
+    data.category = getSectionData("分類");
+    data.transaction = getSectionData("取引");
+    data.contact = getSectionData("担当");
+    data.price = getSectionData("価格");
+    data.dimensions = getSectionData("面積・不動産ＩＤ");
+    data.location = getSectionData("所在");
+    data.transport = getSectionData("交通");
+    data.floor_plan = getSectionData("間取");
+    data.building = getSectionData("建物");
+    data.maintenance = getSectionData("維持");
+    data.parking = getSectionData("駐車場");
+    data.current_status = getSectionData("現況");
+    data.delivery = getSectionData("引渡");
+    data.fees = getSectionData("報酬・負担割合");
+    data.regulations = getSectionData("法規");
+    data.ownership = getSectionData("権利");
+    data.land = getSectionData("土地");
+    data.roads = getSectionData("接道");
+    data.environment = getSectionData("環境");
+    data.equipment = getSectionData("設備・条件・住宅性能等");
+    data.remarks = getSectionData("備考");
+
+    // 画像取得
+    data.images = [];
+    document.querySelectorAll(".col-image").forEach(el => {
+        let fileEl = el.querySelector(".p-label-title");
+        if (fileEl && fileEl.innerText.includes("ファイル名")) {
+            let file = fileEl.closest(".p-label").nextElementSibling?.innerText.trim();
+            let img = el.querySelector("div[style*='background']")?.style.backgroundImage;
+            let url = img ? img.match(/url\("(.*?)"\)/)[1] : null;
+            if (file && url) {
+                data.images.push({ file, url });
+            }
+        }
+    });
+
+    // PDF図面取得
+    data.documents = [];
+    let pdfFile = getSectionData("物件図面")["ファイル名"];
+    if (pdfFile) {
+        data.documents.push({ file: pdfFile, url: "#" });
+    }
+
+    return data;
+}
+```
+
 
 ## **概要**
 
