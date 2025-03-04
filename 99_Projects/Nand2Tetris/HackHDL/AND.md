@@ -1,3 +1,4 @@
+# Specification
 
 |A|B|A AND B|
 |---|---|---|
@@ -6,7 +7,6 @@
 |1|0|0|
 |1|1|1|
 
----
 
 ```mermaid
 graph LR;
@@ -30,10 +30,14 @@ graph LR;
 ```
 
 ---
-``\
+# Imprementation
+## Logical Expressions
+
+$ A \land B $
+
+## Logical Expressions
 
 
----
 
 ```hdl
 CHIP And {
