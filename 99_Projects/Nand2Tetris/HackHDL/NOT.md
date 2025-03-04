@@ -31,17 +31,15 @@ graph LR;
 
 # Imprementation
 
-  
-
 ~A = A NAND A
 
 ```hdl
 CHIP Not {
-    IN a;
+    IN in;
     OUT out;
     
     PARTS:
-    Nand(a=a, b=a, out=out);
+    Nand(a=in, b=in, out=out);
 }
 ```
 
