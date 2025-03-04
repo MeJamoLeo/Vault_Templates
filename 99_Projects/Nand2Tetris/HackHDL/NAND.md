@@ -4,8 +4,11 @@ tags:
   - "#logic-gates"
   - "#nand-gate"
   - "#truth-table"
+  - "#boolean-algebra"
+  - "#logic-design"
 ---
 
+# Specification
 
 |A|B|A NAND B|
 |---|---|---|
@@ -14,7 +17,6 @@ tags:
 |1|0|1|
 |1|1|0|
 
----
 ```mermaid
 graph LR;
 A0["入力 A"] -->|<span style="color:#a00">0</span>| NAND0;

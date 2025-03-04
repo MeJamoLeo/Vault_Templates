@@ -43,15 +43,13 @@ graph LR;
 
 A _AND_ B = ~(A _NAND_ B)
 
-
-
 ```hdl
 CHIP And {
 	IN a, b;
 	OUT out;
 PARTS:
 	Nand(a=a, b=b, out=nandOut);
-	Not(in=nand
+	Not(in=nandOut, out=notOut);
 }
 ```
 
