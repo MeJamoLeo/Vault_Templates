@@ -2,6 +2,8 @@
 tags:
   - "#nand2tetris"
   - "#logic-gates"
+  - "#nand-gate"
+  - "#truth-table"
 ---
 
 
