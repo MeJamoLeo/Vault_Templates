@@ -6,6 +6,8 @@ tags:
   - "#truth-table"
   - "#boolean-algebra"
   - "#logic-design"
+  - "#hardware-description-language"
+  - "#hardware-implementation"
 ---
 # Specification
 
