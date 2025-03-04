@@ -4,8 +4,6 @@ tags:
   - "#logic-gates"
 ---
 
-# NAND
-## 真偽テーブル
 |A|B|A NAND B|
 |---|---|---|
 |0|0|1|
