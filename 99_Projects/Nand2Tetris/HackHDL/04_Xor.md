@@ -220,6 +220,8 @@ graph LR;
 > 
 >     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
 > ```
+
+>[!prove]- Xゲートの最適化手順
 以下、XORゲートをNANDのみで実装する最適化プロセスを **ステップバイステップで図解** します。各段階の論理式と回路構造の変化をMermaid図で表現します。
 
 ---
@@ -307,9 +309,9 @@ $$
 $$
 
 ここで、以下の **中間信号の共有** が可能：
-- \( \text{nand1} = A \uparrow B \)
-- \( \text{nand2} = A \uparrow \text{nand1} \)
-- \( \text{nand3} = B \uparrow \text{nand1} \)
+- $\text{nand1} = A \uparrow B$
+- $\text{nand2} = A \uparrow \text{nand1}$ 
+- $\text{nand3} = B \uparrow \text{nand1}$
 
 ```mermaid
 graph LR
@@ -344,9 +346,9 @@ graph LR
 ---
 
 ### 最適化の鍵
-1. **中間信号の共有**: \( \text{nand1} = A \uparrow B \) を複数箇所で再利用
+1. **中間信号の共有**:  $\text{nand1} = A \uparrow B$ を複数箇所で再利用
 2. **論理圧縮**:
-   - \( \text{nand2} = A \uparrow \text{nand1} = \neg (A \land \neg (A \land B)) \)
+   - $$ \text{nand2} = A \uparrow \text{nand1} = \neg (A \land \neg (A \land B)) $$
    - \( \text{nand3} = B \uparrow \text{nand1} = \neg (B \land \neg (A \land B)) \)
 3. **最終出力**:  
    $$
