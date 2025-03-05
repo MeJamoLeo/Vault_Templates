@@ -46,6 +46,7 @@ tags:
 > $$A \text{ XOR } B $$
 > According to Truth Table, 
 > $$= (\neg A \land B)\lor(A \land \neg B)$$
+> And 
 >
 
 ###  And/Or/Not Version
