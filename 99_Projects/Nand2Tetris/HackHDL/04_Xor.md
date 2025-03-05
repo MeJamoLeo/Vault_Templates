@@ -40,22 +40,21 @@ graph LR;
 ---
 # Implementation
 
->[!tip] 
-> $$$ 
-> \neg(A \text{ NAND } B) = A \text{ AND } B 
-> \neg hgoe
-> $$$
-> 
-
-
 >[!tip]
->$$$
-> A \text{ XOR } B = \\
+> 
+> $$A \text{ XOR } B $$
 > 
 > 
-> 
-> A \text{ XOR } B = \left( A \land (A \land B) \right) \uparrow \left( B \uparrow (A \uparrow B) \right)
->$$$
+> $$= (\neg A \land B)\lor(A \land \neg B)$$
+>
+
+$$
+\documentclass[fleqn]{article}
+
+
+$$
+
+
 
 ```vhdl
 CHIP Xor {
@@ -64,7 +63,7 @@ CHIP Xor {
 PARTS:
     Nand(a=a, b=b, out=nand1);
     Nand(a=a, b=nand1, out=nand2);
-    Nand(a=b, b=nand1, out=nand3);
+    Nand(a=b, b=nand1, oukt=nand3);
     Nand(a=nand2, b=nand3, out=out);
 }
 ```
