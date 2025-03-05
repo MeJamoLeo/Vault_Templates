@@ -62,6 +62,15 @@
 
 ===
 
+---
+tags:
+  - "#logic-design"
+  - "#vhdl"
+  - "#hardware-design"
+  - "#nand-gate"
+  - "#digital-electronics"
+---
+
 ## Specification
 
 |A|B|A XOR B|
@@ -76,19 +85,19 @@
 > graph LR;
 >     A0["A"] -->|<span style="color:#a00">0</span>| Xor0;
 >     B0["B"] -->|<span style="color:#a00">0</span>| Xor0;
->     Xor0["Xor"]:::gate -->|<span style="color:#a00">0</span>| OUT0["Output"];
+>     Xor0["Xor"]:::gate -->|<span style="color:#a00">0</span>| OUT0["Out"];
 > 
 >     A1["A"] -->|<span style="color:#a00">0</span>| Xor1;
 >     B1["B"] -->|<span style="color:#0a0">1</span>| Xor1;
->     Xor1["Xor"]:::gate -->|<span style="color:#0a0">1</span>| OUT1["Output"];
+>     Xor1["Xor"]:::gate -->|<span style="color:#0a0">1</span>| OUT1["Out"];
 > 
 >     A2["A"] -->|<span style="color:#0a0">1</span>| Xor2;
 >     B2["B"] -->|<span style="color:#a00">0</span>| Xor2;
->     Xor2["Xor"]:::gate -->|<span style="color:#0a0">1</span>| OUT2["Output"];
+>     Xor2["Xor"]:::gate -->|<span style="color:#0a0">1</span>| OUT2["Out"];
 > 
 >     A3["A"] -->|<span style="color:#0a0">1</span>| Xor3;
 >     B3["B"] -->|<span style="color:#0a0">1</span>| Xor3;
->     Xor3["Xor"]:::gate -->|<span style="color:#a00">0</span>| OUT3["Output"];
+>     Xor3["Xor"]:::gate -->|<span style="color:#a00">0</span>| OUT3["Out"];
 > 
 >     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
 > ```
@@ -124,7 +133,7 @@ graph LR;
     B --> And2
     And1 --> Or0["Or"]:::gate
     And2 --> Or0
-    Or0 --> OUT["out"]
+    Or0 --> OUT["Out"]
     
     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
 ```
@@ -133,48 +142,48 @@ graph LR;
 > ```mermaid
 > graph LR;
 >     %% パターン0: A=0, B=0
->     A0["A"] -->|<span style="color:#a00">0</span>| NotA0["NOT"]:::gate
->     B0["B"] -->|<span style="color:#a00">0</span>| NotB0["NOT"]:::gate
->     A0 -->|<span style="color:#a00">0</span>| And1_0["AND"]:::gate
+>     A0["A"] -->|<span style="color:#a00">0</span>| NotA0["Not"]:::gate
+>     B0["B"] -->|<span style="color:#a00">0</span>| NotB0["Not"]:::gate
+>     A0 -->|<span style="color:#a00">0</span>| And1_0["And"]:::gate
 >     NotB0 -->|<span style="color:#0a0">1</span>| And1_0
->     NotA0 -->|<span style="color:#0a0">1</span>| And2_0["AND"]:::gate
+>     NotA0 -->|<span style="color:#0a0">1</span>| And2_0["And"]:::gate
 >     B0 -->|<span style="color:#a00">0</span>| And2_0
->     And1_0 -->|<span style="color:#a00">0</span>| Or0_0["OR"]:::gate
+>     And1_0 -->|<span style="color:#a00">0</span>| Or0_0["Or"]:::gate
 >     And2_0 -->|<span style="color:#a00">0</span>| Or0_0
->     Or0_0 -->|<span style="color:#a00">0</span>| OUT0["out"]
+>     Or0_0 -->|<span style="color:#a00">0</span>| OUT0["Out"]
 >     
 >     %% パターン1: A=0, B=1
->     A1["A"] -->|<span style="color:#a00">0</span>| NotA1["NOT"]:::gate
->     B1["B"] -->|<span style="color:#0a0">1</span>| NotB1["NOT"]:::gate
->     A1 -->|<span style="color:#a00">0</span>| And1_1["AND"]:::gate
+>     A1["A"] -->|<span style="color:#a00">0</span>| NotA1["Not"]:::gate
+>     B1["B"] -->|<span style="color:#0a0">1</span>| NotB1["Not"]:::gate
+>     A1 -->|<span style="color:#a00">0</span>| And1_1["And"]:::gate
 >     NotB1 -->|<span style="color:#a00">0</span>| And1_1
->     NotA1 -->|<span style="color:#0a0">1</span>| And2_1["AND"]:::gate
+>     NotA1 -->|<span style="color:#0a0">1</span>| And2_1["And"]:::gate
 >     B1 -->|<span style="color:#0a0">1</span>| And2_1
->     And1_1 -->|<span style="color:#a00">0</span>| Or0_1["OR"]:::gate
+>     And1_1 -->|<span style="color:#a00">0</span>| Or0_1["Or"]:::gate
 >     And2_1 -->|<span style="color:#0a0">1</span>| Or0_1
->     Or0_1 -->|<span style="color:#0a0">1</span>| OUT1["out"]
+>     Or0_1 -->|<span style="color:#0a0">1</span>| OUT1["Out"]
 >     
 >     %% パターン2: A=1, B=0
->     A2["A"] -->|<span style="color:#0a0">1</span>| NotA2["NOT"]:::gate
->     B2["B"] -->|<span style="color:#a00">0</span>| NotB2["NOT"]:::gate
->     A2 -->|<span style="color:#0a0">1</span>| And1_2["AND"]:::gate
+>     A2["A"] -->|<span style="color:#0a0">1</span>| NotA2["Not"]:::gate
+>     B2["B"] -->|<span style="color:#a00">0</span>| NotB2["Not"]:::gate
+>     A2 -->|<span style="color:#0a0">1</span>| And1_2["And"]:::gate
 >     NotB2 -->|<span style="color:#0a0">1</span>| And1_2
->     NotA2 -->|<span style="color:#a00">0</span>| And2_2["AND"]:::gate
+>     NotA2 -->|<span style="color:#a00">0</span>| And2_2["And"]:::gate
 >     B2 -->|<span style="color:#a00">0</span>| And2_2
->     And1_2 -->|<span style="color:#0a0">1</span>| Or0_2["OR"]:::gate
+>     And1_2 -->|<span style="color:#0a0">1</span>| Or0_2["Or"]:::gate
 >     And2_2 -->|<span style="color:#a00">0</span>| Or0_2
->     Or0_2 -->|<span style="color:#0a0">1</span>| OUT2["out"]
+>     Or0_2 -->|<span style="color:#0a0">1</span>| OUT2["Out"]
 >     
 >     %% パターン3: A=1, B=1
->     A3["A"] -->|<span style="color:#0a0">1</span>| NotA3["NOT"]:::gate
->     B3["B"] -->|<span style="color:#0a0">1</span>| NotB3["NOT"]:::gate
->     A3 -->|<span style="color:#0a0">1</span>| And1_3["AND"]:::gate
+>     A3["A"] -->|<span style="color:#0a0">1</span>| NotA3["Not"]:::gate
+>     B3["B"] -->|<span style="color:#0a0">1</span>| NotB3["Not"]:::gate
+>     A3 -->|<span style="color:#0a0">1</span>| And1_3["And"]:::gate
 >     NotB3 -->|<span style="color:#a00">0</span>| And1_3
->     NotA3 -->|<span style="color:#a00">0</span>| And2_3["AND"]:::gate
+>     NotA3 -->|<span style="color:#a00">0</span>| And2_3["And"]:::gate
 >     B3 -->|<span style="color:#0a0">1</span>| And2_3
->     And1_3 -->|<span style="color:#a00">0</span>| Or0_3["OR"]:::gate
+>     And1_3 -->|<span style="color:#a00">0</span>| Or0_3["Or"]:::gate
 >     And2_3 -->|<span style="color:#a00">0</span>| Or0_3
->     Or0_3 -->|<span style="color:#a00">0</span>| OUT3["out"]
+>     Or0_3 -->|<span style="color:#a00">0</span>| OUT3["Out"]
 >     
 >     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
 >     style A0 fill:#ff9999
@@ -214,55 +223,63 @@ graph LR;
     B --> Nand3;
     Nand2 --> Nand4["Nand"]:::gate;
     Nand3 --> Nand4;
-    Nand4 --> OUT["out"];
+    Nand4 --> OUT["Out"];
     
     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
 ```
 
-> [!example]-
+>[!example]-
 > ```mermaid
 > graph LR;
->     A0["A"] -->|<span style="color:#a00">0</span>| Nand1_0;
->     B0["B"] -->|<span style="color:#a00">0</span>| Nand1_0;
->     Nand1_0["Nand"]:::gate -->|<span style="color:#0a0">1</span>| Nand2_0["Nand"]:::gate;
->     A0 -->|<span style="color:#a00">0</span>| Nand2_0;
->     Nand1_0 -->|<span style="color:#0a0">1</span>| Nand3_0["Nand"]:::gate;
->     B0 -->|<span style="color:#a00">0</span>| Nand3_0;
->     Nand2_0 -->|<span style="color:#0a0">1</span>| Nand4_0["Nand"]:::gate;
->     Nand3_0 -->|<span style="color:#0a0">1</span>| Nand4_0;
->     Nand4_0 -->|<span style="color:#a00">0</span>| OUT0["Output"];
+>     %% Pattern 0: A=0, B=0
+>     A0["A"]:::input0 -->|<span style="color:#aa0000">0</span>| Nand1_0["Nand"]:::gate;
+>     B0["B"]:::input0 -->|<span style="color:#aa0000">0</span>| Nand1_0;
+>     Nand1_0 -->|<span style="color:#00aa00">1</span>| Nand2_0["Nand"]:::gate;
+>     A0 -->|<span style="color:#aa0000">0</span>| Nand2_0;
+>     Nand1_0 -->|<span style="color:#00aa00">1</span>| Nand3_0["Nand"]:::gate;
+>     B0 -->|<span style="color:#aa0000">0</span>| Nand3_0;
+>     Nand2_0 -->|<span style="color:#00aa00">1</span>| Nand4_0["Nand"]:::gate;
+>     Nand3_0 -->|<span style="color:#00aa00">1</span>| Nand4_0;
+>     Nand4_0 -->|<span style="color:#aa0000">0</span>| OUT0["Out"]:::output0;
 > 
->     A1["A"] -->|<span style="color:#a00">0</span>| Nand1_1;
->     B1["B"] -->|<span style="color:#0a0">1</span>| Nand1_1;
->     Nand1_1["Nand"]:::gate -->|<span style="color:#0a0">1</span>| Nand2_1["Nand"]:::gate;
->     A1 -->|<span style="color:#a00">0</span>| Nand2_1;
->     Nand1_1 -->|<span style="color:#0a0">1</span>| Nand3_1["Nand"]:::gate;
->     B1 -->|<span style="color:#0a0">1</span>| Nand3_1;
->     Nand2_1 -->|<span style="color:#0a0">1</span>| Nand4_1["Nand"]:::gate;
->     Nand3_1 -->|<span style="color:#a00">0</span>| Nand4_1;
->     Nand4_1 -->|<span style="color:#0a0">1</span>| OUT1["Output"];
+>     %% Pattern 1: A=0, B=1
+>     A1["A"]:::input0 -->|<span style="color:#aa0000">0</span>| Nand1_1["Nand"]:::gate;
+>     B1["B"]:::input1 -->|<span style="color:#00aa00">1</span>| Nand1_1;
+>     Nand1_1 -->|<span style="color:#00aa00">1</span>| Nand2_1["Nand"]:::gate;
+>     A1 -->|<span style="color:#aa0000">0</span>| Nand2_1;
+>     Nand1_1 -->|<span style="color:#00aa00">1</span>| Nand3_1["Nand"]:::gate;
+>     B1 -->|<span style="color:#00aa00">1</span>| Nand3_1;
+>     Nand2_1 -->|<span style="color:#00aa00">1</span>| Nand4_1["Nand"]:::gate;
+>     Nand3_1 -->|<span style="color:#aa0000">0</span>| Nand4_1;
+>     Nand4_1 -->|<span style="color:#00aa00">1</span>| OUT1["Out"]:::output1;
 > 
->     A2["A"] -->|<span style="color:#0a0">1</span>| Nand1_2;
->     B2["B"] -->|<span style="color:#a00">0</span>| Nand1_2;
->     Nand1_2["Nand"]:::gate -->|<span style="color:#0a0">1</span>| Nand2_2["Nand"]:::gate;
->     A2 -->|<span style="color:#0a0">1</span>| Nand2_2;
->     Nand1_2 -->|<span style="color:#0a0">1</span>| Nand3_2["Nand"]:::gate;
->     B2 -->|<span style="color:#a00">0</span>| Nand3_2;
->     Nand2_2 -->|<span style="color:#a00">0</span>| Nand4_2["Nand"]:::gate;
->     Nand3_2 -->|<span style="color:#0a0">1</span>| Nand4_2;
->     Nand4_2 -->|<span style="color:#0a0">1</span>| OUT2["Output"];
+>     %% Pattern 2: A=1, B=0
+>     A2["A"]:::input1 -->|<span style="color:#00aa00">1</span>| Nand1_2["Nand"]:::gate;
+>     B2["B"]:::input0 -->|<span style="color:#aa0000">0</span>| Nand1_2;
+>     Nand1_2 -->|<span style="color:#00aa00">1</span>| Nand2_2["Nand"]:::gate;
+>     A2 -->|<span style="color:#00aa00">1</span>| Nand2_2;
+>     Nand1_2 -->|<span style="color:#00aa00">1</span>| Nand3_2["Nand"]:::gate;
+>     B2 -->|<span style="color:#aa0000">0</span>| Nand3_2;
+>     Nand2_2 -->|<span style="color:#aa0000">0</span>| Nand4_2["Nand"]:::gate;
+>     Nand3_2 -->|<span style="color:#00aa00">1</span>| Nand4_2;
+>     Nand4_2 -->|<span style="color:#00aa00">1</span>| OUT2["Out"]:::output1;
 > 
->     A3["A"] -->|<span style="color:#0a0">1</span>| Nand1_3;
->     B3["B"] -->|<span style="color:#0a0">1</span>| Nand1_3;
->     Nand1_3["Nand"]:::gate -->|<span style="color:#a00">0</span>| Nand2_3["Nand"]:::gate;
->     A3 -->|<span style="color:#0a0">1</span>| Nand2_3;
->     Nand1_3 -->|<span style="color:#a00">0</span>| Nand3_3["Nand"]:::gate;
->     B3 -->|<span style="color:#0a0">1</span>| Nand3_3;
->     Nand2_3 -->|<span style="color:#0a0">1</span>| Nand4_3["Nand"]:::gate;
->     Nand3_3 -->|<span style="color:#0a0">1</span>| Nand4_3;
->     Nand4_3 -->|<span style="color:#a00">0</span>| OUT3["Output"];
+>     %% Pattern 3: A=1, B=1
+>     A3["A"]:::input1 -->|<span style="color:#00aa00">1</span>| Nand1_3["Nand"]:::gate;
+>     B3["B"]:::input1 -->|<span style="color:#00aa00">1</span>| Nand1_3;
+>     Nand1_3 -->|<span style="color:#aa0000">0</span>| Nand2_3["Nand"]:::gate;
+>     A3 -->|<span style="color:#00aa00">1</span>| Nand2_3;
+>     Nand1_3 -->|<span style="color:#aa0000">0</span>| Nand3_3["Nand"]:::gate;
+>     B3 -->|<span style="color:#00aa00">1</span>| Nand3_3;
+>     Nand2_3 -->|<span style="color:#00aa00">1</span>| Nand4_3["Nand"]:::gate;
+>     Nand3_3 -->|<span style="color:#00aa00">1</span>| Nand4_3;
+>     Nand4_3 -->|<span style="color:#aa0000">0</span>| OUT3["Out"]:::output0;
 > 
 >     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
+>     classDef input0 fill:#ff9999,stroke:#000,stroke-width:1px;
+>     classDef input1 fill:#99ff99,stroke:#000,stroke-width:1px;
+>     classDef output0 fill:#ff9999,stroke:#000,stroke-width:1px;
+>     classDef output1 fill:#99ff99,stroke:#000,stroke-width:1px;
 > ```
 
 
@@ -286,7 +303,7 @@ graph LR;
 >     B --> And2
 >     And1 --> Or["Or"]:::gate
 >     And2 --> Or
->     Or --> OUT["OUT"]
+>     Or --> OUT["Out"]
 > 
 >     classDef gate fill:#ddd,stroke:#000;
 > ```
@@ -310,7 +327,7 @@ graph LR;
 >     B --> And2
 >     And1 --> Or["Or"]:::gate
 >     And2 --> Or
->     Or --> OUT["OUT"]
+>     Or --> OUT["Out"]
 > 
 >     classDef gate fill:#ddd,stroke:#000;
 > ```
@@ -339,7 +356,7 @@ graph LR;
 > 
 >     Nand2 --> Nand5["Nand(Nand2, Nand4)"]:::gate
 >     Nand4 --> Nand5
->     Nand5 --> OUT["OUT"]
+>     Nand5 --> OUT["Out"]
 > 
 >     classDef gate fill:#ddd,stroke:#000;
 > ```
@@ -371,7 +388,7 @@ graph LR;
 > 
 >     Nand2 --> Nand4["Nand(Nand2,Nand3)"]:::gate
 >     Nand3 --> Nand4
->     Nand4 --> OUT["OUT"]
+>     Nand4 --> OUT["Out"]
 > 
 >     classDef gate fill:#ddd,stroke:#000;
 > ```
