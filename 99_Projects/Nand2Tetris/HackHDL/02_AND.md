@@ -6,7 +6,7 @@ tags:
   - "#nand-gate"
   - "#digital-electronics"
 ---
-# Specification
+## Specification
 
 |A|B|A AND B|
 |---|---|---|
@@ -16,29 +16,30 @@ tags:
 |1|1|1|
 
 
-```mermaid
-graph LR;
-    A0["A"] -->|<span style="color:#a00">0</span>| And0;
-    B0["B"] -->|<span style="color:#a00">0</span>| And0;
-    And0["And"]:::gate -->|<span style="color:#a00">0</span>| OUT0["Output"];
-
-    A1["A"] -->|<span style="color:#a00">0</span>| And1;
-    B1["B"] -->|<span style="color:#0a0">1</span>| And1;
-    And1["And"]:::gate -->|<span style="color:#a00">0</span>| OUT1["Output"];
-
-    A2["A"] -->|<span style="color:#0a0">1</span>| And2;
-    B2["B"] -->|<span style="color:#a00">0</span>| And2;
-    And2["And"]:::gate -->|<span style="color:#a00">0</span>| OUT2["Output"];
-
-    A3["A"] -->|<span style="color:#0a0">1</span>| And3;
-    B3["B"] -->|<span style="color:#0a0">1</span>| And3;
-    And3["And"]:::gate -->|<span style="color:#0a0">1</span>| OUT3["Output"];
-
-    classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
-```
+>[!example]-
+> ```mermaid
+> graph LR;
+>     A0["A"] -->|<span style="color:#a00">0</span>| And0;
+>     B0["B"] -->|<span style="color:#a00">0</span>| And0;
+>     And0["And"]:::gate -->|<span style="color:#a00">0</span>| OUT0["Output"];
+> 
+>     A1["A"] -->|<span style="color:#a00">0</span>| And1;
+>     B1["B"] -->|<span style="color:#0a0">1</span>| And1;
+>     And1["And"]:::gate -->|<span style="color:#a00">0</span>| OUT1["Output"];
+> 
+>     A2["A"] -->|<span style="color:#0a0">1</span>| And2;
+>     B2["B"] -->|<span style="color:#a00">0</span>| And2;
+>     And2["And"]:::gate -->|<span style="color:#a00">0</span>| OUT2["Output"];
+> 
+>     A3["A"] -->|<span style="color:#0a0">1</span>| And3;
+>     B3["B"] -->|<span style="color:#0a0">1</span>| And3;
+>     And3["And"]:::gate -->|<span style="color:#0a0">1</span>| OUT3["Output"];
+> 
+>     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
+> ```
 
 ---
-# Imprementation
+## Imprementation
 
 >[!tip]
 > $$$

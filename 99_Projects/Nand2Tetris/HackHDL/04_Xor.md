@@ -118,3 +118,97 @@ graph LR;
 > 
 >     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
 > ```
+
+
+# Implementation (And/Or/Not Version)
+
+>[!tip]
+>$$
+>A \oplus B = (A \land \neg B) \lor (\neg A \land B)
+>$$
+
+```vhdl
+CHIP Xor {
+    IN a, b;
+    OUT out;
+PARTS:
+    Not(in=a, out=notA);
+    Not(in=b, out=notB);
+    And(a=a, b=notB, out=and1);
+    And(a=notA, b=b, out=and2);
+    Or(a=and1, b=and2, out=out);
+}
+```
+
+```mermaid
+graph LR;
+    A["A"] --> NotA["Not"]:::gate
+    B["B"] --> NotB["Not"]:::gate
+    A --> And1["And"]:::gate
+    NotB --> And1
+    NotA --> And2["And"]:::gate
+    B --> And2
+    And1 --> Or0["Or"]:::gate
+    And2 --> Or0
+    Or0 --> OUT["out"]
+    
+    classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
+```
+
+> [!example]-
+> ```mermaid
+> graph LR
+>     %% A=0, B=0
+>     subgraph Case1[A=0, B=0]
+>     A0["A"] -->|<span style="color:#a00">0</span>| NotA0["Not"]:::gate
+>     B0["B"] -->|<span style="color:#a00">0</span>| NotB0["Not"]:::gate
+>     NotA0 -->|<span style="color:#0a0">1</span>| And20["And"]:::gate
+>     NotB0 -->|<span style="color:#0a0">1</span>| And10["And"]:::gate
+>     A0 --> And10
+>     B0 --> And20
+>     And10 -->|<span style="color:#a00">0</span>| Or0["Or"]:::gate
+>     And20 -->|<span style="color:#a00">0</span>| Or0
+>     Or0 -->|<span style="color:#a00">0</span>| OUT0["Output"]
+>     end
+> 
+>     %% A=0, B=1
+>     subgraph Case2[A=0, B=1]
+>     A1["A"] -->|<span style="color:#a00">0</span>| NotA1["Not"]:::gate
+>     B1["B"] -->|<span style="color:#0a0">1</span>| NotB1["Not"]:::gate
+>     NotA1 -->|<span style="color:#0a0">1</span>| And21["And"]:::gate
+>     NotB1 -->|<span style="color:#a00">0</span>| And11["And"]:::gate
+>     A1 --> And11
+>     B1 --> And21
+>     And11 -->|<span style="color:#a00">0</span>| Or1["Or"]:::gate
+>     And21 -->|<span style="color:#0a0">1</span>| Or1
+>     Or1 -->|<span style="color:#0a0">1</span>| OUT1["Output"]
+>     end
+> 
+>     %% A=1, B=0
+>     subgraph Case3[A=1, B=0]
+>     A2["A"] -->|<span style="color:#0a0">1</span>| NotA2["Not"]:::gate
+>     B2["B"] -->|<span style="color:#a00">0</span>| NotB2["Not"]:::gate
+>     NotA2 -->|<span style="color:#a00">0</span>| And22["And"]:::gate
+>     NotB2 -->|<span style="color:#0a0">1</span>| And12["And"]:::gate
+>     A2 --> And12
+>     B2 --> And22
+>     And12 -->|<span style="color:#0a0">1</span>| Or2["Or"]:::gate
+>     And22 -->|<span style="color:#a00">0</span>| Or2
+>     Or2 -->|<span style="color:#0a0">1</span>| OUT2["Output"]
+>     end
+> 
+>     %% A=1, B=1
+>     subgraph Case4[A=1, B=1]
+>     A3["A"] -->|<span style="color:#0a0">1</span>| NotA3["Not"]:::gate
+>     B3["B"] -->|<span style="color:#0a0">1</span>| NotB3["Not"]:::gate
+>     NotA3 -->|<span style="color:#a00">0</span>| And23["And"]:::gate
+>     NotB3 -->|<span style="color:#a00">0</span>| And13["And"]:::gate
+>     A3 --> And13
+>     B3 --> And23
+>     And13 -->|<span style="color:#a00">0</span>| Or3["Or"]:::gate
+>     And23 -->|<span style="color:#a00">0</span>| Or3
+>     Or3 -->|<span style="color:#a00">0</span>| OUT3["Output"]
+>     end
+> 
+>     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
+> ```
