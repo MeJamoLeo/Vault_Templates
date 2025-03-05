@@ -1,12 +1,12 @@
 ---
 tags:
-  - "#logic-gates"
   - "#logic-design"
-  - "#boolean-algebra"
-  - "#xor-gate"
   - "#vhdl"
   - "#hardware-design"
+  - "#nand-gate"
+  - "#digital-electronics"
 ---
+
 # Specification
 
 |A|B|A XOR B|
@@ -38,194 +38,83 @@ graph LR;
 ```
 
 ---
-
 # Implementation
 
-> [!tip]
-> 
-> $$
-> (\lnot A \land B) 
-> \lor 
-> (A \land \lnot B) 
-> = A \text{ XOR } B
-> $$
-
-
-```vhdl
-CHIP Xor {
-    IN a, b;
-    OUT out;
-
-    PARTS:
-    Not(in=a, out=notA);
-    Not(in=b, out=notB);
-
-    And(a=a,   b=notB, out=aAndNotB);
-    And(a=notA, b=b,   out=notAAndB);
-
-    Or(a=aAndNotB, b=notAAndB, out=out);
-}
-```
-
-```mermaid
-graph LR;
-    A["a"] --> NotA["Not"];
-    B["b"] --> NotB["Not"];
-
-    A --> And1["And"];
-    NotB --> And1;
-
-    NotA --> And2["And"];
-    B --> And2;
-
-    And1 --> OrGate["Or"];
-    And2 --> OrGate;
-
-    OrGate --> Out["Output"];
-
-    classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
-    class NotA,NotB,And1,And2,OrGate gate;
-
-```
-
-```mermaid
-graph TD;
-    %% Case 1: A=0, B=0 → XOR = 0
-    subgraph Case1_A0B0
-      A0["A = 0"]
-      B0["B = 0"]
-      NotA0["Not(a) = 1"]
-      NotB0["Not(b) = 1"]
-      And0["And: a AND notB = 0"]
-      And0b["And: notA AND b = 0"]
-      Or0["Or: (a AND notB) OR (notA AND b) = 0"]
-      
-      A0 -->|<font color="#a00">0</font>| NotA0;
-      B0 -->|<font color="#a00">0</font>| NotB0;
-      
-      A0 -->|<font color="#a00">0</font>| And0;
-      NotB0 -->|<font color="#0a0">1</font>| And0;
-      
-      NotA0 -->|<font color="#0a0">1</font>| And0b;
-      B0 -->|<font color="#a00">0</font>| And0b;
-      
-      And0 -->|<font color="#a00">0</font>| Or0;
-      And0b -->|<font color="#a00">0</font>| Or0;
-    end
-
-    %% Case 2: A=0, B=1 → XOR = 1
-    subgraph Case2_A0B1
-      A1["A = 0"]
-      B1["B = 1"]
-      NotA1["Not(a) = 1"]
-      NotB1["Not(b) = 0"]
-      And1["And: a AND notB = 0"]
-      And1b["And: notA AND b = 1"]
-      Or1["Or: (a AND notB) OR (notA AND b) = 1"]
-      
-      A1 -->|<font color="#a00">0</font>| NotA1;
-      B1 -->|<font color="#0a0">1</font>| NotB1;
-      
-      A1 -->|<font color="#a00">0</font>| And1;
-      NotB1 -->|<font color="#a00">0</font>| And1;
-      
-      NotA1 -->|<font color="#0a0">1</font>| And1b;
-      B1 -->|<font color="#0a0">1</font>| And1b;
-      
-      And1 -->|<font color="#a00">0</font>| Or1;
-      And1b -->|<font color="#0a0">1</font>| Or1;
-    end
-
-    %% Case 3: A=1, B=0 → XOR = 1
-    subgraph Case3_A1B0
-      A2["A = 1"]
-      B2["B = 0"]
-      NotA2["Not(a) = 0"]
-      NotB2["Not(b) = 1"]
-      And2["And: a AND notB = 1"]
-      And2b["And: notA AND b = 0"]
-      Or2["Or: (a AND notB) OR (notA AND b) = 1"]
-      
-      A2 -->|<font color="#0a0">1</font>| NotA2;
-      B2 -->|<font color="#a00">0</font>| NotB2;
-      
-      A2 -->|<font color="#0a0">1</font>| And2;
-      NotB2 -->|<font color="#0a0">1</font>| And2;
-      
-      NotA2 -->|<font color="#a00">0</font>| And2b;
-      B2 -->|<font color="#a00">0</font>| And2b;
-      
-      And2 -->|<font color="#0a0">1</font>| Or2;
-      And2b -->|<font color="#a00">0</font>| Or2;
-    end
-
-    %% Case 4: A=1, B=1 → XOR = 0
-    subgraph Case4_A1B1
-      A3["A = 1"]
-      B3["B = 1"]
-      NotA3["Not(a) = 0"]
-      NotB3["Not(b) = 0"]
-      And3["And: a AND notB = 0"]
-      And3b["And: notA AND b = 0"]
-      Or3["Or: (a AND notB) OR (notA AND b) = 0"]
-      
-      A3 -->|<font color="#0a0">1</font>| NotA3;
-      B3 -->|<font color="#0a0">1</font>| NotB3;
-      
-      A3 -->|<font color="#0a0">1</font>| And3;
-      NotB3 -->|<font color="#a00">0</font>| And3;
-      
-      NotA3 -->|<font color="#a00">0</font>| And3b;
-      B3 -->|<font color="#0a0">1</font>| And3b;
-      
-      And3 -->|<font color="#a00">0</font>| Or3;
-      And3b -->|<font color="#a00">0</font>| Or3;
-    end
-```
-
-## XOR ゲート
-
-**真理値表**
-
-|A|B|A XOR B|
-|---|---|---|
-|0|0|0|
-|0|1|1|
-|1|0|1|
-|1|1|0|
-
-**VHDL コード**
+>[!tip]
+>$$
+>A \oplus B = \left( A \uparrow (A \uparrow B) \right) \uparrow \left( B \uparrow (A \uparrow B) \right)
+>$$
+>Where \( \uparrow \) denotes the NAND operation.
 
 ```vhdl
 CHIP Xor {
     IN a, b;
     OUT out;
 PARTS:
-    Or(a=a, b=b, out=orOut);
-    And(a=a, b=b, out=andOut);
-    Not(in=andOut, out=notAnd);
-    And(a=orOut, b=notAnd, out=out);
+    Nand(a=a, b=b, out=nand1);
+    Nand(a=a, b=nand1, out=nand2);
+    Nand(a=b, b=nand1, out=nand3);
+    Nand(a=nand2, b=nand3, out=out);
 }
 ```
 
-**回路図**
-
 ```mermaid
 graph LR;
-    A["A"] --> Or0;
-    B["B"] --> Or0;
-    Or0["Or"]:::gate --> orOut["orOut"];
-
-    A["A"] --> And0;
-    B["B"] --> And0;
-    And0["And"]:::gate --> andOut["andOut"];
-
-    andOut --> Not0;
-    Not0["Not"]:::gate --> notAnd["notAnd"];
-
-    orOut --> And1;
-    notAnd --> And1;
-    And1["And"]:::gate --> OUT["Output"];
-
+    A["A"] --> Nand1;
+    B["B"] --> Nand1;
+    Nand1["Nand"]:::gate --> Nand2["Nand"]:::gate;
+    A --> Nand2;
+    Nand1 --> Nand3["Nand"]:::gate;
+    B --> Nand3;
+    Nand2 --> Nand4["Nand"]:::gate;
+    Nand3 --> Nand4;
+    Nand4 --> OUT["out"];
+    
     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
 ```
+
+> [!example]-
+> ```mermaid
+> graph LR;
+>     A0["A"] -->|<span style="color:#a00">0</span>| Nand1_0;
+>     B0["B"] -->|<span style="color:#a00">0</span>| Nand1_0;
+>     Nand1_0["Nand"]:::gate -->|<span style="color:#0a0">1</span>| Nand2_0["Nand"]:::gate;
+>     A0 -->|<span style="color:#a00">0</span>| Nand2_0;
+>     Nand1_0 -->|<span style="color:#0a0">1</span>| Nand3_0["Nand"]:::gate;
+>     B0 -->|<span style="color:#a00">0</span>| Nand3_0;
+>     Nand2_0 -->|<span style="color:#0a0">1</span>| Nand4_0["Nand"]:::gate;
+>     Nand3_0 -->|<span style="color:#0a0">1</span>| Nand4_0;
+>     Nand4_0 -->|<span style="color:#a00">0</span>| OUT0["Output"];
+> 
+>     A1["A"] -->|<span style="color:#a00">0</span>| Nand1_1;
+>     B1["B"] -->|<span style="color:#0a0">1</span>| Nand1_1;
+>     Nand1_1["Nand"]:::gate -->|<span style="color:#0a0">1</span>| Nand2_1["Nand"]:::gate;
+>     A1 -->|<span style="color:#a00">0</span>| Nand2_1;
+>     Nand1_1 -->|<span style="color:#0a0">1</span>| Nand3_1["Nand"]:::gate;
+>     B1 -->|<span style="color:#0a0">1</span>| Nand3_1;
+>     Nand2_1 -->|<span style="color:#0a0">1</span>| Nand4_1["Nand"]:::gate;
+>     Nand3_1 -->|<span style="color:#a00">0</span>| Nand4_1;
+>     Nand4_1 -->|<span style="color:#0a0">1</span>| OUT1["Output"];
+> 
+>     A2["A"] -->|<span style="color:#0a0">1</span>| Nand1_2;
+>     B2["B"] -->|<span style="color:#a00">0</span>| Nand1_2;
+>     Nand1_2["Nand"]:::gate -->|<span style="color:#0a0">1</span>| Nand2_2["Nand"]:::gate;
+>     A2 -->|<span style="color:#0a0">1</span>| Nand2_2;
+>     Nand1_2 -->|<span style="color:#0a0">1</span>| Nand3_2["Nand"]:::gate;
+>     B2 -->|<span style="color:#a00">0</span>| Nand3_2;
+>     Nand2_2 -->|<span style="color:#a00">0</span>| Nand4_2["Nand"]:::gate;
+>     Nand3_2 -->|<span style="color:#0a0">1</span>| Nand4_2;
+>     Nand4_2 -->|<span style="color:#0a0">1</span>| OUT2["Output"];
+> 
+>     A3["A"] -->|<span style="color:#0a0">1</span>| Nand1_3;
+>     B3["B"] -->|<span style="color:#0a0">1</span>| Nand1_3;
+>     Nand1_3["Nand"]:::gate -->|<span style="color:#a00">0</span>| Nand2_3["Nand"]:::gate;
+>     A3 -->|<span style="color:#0a0">1</span>| Nand2_3;
+>     Nand1_3 -->|<span style="color:#a00">0</span>| Nand3_3["Nand"]:::gate;
+>     B3 -->|<span style="color:#0a0">1</span>| Nand3_3;
+>     Nand2_3 -->|<span style="color:#0a0">1</span>| Nand4_3["Nand"]:::gate;
+>     Nand3_3 -->|<span style="color:#0a0">1</span>| Nand4_3;
+>     Nand4_3 -->|<span style="color:#a00">0</span>| OUT3["Output"];
+> 
+>     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
+> ```
