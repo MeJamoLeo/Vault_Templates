@@ -44,15 +44,9 @@ graph LR;
 > 
 > $$A \text{ XOR } B $$
 > 
-> 
+> $$= (\neg A \land B)\lor(A \land \neg B)$$
 > $$= (\neg A \land B)\lor(A \land \neg B)$$
 >
-
-$$
-\documentclass[fleqn]{article}
-
-
-$$
 
 
 
