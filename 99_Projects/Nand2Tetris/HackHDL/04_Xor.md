@@ -74,6 +74,63 @@ graph LR;
     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
 ```
 
+```mermaid
+graph LR;
+    %% パターン0: A=0, B=0
+    A0["A"] -->|0| NotA0["NOT"]:::gate
+    B0["B"] -->|0| NotB0["NOT"]:::gate
+    A0 -->|0| And1_0["AND"]:::gate
+    NotB0 -->|1| And1_0
+    NotA0 -->|1| And2_0["AND"]:::gate
+    B0 -->|0| And2_0
+    And1_0 -->|0| Or0_0["OR"]:::gate
+    And2_0 -->|0| Or0_0
+    Or0_0 -->|0| OUT0["out"]
+    
+    %% パターン1: A=0, B=1
+    A1["A"] -->|0| NotA1["NOT"]:::gate
+    B1["B"] -->|1| NotB1["NOT"]:::gate
+    A1 -->|0| And1_1["AND"]:::gate
+    NotB1 -->|0| And1_1
+    NotA1 -->|1| And2_1["AND"]:::gate
+    B1 -->|1| And2_1
+    And1_1 -->|0| Or0_1["OR"]:::gate
+    And2_1 -->|1| Or0_1
+    Or0_1 -->|1| OUT1["out"]
+    
+    %% パターン2: A=1, B=0
+    A2["A"] -->|1| NotA2["NOT"]:::gate
+    B2["B"] -->|0| NotB2["NOT"]:::gate
+    A2 -->|1| And1_2["AND"]:::gate
+    NotB2 -->|1| And1_2
+    NotA2 -->|0| And2_2["AND"]:::gate
+    B2 -->|0| And2_2
+    And1_2 -->|1| Or0_2["OR"]:::gate
+    And2_2 -->|0| Or0_2
+    Or0_2 -->|1| OUT2["out"]
+    
+    %% パターン3: A=1, B=1
+    A3["A"] -->|1| NotA3["NOT"]:::gate
+    B3["B"] -->|1| NotB3["NOT"]:::gate
+    A3 -->|1| And1_3["AND"]:::gate
+    NotB3 -->|0| And1_3
+    NotA3 -->|0| And2_3["AND"]:::gate
+    B3 -->|1| And2_3
+    And1_3 -->|0| Or0_3["OR"]:::gate
+    And2_3 -->|0| Or0_3
+    Or0_3 -->|0| OUT3["out"]
+    
+    classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
+    style A0 fill:#ff9999
+    style B0 fill:#ff9999
+    style A1 fill:#ff9999
+    style B1 fill:#99ff99
+    style A2 fill:#99ff99
+    style B2 fill:#ff9999
+    style A3 fill:#99ff99
+style B3 fill:#99ff99
+```
+
 > [!example]-
 > ```mermaid
 > graph LR;
