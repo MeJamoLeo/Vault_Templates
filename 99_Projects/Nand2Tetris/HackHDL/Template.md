@@ -67,6 +67,14 @@
 指示で曖昧な部分があれば以下の例を参考にしてください。
 
 ===
+---
+tags:
+  - "#logic-design"
+  - "#vhdl"
+  - "#hardware-design"
+  - "#nand-gate"
+  - "#digital-electronics"
+---
 
 ## Specification
 
