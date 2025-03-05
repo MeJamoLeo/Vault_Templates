@@ -40,15 +40,6 @@ tags:
 
 ---
 ## Implementation
-
->[!tip]
-> 
-> $$A \text{ XOR } B $$
-> According to Truth Table, 
-> $$= (\neg A \land B)\lor(A \land \neg B)$$
-> And 
->
-
 ###  And/Or/Not Version
 >[!tip]
 >$$
@@ -85,62 +76,32 @@ graph LR;
 
 > [!example]-
 > ```mermaid
-> graph LR
->     %% A=0, B=0
->     subgraph Case1[A=0, B=0
-> 	direction LR
-direction LR
->     A0["A"] -->|<span style="color:#a00">0</span>| NotA0["Not"]:::gate
->     B0["B"] -->|<span style="color:#a00">0</span>| NotB0["Not"]:::gate
->     NotA0 -->|<span style="color:#0a0">1</span>| And20["And"]:::gate
->     NotB0 -->|<span style="color:#0a0">1</span>| And10["And"]:::gate
->     A0 --> And10
->     B0 --> And20
->     And10 -->|<span style="color:#a00">0</span>| Or0["Or"]:::gate
->     And20 -->|<span style="color:#a00">0</span>| Or0
->     Or0 -->|<span style="color:#a00">0</span>| OUT0["Output"]
->     end
+> graph LR;
+>  %% A=0, B=0
+>  A0["A"] -->|<span style="color:#a00">0</span>| Nand0["Nand"]:::gate;
+>  B0["B"] -->|<span style="color:#a00">0</span>| Nand0;
+>  Nand0 -->|<span style="color:#0a0">1</span>| Not0["Not"]:::gate;
+>  Not0 -->|<span style="color:#a00">0</span>| OUT0["Output"];
 > 
->     %% A=0, B=1
->     subgraph Case2[A=0, B=1]
->     A1["A"] -->|<span style="color:#a00">0</span>| NotA1["Not"]:::gate
->     B1["B"] -->|<span style="color:#0a0">1</span>| NotB1["Not"]:::gate
->     NotA1 -->|<span style="color:#0a0">1</span>| And21["And"]:::gate
->     NotB1 -->|<span style="color:#a00">0</span>| And11["And"]:::gate
->     A1 --> And11
->     B1 --> And21
->     And11 -->|<span style="color:#a00">0</span>| Or1["Or"]:::gate
->     And21 -->|<span style="color:#0a0">1</span>| Or1
->     Or1 -->|<span style="color:#0a0">1</span>| OUT1["Output"]
->     end
+>  %% A=0, B=1
+>  A1["A"] -->|<span style="color:#a00">0</span>| Nand1["Nand"]:::gate;
+>  B1["B"] -->|<span style="color:#0a0">1</span>| Nand1;
+>  Nand1 -->|<span style="color:#0a0">1</span>| Not1["Not"]:::gate;
+>  Not1 -->|<span style="color:#a00">0</span>| OUT1["Output"];
 > 
->     %% A=1, B=0
->     subgraph Case3[A=1, B=0]
->     A2["A"] -->|<span style="color:#0a0">1</span>| NotA2["Not"]:::gate
->     B2["B"] -->|<span style="color:#a00">0</span>| NotB2["Not"]:::gate
->     NotA2 -->|<span style="color:#a00">0</span>| And22["And"]:::gate
->     NotB2 -->|<span style="color:#0a0">1</span>| And12["And"]:::gate
->     A2 --> And12
->     B2 --> And22
->     And12 -->|<span style="color:#0a0">1</span>| Or2["Or"]:::gate
->     And22 -->|<span style="color:#a00">0</span>| Or2
->     Or2 -->|<span style="color:#0a0">1</span>| OUT2["Output"]
->     end
+>  %% A=1, B=0
+>  A2["A"] -->|<span style="color:#0a0">1</span>| Nand2["Nand"]:::gate;
+>  B2["B"] -->|<span style="color:#a00">0</span>| Nand2;
+>  Nand2 -->|<span style="color:#0a0">1</span>| Not2["Not"]:::gate;
+>  Not2 -->|<span style="color:#a00">0</span>| OUT2["Output"];
 > 
->     %% A=1, B=1
->     subgraph Case4[A=1, B=1]
->     A3["A"] -->|<span style="color:#0a0">1</span>| NotA3["Not"]:::gate
->     B3["B"] -->|<span style="color:#0a0">1</span>| NotB3["Not"]:::gate
->     NotA3 -->|<span style="color:#a00">0</span>| And23["And"]:::gate
->     NotB3 -->|<span style="color:#a00">0</span>| And13["And"]:::gate
->     A3 --> And13
->     B3 --> And23
->     And13 -->|<span style="color:#a00">0</span>| Or3["Or"]:::gate
->     And23 -->|<span style="color:#a00">0</span>| Or3
->     Or3 -->|<span style="color:#a00">0</span>| OUT3["Output"]
->     end
+>  %% A=1, B=1
+>  A3["A"] -->|<span style="color:#0a0">1</span>| Nand3["Nand"]:::gate;
+>  B3["B"] -->|<span style="color:#0a0">1</span>| Nand3;
+>  Nand3 -->|<span style="color:#a00">0</span>| Not3["Not"]:::gate;
+>  Not3 -->|<span style="color:#0a0">1</span>| OUT3["Output"];
 > 
->     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
+>  classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
 > ```
 
 ###  Nand Version
