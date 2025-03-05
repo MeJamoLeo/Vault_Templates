@@ -1,14 +1,18 @@
+以下の指示に従って〇〇ゲートのドキュメントを作成してください。
+
+---
+
 - Specificationセクション
 	- Truth Tableを作成してください
 	- exampleという折りたためるブロックを作成し、その中にはMarmeidを用いたグラフを作成してください。
 		- グラフはTruth Tableを参考に、全てのパターンを作成してください。
 		- 最初のノードは値によって色分けしてください
-			- 1の場合は#00aa00
-			- 0の場合は#aa0000
-		- ノードからの矢印の上に受け渡しされる値を書き込んでください。
-			- 値によって色分けしてください。
 				- 1の場合は99ff99
 				- 0の場合はff9999
+		- ノードからの矢印の上に受け渡しされる値を書き込んでください。
+			- 値によって色分けしてください。
+				- 1の場合は#00aa00
+				- 0の場合は#aa0000
 - Implementationセクション
 	- tipというブロックを作成し、その中には論理式を書いてください。
 		- Truth Tableを参考に出力が真のものを\lorで繋ぐところから始めてください。
@@ -26,7 +30,65 @@
 					- 1の場合は99ff99
 					- 0の場合はff9999
 	- 最適化された実装がある場合は追加してください。
-	- 
+		- vhdlのコードブロックを作成し、HackHDLを使って実装してください。
+		- 実装を元にMarmeidを用いたグラフを作成してください
+		- 実装に基づいたMarmeidをベースとして以下を作成してください。
+			- exampleという折りたためるブロックを作成し、その中にはMarmeidを用いたグラフを作成してください。
+				- グラフはTruth Tableを参考に、全てのパターンを作成してください。
+				- 最初のノードは値によって色分けしてください
+					- 1の場合は#00aa00
+					- 0の場合は#aa0000
+				- ノードからの矢印の上に受け渡しされる値を書き込んでください。
+					- 値によって色分けしてください。
+						- 1の場合は99ff99
+						- 0の場合はff9999
+		- 最適化の手順をproveというブロックを使って説明してください
+
+---
+
+以下はXorを例にしたドキュメントのサンプルです。
+指示で曖昧な部分があれば以下の例を参考にしてください。
+
+---
+---
+tags:
+  - "#logic-design"
+  - "#vhdl"
+  - "#hardware-design"
+  - "#nand-gate"
+  - "#digital-electronics"
+---
+
+## Specification
+
+|A|B|A XOR B|
+|---|---|---|
+|0|0|0|
+|0|1|1|
+|1|0|1|
+|1|1|0|
+
+>[!example]-
+> ```mermaid
+> graph LR;
+>     A0["A"] -->|<span style="color:#a00">0</span>| Xor0;
+>     B0["B"] -->|<span style="color:#a00">0</span>| Xor0;
+>     Xor0["Xor"]:::gate -->|<span style="color:#a00">0</span>| OUT0["Output"];
+> 
+>     A1["A"] -->|<span style="color:#a00">0</span>| Xor1;
+>     B1["B"] -->|<span style="color:#0a0">1</span>| Xor1;
+>     Xor1["Xor"]:::gate -->|<span style="color:#0a0">1</span>| OUT1["Output"];
+> 
+>     A2["A"] -->|<span style="color:#0a0">1</span>| Xor2;
+>     B2["B"] -->|<span style="color:#a00">0</span>| Xor2;
+>     Xor2["Xor"]:::gate -->|<span style="color:#0a0">1</span>| OUT2["Output"];
+> 
+>     A3["A"] -->|<span style="color:#0a0">1</span>| Xor3;
+>     B3["B"] -->|<span style="color:#0a0">1</span>| Xor3;
+>     Xor3["Xor"]:::gate -->|<span style="color:#a00">0</span>| OUT3["Output"];
+> 
+>     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
+> ```
 
 ---
 ## Implementation
