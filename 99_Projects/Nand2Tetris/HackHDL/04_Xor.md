@@ -182,3 +182,50 @@ graph TD;
       And3b -->|<font color="#a00">0</font>| Or3;
     end
 ```
+
+## XOR ゲート
+
+**真理値表**
+
+|A|B|A XOR B|
+|---|---|---|
+|0|0|0|
+|0|1|1|
+|1|0|1|
+|1|1|0|
+
+**VHDL コード**
+
+```vhdl
+CHIP Xor {
+    IN a, b;
+    OUT out;
+PARTS:
+    Or(a=a, b=b, out=orOut);
+    And(a=a, b=b, out=andOut);
+    Not(in=andOut, out=notAnd);
+    And(a=orOut, b=notAnd, out=out);
+}
+```
+
+**回路図**
+
+```mermaid
+graph LR;
+    A["A"] --> Or0;
+    B["B"] --> Or0;
+    Or0["Or"]:::gate --> orOut["orOut"];
+
+    A["A"] --> And0;
+    B["B"] --> And0;
+    And0["And"]:::gate --> andOut["andOut"];
+
+    andOut --> Not0;
+    Not0["Not"]:::gate --> notAnd["notAnd"];
+
+    orOut --> And1;
+    notAnd --> And1;
+    And1["And"]:::gate --> OUT["Output"];
+
+    classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
+```

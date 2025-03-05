@@ -42,9 +42,8 @@ graph LR;
 
 >[!tip]
 > $$$
-> A  \text{ AND } B = \neg(A \text{ NAND } B)
+> \neg(A \text{ NAND } B) = A  \text{ AND } B 
 > $$$
-
 
 ```vhdl
 CHIP And {

@@ -39,25 +39,3 @@ Nand3["Nand"]:::gate -->|<span style="color:#a00">0</span>| OUT3["Output"];
 
 classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
 ```
-
-```mermaid
-graph LR;
-    A["A"] --> Nand0;
-    B["B"] --> Nand0;
-    Nand0["Nand"]:::gate --> n1["n1"];
-    
-    A["A"] --> Nand1;
-    n1 --> Nand1;
-    Nand1["Nand"]:::gate --> n2["n2"];
-    
-    B["B"] --> Nand2;
-    n1 --> Nand2;
-    Nand2["Nand"]:::gate --> n3["n3"];
-    
-    n2 --> Nand3;
-    n3 --> Nand3;
-    Nand3["Nand"]:::gate --> OUT["Output"];
-    
-    classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
-
-```
