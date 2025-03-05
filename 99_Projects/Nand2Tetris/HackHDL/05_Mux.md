@@ -32,6 +32,12 @@
 >     B2["B"]:::input1 -->|<span style="color:#00aa00">1</span>| Mux2;
 >     Mux2 -->|<span style="color:#00aa00">1</span>| OUT2["Out"]:::output1;
 > 
+>     %% Pattern 3: Sel=1, A=1, B=0
+>     Sel3["Sel"]:::input1 -->|<span style="color:#00aa00">1</span>| Mux3["Mux"]:::gate;
+>     A3["A"]:::input1 -->|<span style="color:#00aa00">1</span>| Mux3;
+>     B3["B"]:::input0 -->|<span style="color:#aa0000">0</span>| Mux3;
+>     Mux3 -->|<span style="color:#aa0000">0</span>| OUT3["Out"]:::output0;
+> 
 >     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
 >     classDef input0 fill:#ff9999,stroke:#000,stroke-width:1px;
 >     classDef input1 fill:#99ff99,stroke:#000,stroke-width:1px;
@@ -50,9 +56,10 @@
 > $$
 > 
 > **導出プロセス**:
-> 1. Sel=0 の場合: Out = A
-> 2. Sel=1 の場合: Out = B
-> 3. 上記2条件をORで結合
+> 1. Sel=0 の場合の条件: $\lnot Sel \land A$
+> 2. Sel=1 の場合の条件: $Sel \land B$
+> 3. 両条件をORで結合:  
+>    $$(\lnot Sel \land A) \lor (Sel \land B)$$
 
 ```vhdl
 CHIP Mux {
@@ -85,20 +92,20 @@ graph LR;
 > graph LR;
 >     %% Pattern 0: Sel=0, A=0, B=0
 >     Sel0["Sel"]:::input0 -->|<span style="color:#aa0000">0</span>| Not0["Not"]:::gate;
->     Sel0 -->|<span style="color:#aa0000">0</span>| And2_0["And"]:::gate;
->     Not0 -->|<span style="color:#00aa00">1</span>| And1_0["And"]:::gate;
->     A0["A"]:::input0 -->|<span style="color:#aa0000">0</span>| And1_0;
->     B0["B"]:::input0 -->|<span style="color:#aa0000">0</span>| And2_0;
+>     A0["A"]:::input0 -->|<span style="color:#aa0000">0</span>| And1_0["And"]:::gate;
+>     B0["B"]:::input0 -->|<span style="color:#aa0000">0</span>| And2_0["And"]:::gate;
+>     Not0 -->|<span style="color:#00aa00">1</span>| And1_0;
+>     Sel0 -->|<span style="color:#aa0000">0</span>| And2_0;
 >     And1_0 -->|<span style="color:#aa0000">0</span>| Or0["Or"]:::gate;
 >     And2_0 -->|<span style="color:#aa0000">0</span>| Or0;
 >     Or0 -->|<span style="color:#aa0000">0</span>| OUT0["Out"]:::output0;
 > 
 >     %% Pattern 1: Sel=1, A=0, B=1
 >     Sel1["Sel"]:::input1 -->|<span style="color:#00aa00">1</span>| Not1["Not"]:::gate;
->     Sel1 -->|<span style="color:#00aa00">1</span>| And2_1["And"]:::gate;
->     Not1 -->|<span style="color:#aa0000">0</span>| And1_1["And"]:::gate;
->     A1["A"]:::input0 -->|<span style="color:#aa0000">0</span>| And1_1;
->     B1["B"]:::input1 -->|<span style="color:#00aa00">1</span>| And2_1;
+>     A1["A"]:::input0 -->|<span style="color:#aa0000">0</span>| And1_1["And"]:::gate;
+>     B1["B"]:::input1 -->|<span style="color:#00aa00">1</span>| And2_1["And"]:::gate;
+>     Not1 -->|<span style="color:#aa0000">0</span>| And1_1;
+>     Sel1 -->|<span style="color:#00aa00">1</span>| And2_1;
 >     And1_1 -->|<span style="color:#aa0000">0</span>| Or1["Or"]:::gate;
 >     And2_1 -->|<span style="color:#00aa00">1</span>| Or1;
 >     Or1 -->|<span style="color:#00aa00">1</span>| OUT1["Out"]:::output1;
@@ -179,17 +186,29 @@ graph LR;
 > ```
 
 > [!prove]- Muxの最適化手順
-> **ステップ1：基本構造の分解**  
+> **ステップ1：基本論理式の分解**  
 > 初期論理式：
 > $$
 > \text{Out} = (\lnot Sel \cdot A) + (Sel \cdot B)
 > $$
 > 
-> **ステップ2：AND/ORをNANDで表現**  
-> 1. NOT: $\lnot X = X \uparrow X$  
-> 2. AND: $X \cdot Y = \lnot(X \uparrow Y)$  
-> 3. OR: $X + Y = \lnot(\lnot X \cdot \lnot Y)$  
+> **ステップ2：NOTゲートのNAND化**  
+> $\lnot Sel = Sel \uparrow Sel$
+> ```mermaid
+> graph LR
+>     Sel["Sel"] --> Nand1["Nand(Sel,Sel)"]:::gate
+>     Nand1 --> And1["And"]:::gate
+>     A["A"] --> And1
+>     Sel --> And2["And"]:::gate
+>     B["B"] --> And2
+>     And1 --> Or["Or"]:::gate
+>     And2 --> Or
+>     Or --> OUT["Out"]
+> ```
 > 
+> **ステップ3：AND/ORゲートのNAND化**  
+> - AND: $X \cdot Y = \lnot(X \uparrow Y)$  
+> - OR: $X + Y = \lnot(\lnot X \cdot \lnot Y)$
 > ```mermaid
 > graph LR
 >     Sel["Sel"] --> Nand1["Nand(Sel,Sel)"]:::gate
@@ -203,7 +222,7 @@ graph LR;
 >     Nand7 --> OUT["Out"]
 > ```
 > 
-> **ステップ3：冗長なNANDの除去**  
+> **ステップ4：信号の共有と最適化**  
 > 中間信号を再利用してゲート数を削減：
 > ```mermaid
 > graph LR
@@ -216,7 +235,7 @@ graph LR;
 >     Nand5 --> OUT["Out"]
 > ```
 > 
-> **最終実装の検証**：
+> **最終検証**：
 > | Sel | A | B | Nand1 | Nand2 | Nand3 | Out |
 > |-----|---|---|-------|-------|-------|-----|
 > | 0   | 0 | 0 | 1     | 1     | 1     | 0   |
