@@ -16,30 +16,35 @@ tags:
 |1|0|1|
 |1|1|0|
 
->[!example]-
+> [!example]-
 > ```mermaid
 > graph LR;
->     A0["A"] -->|<span style="color:#a00">0</span>| Xor0;
->     B0["B"] -->|<span style="color:#a00">0</span>| Xor0;
->     Xor0["Xor"]:::gate -->|<span style="color:#a00">0</span>| OUT0["Out"];
+>     %% Pattern 0: A=0, B=0
+>     A0["A"]:::input0 -->|<span style="color:#aa0000">0</span>| Xor0["Xor"]:::gate;
+>     B0["B"]:::input0 -->|<span style="color:#aa0000">0</span>| Xor0;
+>     Xor0 -->|<span style="color:#aa0000">0</span>| OUT0["Out"]:::output0;
 > 
->     A1["A"] -->|<span style="color:#a00">0</span>| Xor1;
->     B1["B"] -->|<span style="color:#0a0">1</span>| Xor1;
->     Xor1["Xor"]:::gate -->|<span style="color:#0a0">1</span>| OUT1["Out"];
+>     %% Pattern 1: A=0, B=1
+>     A1["A"]:::input0 -->|<span style="color:#aa0000">0</span>| Xor1["Xor"]:::gate;
+>     B1["B"]:::input1 -->|<span style="color:#00aa00">1</span>| Xor1;
+>     Xor1 -->|<span style="color:#00aa00">1</span>| OUT1["Out"]:::output1;
 > 
->     A2["A"] -->|<span style="color:#0a0">1</span>| Xor2;
->     B2["B"] -->|<span style="color:#a00">0</span>| Xor2;
->     Xor2["Xor"]:::gate -->|<span style="color:#0a0">1</span>| OUT2["Out"];
+>     %% Pattern 2: A=1, B=0
+>     A2["A"]:::input1 -->|<span style="color:#00aa00">1</span>| Xor2["Xor"]:::gate;
+>     B2["B"]:::input0 -->|<span style="color:#aa0000">0</span>| Xor2;
+>     Xor2 -->|<span style="color:#00aa00">1</span>| OUT2["Out"]:::output1;
 > 
->     A3["A"] -->|<span style="color:#0a0">1</span>| Xor3;
->     B3["B"] -->|<span style="color:#0a0">1</span>| Xor3;
->     Xor3["Xor"]:::gate -->|<span style="color:#a00">0</span>| OUT3["Out"];
+>     %% Pattern 3: A=1, B=1
+>     A3["A"]:::input1 -->|<span style="color:#00aa00">1</span>| Xor3["Xor"]:::gate;
+>     B3["B"]:::input1 -->|<span style="color:#00aa00">1</span>| Xor3;
+>     Xor3 -->|<span style="color:#aa0000">0</span>| OUT3["Out"]:::output0;
 > 
 >     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
 >     classDef input0 fill:#ff9999,stroke:#000,stroke-width:1px;
 >     classDef input1 fill:#99ff99,stroke:#000,stroke-width:1px;
 >     classDef output0 fill:#ff9999,stroke:#000,stroke-width:1px;
 >     classDef output1 fill:#99ff99,stroke:#000,stroke-width:1px;
+> 
 > ```
 
 ---
