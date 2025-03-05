@@ -50,10 +50,100 @@ tags:
 >
 
 ###  And/Or/Not Version
+>[!tip]
+>$$
+>A \oplus B = (A \land \neg B) \lor (\neg A \land B)
+>$$
+
+```vhdl
+CHIP Xor {
+    IN a, b;
+    OUT out;
+PARTS:
+    Not(in=a, out=notA);
+    Not(in=b, out=notB);
+    And(a=a, b=notB, out=and1);
+    And(a=notA, b=b, out=and2);
+    Or(a=and1, b=and2, out=out);
+}
+```
+
+```mermaid
+graph LR;
+    A["A"] --> NotA["Not"]:::gate
+    B["B"] --> NotB["Not"]:::gate
+    A --> And1["And"]:::gate
+    NotB --> And1
+    NotA --> And2["And"]:::gate
+    B --> And2
+    And1 --> Or0["Or"]:::gate
+    And2 --> Or0
+    Or0 --> OUT["out"]
+    
+    classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
+```
+
+> [!example]-
+> ```mermaid
+> graph LR
+>     %% A=0, B=0
+>     subgraph Case1[A=0, B=0
+> 	direction LR
+direction LR
+>     A0["A"] -->|<span style="color:#a00">0</span>| NotA0["Not"]:::gate
+>     B0["B"] -->|<span style="color:#a00">0</span>| NotB0["Not"]:::gate
+>     NotA0 -->|<span style="color:#0a0">1</span>| And20["And"]:::gate
+>     NotB0 -->|<span style="color:#0a0">1</span>| And10["And"]:::gate
+>     A0 --> And10
+>     B0 --> And20
+>     And10 -->|<span style="color:#a00">0</span>| Or0["Or"]:::gate
+>     And20 -->|<span style="color:#a00">0</span>| Or0
+>     Or0 -->|<span style="color:#a00">0</span>| OUT0["Output"]
+>     end
+> 
+>     %% A=0, B=1
+>     subgraph Case2[A=0, B=1]
+>     A1["A"] -->|<span style="color:#a00">0</span>| NotA1["Not"]:::gate
+>     B1["B"] -->|<span style="color:#0a0">1</span>| NotB1["Not"]:::gate
+>     NotA1 -->|<span style="color:#0a0">1</span>| And21["And"]:::gate
+>     NotB1 -->|<span style="color:#a00">0</span>| And11["And"]:::gate
+>     A1 --> And11
+>     B1 --> And21
+>     And11 -->|<span style="color:#a00">0</span>| Or1["Or"]:::gate
+>     And21 -->|<span style="color:#0a0">1</span>| Or1
+>     Or1 -->|<span style="color:#0a0">1</span>| OUT1["Output"]
+>     end
+> 
+>     %% A=1, B=0
+>     subgraph Case3[A=1, B=0]
+>     A2["A"] -->|<span style="color:#0a0">1</span>| NotA2["Not"]:::gate
+>     B2["B"] -->|<span style="color:#a00">0</span>| NotB2["Not"]:::gate
+>     NotA2 -->|<span style="color:#a00">0</span>| And22["And"]:::gate
+>     NotB2 -->|<span style="color:#0a0">1</span>| And12["And"]:::gate
+>     A2 --> And12
+>     B2 --> And22
+>     And12 -->|<span style="color:#0a0">1</span>| Or2["Or"]:::gate
+>     And22 -->|<span style="color:#a00">0</span>| Or2
+>     Or2 -->|<span style="color:#0a0">1</span>| OUT2["Output"]
+>     end
+> 
+>     %% A=1, B=1
+>     subgraph Case4[A=1, B=1]
+>     A3["A"] -->|<span style="color:#0a0">1</span>| NotA3["Not"]:::gate
+>     B3["B"] -->|<span style="color:#0a0">1</span>| NotB3["Not"]:::gate
+>     NotA3 -->|<span style="color:#a00">0</span>| And23["And"]:::gate
+>     NotB3 -->|<span style="color:#a00">0</span>| And13["And"]:::gate
+>     A3 --> And13
+>     B3 --> And23
+>     And13 -->|<span style="color:#a00">0</span>| Or3["Or"]:::gate
+>     And23 -->|<span style="color:#a00">0</span>| Or3
+>     Or3 -->|<span style="color:#a00">0</span>| OUT3["Output"]
+>     end
+> 
+>     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
+> ```
+
 ###  Nand Version
-
-
-
 ```vhdl
 CHIP Xor {
     IN a, b;
@@ -128,239 +218,146 @@ graph LR;
 > ```
 
 
-# Implementation (And/Or/Not Version)
-
->[!tip]
->$$
->A \oplus B = (A \land \neg B) \lor (\neg A \land B)
->$$
-
-```vhdl
-CHIP Xor {
-    IN a, b;
-    OUT out;
-PARTS:
-    Not(in=a, out=notA);
-    Not(in=b, out=notB);
-    And(a=a, b=notB, out=and1);
-    And(a=notA, b=b, out=and2);
-    Or(a=and1, b=and2, out=out);
-}
-```
-
-```mermaid
-graph LR;
-    A["A"] --> NotA["Not"]:::gate
-    B["B"] --> NotB["Not"]:::gate
-    A --> And1["And"]:::gate
-    NotB --> And1
-    NotA --> And2["And"]:::gate
-    B --> And2
-    And1 --> Or0["Or"]:::gate
-    And2 --> Or0
-    Or0 --> OUT["out"]
-    
-    classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
-```
-
-> [!example]-
+>[!prove]- Xゲートの最適化手順
+> 以下、XORゲートをNANDのみで実装する最適化プロセスを **ステップバイステップで図解** します。各段階の論理式と回路構造の変化をMermaid図で表現します。
+> 
+> ---
+> 
+> ### 最適化前の論理式（基本形）
+> $$
+> A \oplus B = (\neg A \land B) \lor (A \land \neg B)
+> $$
+> 
 > ```mermaid
 > graph LR
->     %% A=0, B=0
->     subgraph Case1[A=0, B=0]
->     A0["A"] -->|<span style="color:#a00">0</span>| NotA0["Not"]:::gate
->     B0["B"] -->|<span style="color:#a00">0</span>| NotB0["Not"]:::gate
->     NotA0 -->|<span style="color:#0a0">1</span>| And20["And"]:::gate
->     NotB0 -->|<span style="color:#0a0">1</span>| And10["And"]:::gate
->     A0 --> And10
->     B0 --> And20
->     And10 -->|<span style="color:#a00">0</span>| Or0["Or"]:::gate
->     And20 -->|<span style="color:#a00">0</span>| Or0
->     Or0 -->|<span style="color:#a00">0</span>| OUT0["Output"]
->     end
+>     A["A"] --> NotA["Not"]:::gate
+>     B["B"] --> NotB["Not"]:::gate
+>     A --> And1["And"]:::gate
+>     NotB --> And1
+>     NotA --> And2["And"]:::gate
+>     B --> And2
+>     And1 --> Or["Or"]:::gate
+>     And2 --> Or
+>     Or --> OUT["OUT"]
 > 
->     %% A=0, B=1
->     subgraph Case2[A=0, B=1]
->     A1["A"] -->|<span style="color:#a00">0</span>| NotA1["Not"]:::gate
->     B1["B"] -->|<span style="color:#0a0">1</span>| NotB1["Not"]:::gate
->     NotA1 -->|<span style="color:#0a0">1</span>| And21["And"]:::gate
->     NotB1 -->|<span style="color:#a00">0</span>| And11["And"]:::gate
->     A1 --> And11
->     B1 --> And21
->     And11 -->|<span style="color:#a00">0</span>| Or1["Or"]:::gate
->     And21 -->|<span style="color:#0a0">1</span>| Or1
->     Or1 -->|<span style="color:#0a0">1</span>| OUT1["Output"]
->     end
-> 
->     %% A=1, B=0
->     subgraph Case3[A=1, B=0]
->     A2["A"] -->|<span style="color:#0a0">1</span>| NotA2["Not"]:::gate
->     B2["B"] -->|<span style="color:#a00">0</span>| NotB2["Not"]:::gate
->     NotA2 -->|<span style="color:#a00">0</span>| And22["And"]:::gate
->     NotB2 -->|<span style="color:#0a0">1</span>| And12["And"]:::gate
->     A2 --> And12
->     B2 --> And22
->     And12 -->|<span style="color:#0a0">1</span>| Or2["Or"]:::gate
->     And22 -->|<span style="color:#a00">0</span>| Or2
->     Or2 -->|<span style="color:#0a0">1</span>| OUT2["Output"]
->     end
-> 
->     %% A=1, B=1
->     subgraph Case4[A=1, B=1]
->     A3["A"] -->|<span style="color:#0a0">1</span>| NotA3["Not"]:::gate
->     B3["B"] -->|<span style="color:#0a0">1</span>| NotB3["Not"]:::gate
->     NotA3 -->|<span style="color:#a00">0</span>| And23["And"]:::gate
->     NotB3 -->|<span style="color:#a00">0</span>| And13["And"]:::gate
->     A3 --> And13
->     B3 --> And23
->     And13 -->|<span style="color:#a00">0</span>| Or3["Or"]:::gate
->     And23 -->|<span style="color:#a00">0</span>| Or3
->     Or3 -->|<span style="color:#a00">0</span>| OUT3["Output"]
->     end
-> 
->     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
+>     classDef gate fill:#ddd,stroke:#000;
 > ```
-
->[!prove]- Xゲートの最適化手順
-以下、XORゲートをNANDのみで実装する最適化プロセスを **ステップバイステップで図解** します。各段階の論理式と回路構造の変化をMermaid図で表現します。
-
----
-
-### 最適化前の論理式（基本形）
-$$
-A \oplus B = (\neg A \land B) \lor (A \land \neg B)
-$$
-
-```mermaid
-graph LR
-    A["A"] --> NotA["Not"]:::gate
-    B["B"] --> NotB["Not"]:::gate
-    A --> And1["And"]:::gate
-    NotB --> And1
-    NotA --> And2["And"]:::gate
-    B --> And2
-    And1 --> Or["Or"]:::gate
-    And2 --> Or
-    Or --> OUT["OUT"]
-
-    classDef gate fill:#ddd,stroke:#000;
-```
-
----
-
-### 最適化ステップ 1: NOTをNANDで置換
-NOTゲートをNANDの自己接続で実装します。
-
-$$
-\neg X = X \uparrow X
-$$
-
-```mermaid
-graph LR
-    A["A"] --> NandA["Nand(A,A)"]:::gate
-    B["B"] --> NandB["Nand(B,B)"]:::gate
-    A --> And1["And"]:::gate
-    NandB --> And1
-    NandA --> And2["And"]:::gate
-    B --> And2
-    And1 --> Or["Or"]:::gate
-    And2 --> Or
-    Or --> OUT["OUT"]
-
-    classDef gate fill:#ddd,stroke:#000;
-```
-
----
-
-### 最適化ステップ 2: ANDをNANDで置換
-ANDゲートを「NAND + NAND」で実装します。
-
-$$
-X \land Y = (X \uparrow Y) \uparrow (X \uparrow Y)
-$$
-
-```mermaid
-graph LR
-    A["A"] --> NandA["Nand(A,A)"]:::gate
-    B["B"] --> NandB["Nand(B,B)"]:::gate
-
-    A --> Nand1["Nand(A, NandB)"]:::gate
-    NandB --> Nand1
-    Nand1 --> Nand2["Nand(Nand1, Nand1)"]:::gate
-
-    B --> Nand3["Nand(NandA, B)"]:::gate
-    NandA --> Nand3
-    Nand3 --> Nand4["Nand(Nand3, Nand3)"]:::gate
-
-    Nand2 --> Nand5["Nand(Nand2, Nand4)"]:::gate
-    Nand4 --> Nand5
-    Nand5 --> OUT["OUT"]
-
-    classDef gate fill:#ddd,stroke:#000;
-```
-
----
-
-### 最適化ステップ 3: ORの冗長性を排除
-ORゲートのNAND実装を分析し、中間信号を共有可能と判断：
-
-$$
-\text{OR} = \neg (\neg X \land \neg Y) = (X \uparrow X) \uparrow (Y \uparrow Y)
-$$
-
-ここで、以下の **中間信号の共有** が可能：
-- $\text{nand1} = A \uparrow B$
-- $\text{nand2} = A \uparrow \text{nand1}$ 
-- $\text{nand3} = B \uparrow \text{nand1}$
-
-```mermaid
-graph LR
-    A["A"] --> Nand1["Nand(A,B)"]:::gate
-    B["B"] --> Nand1
-
-    A --> Nand2["Nand(A,Nand1)"]:::gate
-    Nand1 --> Nand2
-
-    B --> Nand3["Nand(B,Nand1)"]:::gate
-    Nand1 --> Nand3
-
-    Nand2 --> Nand4["Nand(Nand2,Nand3)"]:::gate
-    Nand3 --> Nand4
-    Nand4 --> OUT["OUT"]
-
-    classDef gate fill:#ddd,stroke:#000;
-```
-
----
-
-### 最適化ステップ 4: 真理値表で動作検証
-最終的な4-NAND回路の動作を確認：
-
-| A | B | nand1 | nand2 | nand3 | out |
-|---|---|-------|-------|-------|-----|
-| 0 | 0 | 1     | 1     | 1     | 0 ✔️|
-| 0 | 1 | 1     | 1     | 0     | 1 ✔️|
-| 1 | 0 | 1     | 0     | 1     | 1 ✔️|
-| 1 | 1 | 0     | 1     | 1     | 0 ✔️|
-
----
-
-### 最適化の鍵
-1. **中間信号の共有**:  $\text{nand1} = A \uparrow B$ を複数箇所で再利用
-2. **論理圧縮**:
-   - $$ \text{nand2} = A \uparrow \text{nand1} = \neg (A \land \neg (A \land B)) $$
-   - \( \text{nand3} = B \uparrow \text{nand1} = \neg (B \land \neg (A \land B)) \)
-3. **最終出力**:  
-   $$
-   \text{out} = \text{nand2} \uparrow \text{nand3} = \neg \left( \neg (A \land \neg (A \land B)) \land \neg (B \land \neg (A \land B)) \right)
-   $$
-
----
-
-### 最終結論
-**4つのNANDゲートが最小構成** であり、この最適化により：
-- 論理ゲート数が **8個 → 4個** に削減
-- 信号伝播遅延が短縮
-- ハードウェアコストが低減
-
-この構造は、数学的にもハードウェア的にも **完全なXOR動作** を保証します。
+> 
+> ---
+> 
+> ### 最適化ステップ 1: NOTをNANDで置換
+> NOTゲートをNANDの自己接続で実装します。
+> 
+> $$
+> \neg X = X \uparrow X
+> $$
+> 
+> ```mermaid
+> graph LR
+>     A["A"] --> NandA["Nand(A,A)"]:::gate
+>     B["B"] --> NandB["Nand(B,B)"]:::gate
+>     A --> And1["And"]:::gate
+>     NandB --> And1
+>     NandA --> And2["And"]:::gate
+>     B --> And2
+>     And1 --> Or["Or"]:::gate
+>     And2 --> Or
+>     Or --> OUT["OUT"]
+> 
+>     classDef gate fill:#ddd,stroke:#000;
+> ```
+> 
+> ---
+> 
+> ### 最適化ステップ 2: ANDをNANDで置換
+> ANDゲートを「NAND + NAND」で実装します。
+> 
+> $$
+> X \land Y = (X \uparrow Y) \uparrow (X \uparrow Y)
+> $$
+> 
+> ```mermaid
+> graph LR
+>     A["A"] --> NandA["Nand(A,A)"]:::gate
+>     B["B"] --> NandB["Nand(B,B)"]:::gate
+> 
+>     A --> Nand1["Nand(A, NandB)"]:::gate
+>     NandB --> Nand1
+>     Nand1 --> Nand2["Nand(Nand1, Nand1)"]:::gate
+> 
+>     B --> Nand3["Nand(NandA, B)"]:::gate
+>     NandA --> Nand3
+>     Nand3 --> Nand4["Nand(Nand3, Nand3)"]:::gate
+> 
+>     Nand2 --> Nand5["Nand(Nand2, Nand4)"]:::gate
+>     Nand4 --> Nand5
+>     Nand5 --> OUT["OUT"]
+> 
+>     classDef gate fill:#ddd,stroke:#000;
+> ```
+> 
+> ---
+> 
+> ### 最適化ステップ 3: ORの冗長性を排除
+> ORゲートのNAND実装を分析し、中間信号を共有可能と判断：
+> 
+> $$
+> \text{OR} = \neg (\neg X \land \neg Y) = (X \uparrow X) \uparrow (Y \uparrow Y)
+> $$
+> 
+> ここで、以下の **中間信号の共有** が可能：
+> - $\text{nand1} = A \uparrow B$
+> - $\text{nand2} = A \uparrow \text{nand1}$ 
+> - $\text{nand3} = B \uparrow \text{nand1}$
+> 
+> ```mermaid
+> graph LR
+>     A["A"] --> Nand1["Nand(A,B)"]:::gate
+>     B["B"] --> Nand1
+> 
+>     A --> Nand2["Nand(A,Nand1)"]:::gate
+>     Nand1 --> Nand2
+> 
+>     B --> Nand3["Nand(B,Nand1)"]:::gate
+>     Nand1 --> Nand3
+> 
+>     Nand2 --> Nand4["Nand(Nand2,Nand3)"]:::gate
+>     Nand3 --> Nand4
+>     Nand4 --> OUT["OUT"]
+> 
+>     classDef gate fill:#ddd,stroke:#000;
+> ```
+> 
+> ---
+> 
+> ### 最適化ステップ 4: 真理値表で動作検証
+> 最終的な4-NAND回路の動作を確認：
+> 
+> | A | B | nand1 | nand2 | nand3 | out |
+> |---|---|-------|-------|-------|-----|
+> | 0 | 0 | 1     | 1     | 1     | 0 ✔️|
+> | 0 | 1 | 1     | 1     | 0     | 1 ✔️|
+> | 1 | 0 | 1     | 0     | 1     | 1 ✔️|
+> | 1 | 1 | 0     | 1     | 1     | 0 ✔️|
+> 
+> ---
+> 
+> ### 最適化の鍵
+> 1. **中間信号の共有**:  $\text{nand1} = A \uparrow B$ を複数箇所で再利用
+> 2. **論理圧縮**:
+>    - $\text{nand2} = A \uparrow \text{nand1} = \neg (A \land \neg (A \land B))$
+>    - $\text{nand3} = B \uparrow \text{nand1} = \neg (B \land \neg (A \land B))$
+> 3. **最終出力**:  
+>    $$
+>    \text{out} = \text{nand2} \uparrow \text{nand3} = \neg \left( \neg (A \land \neg (A \land B)) \land \neg (B \land \neg (A \land B)) \right)
+>    $$
+> 
+> ---
+> 
+> ### 最終結論
+> **4つのNANDゲートが最小構成** であり、この最適化により：
+> - 論理ゲート数が **8個 → 4個** に削減
+> - 信号伝播遅延が短縮
+> - ハードウェアコストが低減
+> 
+> この構造は、数学的にもハードウェア的にも **完全なXOR動作** を保証します。
