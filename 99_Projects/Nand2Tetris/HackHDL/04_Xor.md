@@ -7,7 +7,7 @@ tags:
   - "#digital-electronics"
 ---
 
-# Specification
+## Specification
 
 |A|B|A XOR B|
 |---|---|---|
@@ -16,37 +16,40 @@ tags:
 |1|0|1|
 |1|1|0|
 
-```mermaid
-graph LR;
-    A0["A"] -->|<span style="color:#a00">0</span>| Xor0;
-    B0["B"] -->|<span style="color:#a00">0</span>| Xor0;
-    Xor0["Xor"]:::gate -->|<span style="color:#a00">0</span>| OUT0["Output"];
-
-    A1["A"] -->|<span style="color:#a00">0</span>| Xor1;
-    B1["B"] -->|<span style="color:#0a0">1</span>| Xor1;
-    Xor1["Xor"]:::gate -->|<span style="color:#0a0">1</span>| OUT1["Output"];
-
-    A2["A"] -->|<span style="color:#0a0">1</span>| Xor2;
-    B2["B"] -->|<span style="color:#a00">0</span>| Xor2;
-    Xor2["Xor"]:::gate -->|<span style="color:#0a0">1</span>| OUT2["Output"];
-
-    A3["A"] -->|<span style="color:#0a0">1</span>| Xor3;
-    B3["B"] -->|<span style="color:#0a0">1</span>| Xor3;
-    Xor3["Xor"]:::gate -->|<span style="color:#a00">0</span>| OUT3["Output"];
-
-    classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
-```
+>[!example]-
+> ```mermaid
+> graph LR;
+>     A0["A"] -->|<span style="color:#a00">0</span>| Xor0;
+>     B0["B"] -->|<span style="color:#a00">0</span>| Xor0;
+>     Xor0["Xor"]:::gate -->|<span style="color:#a00">0</span>| OUT0["Output"];
+> 
+>     A1["A"] -->|<span style="color:#a00">0</span>| Xor1;
+>     B1["B"] -->|<span style="color:#0a0">1</span>| Xor1;
+>     Xor1["Xor"]:::gate -->|<span style="color:#0a0">1</span>| OUT1["Output"];
+> 
+>     A2["A"] -->|<span style="color:#0a0">1</span>| Xor2;
+>     B2["B"] -->|<span style="color:#a00">0</span>| Xor2;
+>     Xor2["Xor"]:::gate -->|<span style="color:#0a0">1</span>| OUT2["Output"];
+> 
+>     A3["A"] -->|<span style="color:#0a0">1</span>| Xor3;
+>     B3["B"] -->|<span style="color:#0a0">1</span>| Xor3;
+>     Xor3["Xor"]:::gate -->|<span style="color:#a00">0</span>| OUT3["Output"];
+> 
+>     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
+> ```
 
 ---
-# Implementation
+## Implementation
 
 >[!tip]
 > 
 > $$A \text{ XOR } B $$
-> 
-> $$= (\neg A \land B)\lor(A \land \neg B)$$
+> According to Truth Table, 
 > $$= (\neg A \land B)\lor(A \land \neg B)$$
 >
+
+###  And/Or/Not Version
+###  Nand Version
 
 
 
@@ -57,7 +60,7 @@ CHIP Xor {
 PARTS:
     Nand(a=a, b=b, out=nand1);
     Nand(a=a, b=nand1, out=nand2);
-    Nand(a=b, b=nand1, oukt=nand3);
+    Nand(a=b, b=nand1, out=nand3);
     Nand(a=nand2, b=nand3, out=out);
 }
 ```
