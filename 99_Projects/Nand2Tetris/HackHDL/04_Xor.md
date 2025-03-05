@@ -40,11 +40,22 @@ graph LR;
 ---
 # Implementation
 
+>[!tip] 
+> $$$ 
+> \neg(A \text{ NAND } B) = A \text{ AND } B 
+> \neg hgoe
+> $$$
+> 
+
+
 >[!tip]
->$$
->A \oplus B = \left( A \uparrow (A \uparrow B) \right) \uparrow \left( B \uparrow (A \uparrow B) \right)
->$$
->Where \( \uparrow \) denotes the NAND operation.
+>$$$
+> A \text{ XOR } B = \\
+> 
+> 
+> 
+> A \text{ XOR } B = \left( A \land (A \land B) \right) \uparrow \left( B \uparrow (A \uparrow B) \right)
+>$$$
 
 ```vhdl
 CHIP Xor {

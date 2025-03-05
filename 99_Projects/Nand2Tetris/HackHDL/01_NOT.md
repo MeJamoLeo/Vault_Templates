@@ -9,10 +9,10 @@ tags:
 ---
 ## Specification
 
-|A|NOT A|
-|---|---|
-|0|1|
-|1|0|
+| A   | NOT A |
+| --- | ----- |
+| 0   | 1     |
+| 1   | 0     |
 
 ``` mermaid
 graph LR;
