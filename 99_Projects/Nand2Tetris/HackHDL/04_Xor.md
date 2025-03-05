@@ -43,7 +43,7 @@ tags:
 ###  And/Or/Not Version
 >[!tip]
 >$$
->A \oplus B = (A \land \neg B) \lor (\neg A \land B)
+>(A \land \neg B) \lor (\neg A \land B) = A \oplus B 
 >$$
 
 ```vhdl
@@ -77,32 +77,54 @@ graph LR;
 > [!example]-
 > ```mermaid
 > graph LR;
->  %% A=0, B=0
->  A0["A"] -->|<span style="color:#a00">0</span>| Nand0["Nand"]:::gate;
->  B0["B"] -->|<span style="color:#a00">0</span>| Nand0;
->  Nand0 -->|<span style="color:#0a0">1</span>| Not0["Not"]:::gate;
->  Not0 -->|<span style="color:#a00">0</span>| OUT0["Output"];
+>     %% パターン0: A=0, B=0
+>     A0["A"] -->|<span style="color:#a00">0</span>| OR0["OR"]:::gate;
+>     B0["B"] -->|<span style="color:#a00">0</span>| OR0;
+>     OR0 -->|<span style="color:#a00">0</span>| FINAL0["AND"]:::gate;
 > 
->  %% A=0, B=1
->  A1["A"] -->|<span style="color:#a00">0</span>| Nand1["Nand"]:::gate;
->  B1["B"] -->|<span style="color:#0a0">1</span>| Nand1;
->  Nand1 -->|<span style="color:#0a0">1</span>| Not1["Not"]:::gate;
->  Not1 -->|<span style="color:#a00">0</span>| OUT1["Output"];
+>     A0 -->|<span style="color:#a00">0</span>| AND0["AND"]:::gate;
+>     B0["B"] -->|<span style="color:#a00">0</span>| AND0;
+>     AND0 -->|<span style="color:#0a0">1</span>| NOT0["NOT"]:::gate;
+>     NOT0 -->|<span style="color:#0a0">1</span>| FINAL0;
+>     FINAL0 -->|<span style="color:#a00">0</span>| OUT0["Output"];
 > 
->  %% A=1, B=0
->  A2["A"] -->|<span style="color:#0a0">1</span>| Nand2["Nand"]:::gate;
->  B2["B"] -->|<span style="color:#a00">0</span>| Nand2;
->  Nand2 -->|<span style="color:#0a0">1</span>| Not2["Not"]:::gate;
->  Not2 -->|<span style="color:#a00">0</span>| OUT2["Output"];
+>     %% パターン1: A=0, B=1
+>     A1["A"] -->|<span style="color:#a00">0</span>| OR1["OR"]:::gate;
+>     B1["B"] -->|<span style="color:#0a0">1</span>| OR1;
+>     OR1 -->|<span style="color:#0a0">1</span>| FINAL1["AND"]:::gate;
 > 
->  %% A=1, B=1
->  A3["A"] -->|<span style="color:#0a0">1</span>| Nand3["Nand"]:::gate;
->  B3["B"] -->|<span style="color:#0a0">1</span>| Nand3;
->  Nand3 -->|<span style="color:#a00">0</span>| Not3["Not"]:::gate;
->  Not3 -->|<span style="color:#0a0">1</span>| OUT3["Output"];
+>     A1 -->|<span style="color:#a00">0</span>| AND1["AND"]:::gate;
+>     B1 -->|<span style="color:#0a0">1</span>| AND1;
+>     AND1 -->|<span style="color:#0a0">1</span>| NOT1["NOT"]:::gate;
+>     NOT1 -->|<span style="color:#0a0">1</span>| FINAL1;
+>     FINAL1 -->|<span style="color:#0a0">1</span>| OUT1["Output"];
 > 
->  classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
+>     %% パターン2: A=1, B=0
+>     A2["A"] -->|<span style="color:#0a0">1</span>| OR2["OR"]:::gate;
+>     B2["B"] -->|<span style="color:#a00">0</span>| OR2;
+>     OR2 -->|<span style="color:#0a0">1</span>| FINAL2["AND"]:::gate;
+> 
+>     A2 -->|<span style="color:#0a0">1</span>| AND2["AND"]:::gate;
+>     B2["B"] -->|<span style="color:#a00">0</span>| AND2;
+>     AND2 -->|<span style="color:#0a0">1</span>| NOT2["NOT"]:::gate;
+>     NOT2 -->|<span style="color:#0a0">1</span>| FINAL2;
+>     FINAL2 -->|<span style="color:#0a0">1</span>| OUT2["Output"];
+> 
+>     %% パターン3: A=1, B=1
+>     A3["A"] -->|<span style="color:#0a0">1</span>| OR3["OR"]:::gate;
+>     B3["B"] -->|<span style="color:#0a0">1</span>| OR3;
+>     OR3 -->|<span style="color:#0a0">1</span>| FINAL3["AND"]:::gate;
+> 
+>     A3 -->|<span style="color:#0a0">1</span>| AND3["AND"]:::gate;
+>     B3["B"] -->|<span style="color:#0a0">1</span>| AND3;
+>     AND3 -->|<span style="color:#0a0">1</span>| NOT3["NOT"]:::gate;
+>     NOT3 -->|<span style="color:#a00">0</span>| FINAL3;
+>     FINAL3 -->|<span style="color:#a00">0</span>| OUT3["Output"];
+> 
+>     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
 > ```
+
+---
 
 ###  Nand Version
 ```vhdl
