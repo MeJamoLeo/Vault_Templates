@@ -164,50 +164,58 @@ graph LR;
     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
 ```
 
-> [!example]-
+>[!example]-
 > ```mermaid
 > graph LR;
->     A0["A"] -->|<span style="color:#a00">0</span>| Nand1_0;
->     B0["B"] -->|<span style="color:#a00">0</span>| Nand1_0;
->     Nand1_0["Nand"]:::gate -->|<span style="color:#0a0">1</span>| Nand2_0["Nand"]:::gate;
->     A0 -->|<span style="color:#a00">0</span>| Nand2_0;
->     Nand1_0 -->|<span style="color:#0a0">1</span>| Nand3_0["Nand"]:::gate;
->     B0 -->|<span style="color:#a00">0</span>| Nand3_0;
->     Nand2_0 -->|<span style="color:#0a0">1</span>| Nand4_0["Nand"]:::gate;
->     Nand3_0 -->|<span style="color:#0a0">1</span>| Nand4_0;
->     Nand4_0 -->|<span style="color:#a00">0</span>| OUT0["Output"];
+>     %% Pattern 0: A=0, B=0
+>     A0["A"]:::input0 -->|<span style="color:#aa0000">0</span>| Nand1_0["NAND"]:::gate;
+>     B0["B"]:::input0 -->|<span style="color:#aa0000">0</span>| Nand1_0;
+>     Nand1_0 -->|<span style="color:#00aa00">1</span>| Nand2_0["NAND"]:::gate;
+>     A0 -->|<span style="color:#aa0000">0</span>| Nand2_0;
+>     Nand1_0 -->|<span style="color:#00aa00">1</span>| Nand3_0["NAND"]:::gate;
+>     B0 -->|<span style="color:#aa0000">0</span>| Nand3_0;
+>     Nand2_0 -->|<span style="color:#00aa00">1</span>| Nand4_0["NAND"]:::gate;
+>     Nand3_0 -->|<span style="color:#00aa00">1</span>| Nand4_0;
+>     Nand4_0 -->|<span style="color:#aa0000">0</span>| OUT0["Output"]:::output0;
 > 
->     A1["A"] -->|<span style="color:#a00">0</span>| Nand1_1;
->     B1["B"] -->|<span style="color:#0a0">1</span>| Nand1_1;
->     Nand1_1["Nand"]:::gate -->|<span style="color:#0a0">1</span>| Nand2_1["Nand"]:::gate;
->     A1 -->|<span style="color:#a00">0</span>| Nand2_1;
->     Nand1_1 -->|<span style="color:#0a0">1</span>| Nand3_1["Nand"]:::gate;
->     B1 -->|<span style="color:#0a0">1</span>| Nand3_1;
->     Nand2_1 -->|<span style="color:#0a0">1</span>| Nand4_1["Nand"]:::gate;
->     Nand3_1 -->|<span style="color:#a00">0</span>| Nand4_1;
->     Nand4_1 -->|<span style="color:#0a0">1</span>| OUT1["Output"];
+>     %% Pattern 1: A=0, B=1
+>     A1["A"]:::input0 -->|<span style="color:#aa0000">0</span>| Nand1_1["NAND"]:::gate;
+>     B1["B"]:::input1 -->|<span style="color:#00aa00">1</span>| Nand1_1;
+>     Nand1_1 -->|<span style="color:#00aa00">1</span>| Nand2_1["NAND"]:::gate;
+>     A1 -->|<span style="color:#aa0000">0</span>| Nand2_1;
+>     Nand1_1 -->|<span style="color:#00aa00">1</span>| Nand3_1["NAND"]:::gate;
+>     B1 -->|<span style="color:#00aa00">1</span>| Nand3_1;
+>     Nand2_1 -->|<span style="color:#00aa00">1</span>| Nand4_1["NAND"]:::gate;
+>     Nand3_1 -->|<span style="color:#aa0000">0</span>| Nand4_1;
+>     Nand4_1 -->|<span style="color:#00aa00">1</span>| OUT1["Output"]:::output1;
 > 
->     A2["A"] -->|<span style="color:#0a0">1</span>| Nand1_2;
->     B2["B"] -->|<span style="color:#a00">0</span>| Nand1_2;
->     Nand1_2["Nand"]:::gate -->|<span style="color:#0a0">1</span>| Nand2_2["Nand"]:::gate;
->     A2 -->|<span style="color:#0a0">1</span>| Nand2_2;
->     Nand1_2 -->|<span style="color:#0a0">1</span>| Nand3_2["Nand"]:::gate;
->     B2 -->|<span style="color:#a00">0</span>| Nand3_2;
->     Nand2_2 -->|<span style="color:#a00">0</span>| Nand4_2["Nand"]:::gate;
->     Nand3_2 -->|<span style="color:#0a0">1</span>| Nand4_2;
->     Nand4_2 -->|<span style="color:#0a0">1</span>| OUT2["Output"];
+>     %% Pattern 2: A=1, B=0
+>     A2["A"]:::input1 -->|<span style="color:#00aa00">1</span>| Nand1_2["NAND"]:::gate;
+>     B2["B"]:::input0 -->|<span style="color:#aa0000">0</span>| Nand1_2;
+>     Nand1_2 -->|<span style="color:#00aa00">1</span>| Nand2_2["NAND"]:::gate;
+>     A2 -->|<span style="color:#00aa00">1</span>| Nand2_2;
+>     Nand1_2 -->|<span style="color:#00aa00">1</span>| Nand3_2["NAND"]:::gate;
+>     B2 -->|<span style="color:#aa0000">0</span>| Nand3_2;
+>     Nand2_2 -->|<span style="color:#aa0000">0</span>| Nand4_2["NAND"]:::gate;
+>     Nand3_2 -->|<span style="color:#00aa00">1</span>| Nand4_2;
+>     Nand4_2 -->|<span style="color:#00aa00">1</span>| OUT2["Output"]:::output1;
 > 
->     A3["A"] -->|<span style="color:#0a0">1</span>| Nand1_3;
->     B3["B"] -->|<span style="color:#0a0">1</span>| Nand1_3;
->     Nand1_3["Nand"]:::gate -->|<span style="color:#a00">0</span>| Nand2_3["Nand"]:::gate;
->     A3 -->|<span style="color:#0a0">1</span>| Nand2_3;
->     Nand1_3 -->|<span style="color:#a00">0</span>| Nand3_3["Nand"]:::gate;
->     B3 -->|<span style="color:#0a0">1</span>| Nand3_3;
->     Nand2_3 -->|<span style="color:#0a0">1</span>| Nand4_3["Nand"]:::gate;
->     Nand3_3 -->|<span style="color:#0a0">1</span>| Nand4_3;
->     Nand4_3 -->|<span style="color:#a00">0</span>| OUT3["Output"];
+>     %% Pattern 3: A=1, B=1
+>     A3["A"]:::input1 -->|<span style="color:#00aa00">1</span>| Nand1_3["NAND"]:::gate;
+>     B3["B"]:::input1 -->|<span style="color:#00aa00">1</span>| Nand1_3;
+>     Nand1_3 -->|<span style="color:#aa0000">0</span>| Nand2_3["NAND"]:::gate;
+>     A3 -->|<span style="color:#00aa00">1</span>| Nand2_3;
+>     Nand1_3 -->|<span style="color:#aa0000">0</span>| Nand3_3["NAND"]:::gate;
+>     B3 -->|<span style="color:#00aa00">1</span>| Nand3_3;
+>     Nand2_3 -->|<span style="color:#00aa00">1</span>| Nand4_3["NAND"]:::gate;
+>     Nand3_3 -->|<span style="color:#00aa00">1</span>| Nand4_3;
+>     Nand4_3 -->|<span style="color:#aa0000">0</span>| OUT3["Output"]:::output0;
 > 
 >     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
+>     classDef input0 fill:#ff9999,stroke:#000,stroke-width:1px;
+>     classDef input1 fill:#99ff99,stroke:#000,stroke-width:1px;
+>     classDef output0 fill:#ff9999,stroke:#000,stroke-width:1px;
+>     classDef output1 fill:#99ff99,stroke:#000,stroke-width:1px;
 > ```
 
 
