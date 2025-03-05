@@ -11,7 +11,7 @@ tags:
 ---
 # Specification
 
-|A|NOT A|
+|A|Not A|
 |---|---|
 |0|1|
 |1|0|
@@ -19,10 +19,10 @@ tags:
 ``` mermaid
 graph LR;
     A0["入力 A"] -->|<span style="color:#a00">0</span>| NAND0;
-    NAND0["NOT"]:::gate -->|<span style="color:#0a0">1</span>| OUT0["出力"];
+    NAND0["Not"]:::gate -->|<span style="color:#0a0">1</span>| OUT0["出力"];
 
     A1["入力 A"] -->|<span style="color:#0a0">1</span>| NAND1;
-    NAND1["NOT"]:::gate -->|<span style="color:#a00">0</span>| OUT1["出力"];
+    Nand1["Not"]:::gate -->|<span style="color:#a00">0</span>| OUT1["出力"];
 
     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
 ```
@@ -33,7 +33,7 @@ graph LR;
 
 >[!tip]
 > $$$
-> A \text{ NAND } A = \neg (A \land A)
+> A \text{ Nand } A = \neg (A \land A)
 > $$$
 > 
 > Since,  $A \land A = A$
@@ -54,11 +54,11 @@ CHIP Not {
 
 ```mermaid
 graph LR;
-    A["入力 A"] -->|<span style="color:#a00">0</span>| NAND0;
-    NAND0["NAND"]:::gate -->|<span style="color:#0a0">1</span>| OUT0["出力"];
+    A["入力 A"] -->|<span style="color:#a00">0</span>| Nand0;
+    Nand0["Nand"]:::gate -->|<span style="color:#0a0">1</span>| OUT0["出力"];
 
-    A1["入力 A"] -->|<span style="color:#0a0">1</span>| NAND1;
-    NAND1["NAND"]:::gate -->|<span style="color:#a00">0</span>| OUT1["出力"];
+    A1["入力 A"] -->|<span style="color:#0a0">1</span>| Nand1;
+    Nand1["Nand"]:::gate -->|<span style="color:#a00">0</span>| OUT1["出力"];
 
     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
 ```
