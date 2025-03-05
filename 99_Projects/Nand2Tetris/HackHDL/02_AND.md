@@ -43,9 +43,14 @@ graph LR;
 ---
 # Imprementation
 
+>[!tip]
+> 
+$
 A _AND_ B = ~(A _NAND_ B)
+$
 
-```hdl
+
+```vhdl
 CHIP And {
 	IN a, b;
 	OUT out;

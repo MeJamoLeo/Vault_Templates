@@ -31,25 +31,18 @@ graph LR;
 
 # Imprementation
 
->[!requirement]
-> -  [[00_NAND]]
+>[!tip]
+> $$$
+> A \text{ NAND } A = \neg (A \land A)
+> $$$
+> 
+> Since,  $A \land A = A$
+> $$$
+> = \neg A
+> $$$
 
-$$$
-A \text{ NAND } A = \neg (A \land A)
-$$$
 
-
-#### **3. ANDの冪等性**
-
-A∧A=AA \land A = A
-
-#### **4. 代入**
-
-A NAND A=¬AA \text{ NAND } A = \neg A
-
-**よって、証明完了** ✅
-
-```hdl
+```vhdl
 CHIP Not {
     IN in;
     OUT out;
