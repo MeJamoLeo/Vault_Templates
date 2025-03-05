@@ -69,19 +69,19 @@ CHIP Xor {
 
 ```mermaid
 graph LR;
-    A["a"] --> NotA["Not: notA"];
-    B["b"] --> NotB["Not: notB"];
+    A["a"] --> NotA["Not"];
+    B["b"] --> NotB["Not"];
 
-    A --> And1["And: a AND notB"];
+    A --> And1["And"];
     NotB --> And1;
 
-    NotA --> And2["And: notA AND b"];
+    NotA --> And2["And"];
     B --> And2;
 
-    And1 --> OrGate["Or: (a AND notB) OR (notA AND b)"];
+    And1 --> OrGate["Or"];
     And2 --> OrGate;
 
-    OrGate --> Out["Output out"];
+    OrGate --> Out["Output"];
 
     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
     class NotA,NotB,And1,And2,OrGate gate;
