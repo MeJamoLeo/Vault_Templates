@@ -1,3 +1,12 @@
+---
+tags:
+  - "#logic-gates"
+  - "#logic-design"
+  - "#boolean-algebra"
+  - "#xor-gate"
+  - "#vhdl"
+  - "#hardware-design"
+---
 # Specification
 
 |A|B|A XOR B|
@@ -34,13 +43,26 @@ graph LR;
 
 > [!tip]
 > 
+> $$
+> (\lnot A \land B) 
+> \lor 
+> (A \land \lnot B) 
+> = A \text{ XOR } B
+> $$
 
-$$
-A \text{ XOR } B = (A \land \lnot B) \lor (\lnot A \land B)
-$$
 
+```vhdl
+CHIP Xor {
+    IN a, b;
+    OUT out;
 
-（VHDL の実装はご自身で検討してください。）
+    PARTS:
+    Not(in=a, out=notA);
+    Not(in=b, out=notB);
 
----
+    And(a=a,   b=notB, out=aAndNotB);
+    And(a=notA, b=b,   out=notAAndB);
 
+    Or(a=aAndNotB, b=notAAndB, out=out);
+}
+```

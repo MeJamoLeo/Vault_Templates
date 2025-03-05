@@ -1,13 +1,11 @@
 ---
 tags:
-  - "#logic-gates"
   - "#nand2tetris"
   - "#nand-gate"
-  - "#hardware-description-language"
-  - "#logic-design"
   - "#truth-table"
   - "#boolean-algebra"
-  - "#hardware-implementation"
+  - "#logic-design"
+  - "#hardware-description-language"
 ---
 # Specification
 
