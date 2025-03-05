@@ -1,42 +1,66 @@
 ## Specification
 
-| Sel | A | B | Out |
-|-----|---|---|-----|
-| 0   | 0 | 0 | 0   |
-| 0   | 0 | 1 | 0   |
-| 0   | 1 | 0 | 1   |
-| 0   | 1 | 1 | 1   |
-| 1   | 0 | 0 | 0   |
-| 1   | 0 | 1 | 1   |
-| 1   | 1 | 0 | 0   |
-| 1   | 1 | 1 | 1   |
+| a | b | sel | out |
+|---|---|-----|-----|
+| 0 | 0 | 0   | 0   |
+| 0 | 1 | 0   | 0   |
+| 1 | 0 | 0   | 1   |
+| 1 | 1 | 0   | 1   |
+| 0 | 0 | 1   | 0   |
+| 0 | 1 | 1   | 1   |
+| 1 | 0 | 1   | 0   |
+| 1 | 1 | 1   | 1   |
 
 > [!example]-
 > ```mermaid
 > graph LR;
->     %% Pattern 0: Sel=0, A=0, B=0
->     Sel0["Sel"]:::input0 -->|<span style="color:#aa0000">0</span>| Mux0["Mux"]:::gate;
->     A0["A"]:::input0 -->|<span style="color:#aa0000">0</span>| Mux0;
->     B0["B"]:::input0 -->|<span style="color:#aa0000">0</span>| Mux0;
->     Mux0 -->|<span style="color:#aa0000">0</span>| OUT0["Out"]:::output0;
+>     %% Pattern 0: a=0, b=0, sel=0
+>     a0["a"]:::input0 -->|<span style="color:#aa0000">0</span>| Mux0["Mux"]:::gate;
+>     b0["b"]:::input0 -->|<span style="color:#aa0000">0</span>| Mux0;
+>     sel0["sel"]:::input0 -->|<span style="color:#aa0000">0</span>| Mux0;
+>     Mux0 -->|<span style="color:#aa0000">0</span>| OUT0["out"]:::output0;
 > 
->     %% Pattern 1: Sel=0, A=1, B=1
->     Sel1["Sel"]:::input0 -->|<span style="color:#aa0000">0</span>| Mux1["Mux"]:::gate;
->     A1["A"]:::input1 -->|<span style="color:#00aa00">1</span>| Mux1;
->     B1["B"]:::input1 -->|<span style="color:#00aa00">1</span>| Mux1;
->     Mux1 -->|<span style="color:#00aa00">1</span>| OUT1["Out"]:::output1;
+>     %% Pattern 1: a=0, b=1, sel=0
+>     a1["a"]:::input0 -->|<span style="color:#aa0000">0</span>| Mux1["Mux"]:::gate;
+>     b1["b"]:::input1 -->|<span style="color:#00aa00">1</span>| Mux1;
+>     sel1["sel"]:::input0 -->|<span style="color:#aa0000">0</span>| Mux1;
+>     Mux1 -->|<span style="color:#aa0000">0</span>| OUT1["out"]:::output0;
 > 
->     %% Pattern 2: Sel=1, A=0, B=1
->     Sel2["Sel"]:::input1 -->|<span style="color:#00aa00">1</span>| Mux2["Mux"]:::gate;
->     A2["A"]:::input0 -->|<span style="color:#aa0000">0</span>| Mux2;
->     B2["B"]:::input1 -->|<span style="color:#00aa00">1</span>| Mux2;
->     Mux2 -->|<span style="color:#00aa00">1</span>| OUT2["Out"]:::output1;
+>     %% Pattern 2: a=1, b=0, sel=0
+>     a2["a"]:::input1 -->|<span style="color:#00aa00">1</span>| Mux2["Mux"]:::gate;
+>     b2["b"]:::input0 -->|<span style="color:#aa0000">0</span>| Mux2;
+>     sel2["sel"]:::input0 -->|<span style="color:#aa0000">0</span>| Mux2;
+>     Mux2 -->|<span style="color:#00aa00">1</span>| OUT2["out"]:::output1;
 > 
->     %% Pattern 3: Sel=1, A=1, B=0
->     Sel3["Sel"]:::input1 -->|<span style="color:#00aa00">1</span>| Mux3["Mux"]:::gate;
->     A3["A"]:::input1 -->|<span style="color:#00aa00">1</span>| Mux3;
->     B3["B"]:::input0 -->|<span style="color:#aa0000">0</span>| Mux3;
->     Mux3 -->|<span style="color:#aa0000">0</span>| OUT3["Out"]:::output0;
+>     %% Pattern 3: a=1, b=1, sel=0
+>     a3["a"]:::input1 -->|<span style="color:#00aa00">1</span>| Mux3["Mux"]:::gate;
+>     b3["b"]:::input1 -->|<span style="color:#00aa00">1</span>| Mux3;
+>     sel3["sel"]:::input0 -->|<span style="color:#aa0000">0</span>| Mux3;
+>     Mux3 -->|<span style="color:#00aa00">1</span>| OUT3["out"]:::output1;
+> 
+>     %% Pattern 4: a=0, b=0, sel=1
+>     a4["a"]:::input0 -->|<span style="color:#aa0000">0</span>| Mux4["Mux"]:::gate;
+>     b4["b"]:::input0 -->|<span style="color:#aa0000">0</span>| Mux4;
+>     sel4["sel"]:::input1 -->|<span style="color:#00aa00">1</span>| Mux4;
+>     Mux4 -->|<span style="color:#aa0000">0</span>| OUT4["out"]:::output0;
+> 
+>     %% Pattern 5: a=0, b=1, sel=1
+>     a5["a"]:::input0 -->|<span style="color:#aa0000">0</span>| Mux5["Mux"]:::gate;
+>     b5["b"]:::input1 -->|<span style="color:#00aa00">1</span>| Mux5;
+>     sel5["sel"]:::input1 -->|<span style="color:#00aa00">1</span>| Mux5;
+>     Mux5 -->|<span style="color:#00aa00">1</span>| OUT5["out"]:::output1;
+> 
+>     %% Pattern 6: a=1, b=0, sel=1
+>     a6["a"]:::input1 -->|<span style="color:#00aa00">1</span>| Mux6["Mux"]:::gate;
+>     b6["b"]:::input0 -->|<span style="color:#aa0000">0</span>| Mux6;
+>     sel6["sel"]:::input1 -->|<span style="color:#00aa00">1</span>| Mux6;
+>     Mux6 -->|<span style="color:#aa0000">0</span>| OUT6["out"]:::output0;
+> 
+>     %% Pattern 7: a=1, b=1, sel=1
+>     a7["a"]:::input1 -->|<span style="color:#00aa00">1</span>| Mux7["Mux"]:::gate;
+>     b7["b"]:::input1 -->|<span style="color:#00aa00">1</span>| Mux7;
+>     sel7["sel"]:::input1 -->|<span style="color:#00aa00">1</span>| Mux7;
+>     Mux7 -->|<span style="color:#00aa00">1</span>| OUT7["out"]:::output1;
 > 
 >     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
 >     classDef input0 fill:#ff9999,stroke:#000,stroke-width:1px;
@@ -46,69 +70,67 @@
 > ```
 
 ---
-
 ## Implementation
-### Basic Gates Version
-> [!tip]
-> **論理式の導出**  
-> $$
-> \text{Out} = (\lnot Sel \land A) \lor (Sel \land B)
-> $$
-> 
-> **導出プロセス**:
-> 1. Sel=0 の場合の条件: $\lnot Sel \land A$
-> 2. Sel=1 の場合の条件: $Sel \land B$
-> 3. 両条件をORで結合:  
->    $$(\lnot Sel \land A) \lor (Sel \land B)$$
+###  And/Or/Not Version
+>[!tip]
+>$$
+>(a \land \neg sel) \lor (b \land sel) 
+>$$
+>**実装プロセス**  
+>1. $\text{not\_sel} = \neg sel$  
+>2. $\text{and1} = a \land \text{not\_sel}$  
+>3. $\text{and2} = b \land sel$  
+>4. $\text{out} = \text{and1} \lor \text{and2}$
 
 ```vhdl
 CHIP Mux {
-    IN sel, a, b;
+    IN a, b, sel;
     OUT out;
 PARTS:
-    Not(in=sel, out=notSel);
-    And(a=notSel, b=a, out=and1);
-    And(a=sel, b=b, out=and2);
+    Not(in=sel, out=not_sel);
+    And(a=a, b=not_sel, out=and1);
+    And(a=b, b=sel, out=and2);
     Or(a=and1, b=and2, out=out);
 }
 ```
 
 ```mermaid
 graph LR;
-    Sel["Sel"] --> Not["Not"]:::gate;
-    Sel --> And2["And"]:::gate;
-    Not --> And1["And"]:::gate;
-    A["A"] --> And1;
-    B["B"] --> And2;
-    And1 --> Or["Or"]:::gate;
-    And2 --> Or;
-    Or --> OUT["Out"];
+    sel["sel"] --> Not["Not"]:::gate
+    a["a"] --> And1["And"]:::gate
+    Not --> And1
+    b["b"] --> And2["And"]:::gate
+    sel --> And2
+    And1 --> Or["Or"]:::gate
+    And2 --> Or
+    Or --> out["out"]
     
     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
 ```
 
 > [!example]-
+> 
 > ```mermaid
 > graph LR;
->     %% Pattern 0: Sel=0, A=0, B=0
->     Sel0["Sel"]:::input0 -->|<span style="color:#aa0000">0</span>| Not0["Not"]:::gate;
->     A0["A"]:::input0 -->|<span style="color:#aa0000">0</span>| And1_0["And"]:::gate;
->     B0["B"]:::input0 -->|<span style="color:#aa0000">0</span>| And2_0["And"]:::gate;
->     Not0 -->|<span style="color:#00aa00">1</span>| And1_0;
->     Sel0 -->|<span style="color:#aa0000">0</span>| And2_0;
+>     %% パターン0: a=0, b=0, sel=0
+>     sel0["sel"]:::input0 -->|<span style="color:#aa0000">0</span>| Not0["Not"]:::gate;
+>     Not0 -->|<span style="color:#00aa00">1</span>| And1_0["And"]:::gate;
+>     a0["a"]:::input0 -->|<span style="color:#aa0000">0</span>| And1_0;
 >     And1_0 -->|<span style="color:#aa0000">0</span>| Or0["Or"]:::gate;
+>     b0["b"]:::input0 -->|<span style="color:#aa0000">0</span>| And2_0["And"]:::gate;
+>     sel0 -->|<span style="color:#aa0000">0</span>| And2_0;
 >     And2_0 -->|<span style="color:#aa0000">0</span>| Or0;
->     Or0 -->|<span style="color:#aa0000">0</span>| OUT0["Out"]:::output0;
+>     Or0 -->|<span style="color:#aa0000">0</span>| out0["out"]:::output0;
 > 
->     %% Pattern 1: Sel=1, A=0, B=1
->     Sel1["Sel"]:::input1 -->|<span style="color:#00aa00">1</span>| Not1["Not"]:::gate;
->     A1["A"]:::input0 -->|<span style="color:#aa0000">0</span>| And1_1["And"]:::gate;
->     B1["B"]:::input1 -->|<span style="color:#00aa00">1</span>| And2_1["And"]:::gate;
->     Not1 -->|<span style="color:#aa0000">0</span>| And1_1;
->     Sel1 -->|<span style="color:#00aa00">1</span>| And2_1;
->     And1_1 -->|<span style="color:#aa0000">0</span>| Or1["Or"]:::gate;
->     And2_1 -->|<span style="color:#00aa00">1</span>| Or1;
->     Or1 -->|<span style="color:#00aa00">1</span>| OUT1["Out"]:::output1;
+>     %% パターン5: a=0, b=1, sel=1
+>     sel5["sel"]:::input1 -->|<span style="color:#00aa00">1</span>| Not5["Not"]:::gate;
+>     Not5 -->|<span style="color:#aa0000">0</span>| And1_5["And"]:::gate;
+>     a5["a"]:::input0 -->|<span style="color:#aa0000">0</span>| And1_5;
+>     And1_5 -->|<span style="color:#aa0000">0</span>| Or5["Or"]:::gate;
+>     b5["b"]:::input1 -->|<span style="color:#00aa00">1</span>| And2_5["And"]:::gate;
+>     sel5 -->|<span style="color:#00aa00">1</span>| And2_5;
+>     And2_5 -->|<span style="color:#00aa00">1</span>| Or5;
+>     Or5 -->|<span style="color:#00aa00">1</span>| out5["out"]:::output1;
 > 
 >     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
 >     classDef input0 fill:#ff9999,stroke:#000,stroke-width:1px;
@@ -119,64 +141,67 @@ graph LR;
 
 ---
 
-### Nand-Only Version
+###  Nand Version
 ```vhdl
 CHIP Mux {
-    IN sel, a, b;
+    IN a, b, sel;
     OUT out;
 PARTS:
-    Nand(a=sel, b=sel, out=notSel);
-    Nand(a=notSel, b=a, out=nand1);
-    Nand(a=nand1, b=nand1, out=and1);
-    Nand(a=sel, b=b, out=nand2);
-    Nand(a=nand2, b=nand2, out=and2);
-    Nand(a=and1, b=and2, out=nand3);
-    Nand(a=nand3, b=nand3, out=out);
+    Nand(a=sel, b=sel, out=not_sel);
+    Nand(a=a, b=not_sel, out=term1);
+    Nand(a=b, b=sel, out=term2);
+    Nand(a=term1, b=term2, out=out);
 }
 ```
 
 ```mermaid
 graph LR;
-    Sel["Sel"] --> Nand1["Nand"]:::gate;
-    Sel --> Nand1;
-    Nand1 --> Nand2["Nand"]:::gate;
-    A["A"] --> Nand2;
-    Sel --> Nand3["Nand"]:::gate;
-    B["B"] --> Nand3;
-    Nand2 --> Nand4["Nand"]:::gate;
-    Nand3 --> Nand4;
-    Nand4 --> Nand5["Nand"]:::gate;
-    Nand5 --> OUT["Out"];
+    sel["sel"] --> Nand1["Nand"]:::gate
+    sel --> Nand1
+    Nand1 --> not_sel
+    a["a"] --> Nand2["Nand"]:::gate
+    not_sel --> Nand2
+    b["b"] --> Nand3["Nand"]:::gate
+    sel --> Nand3
+    Nand2 --> term1
+    Nand3 --> term2
+    term1 --> Nand4["Nand"]:::gate
+    term2 --> Nand4
+    Nand4 --> out["out"]
     
     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
 ```
 
-> [!example]-
+>[!example]-
 > ```mermaid
 > graph LR;
->     %% Pattern 0: Sel=0, A=0, B=0
->     Sel0["Sel"]:::input0 -->|<span style="color:#aa0000">0</span>| Nand1_0["Nand"]:::gate;
->     Sel0 -->|<span style="color:#aa0000">0</span>| Nand1_0;
->     Nand1_0 -->|<span style="color:#00aa00">1</span>| Nand2_0["Nand"]:::gate;
->     A0["A"]:::input0 -->|<span style="color:#aa0000">0</span>| Nand2_0;
->     Nand2_0 -->|<span style="color:#00aa00">1</span>| Nand4_0["Nand"]:::gate;
->     Sel0 -->|<span style="color:#aa0000">0</span>| Nand3_0["Nand"]:::gate;
->     B0["B"]:::input0 -->|<span style="color:#aa0000">0</span>| Nand3_0;
->     Nand3_0 -->|<span style="color:#00aa00">1</span>| Nand4_0;
->     Nand4_0 -->|<span style="color:#aa0000">0</span>| Nand5_0["Nand"]:::gate;
->     Nand5_0 -->|<span style="color:#00aa00">1</span>| OUT0["Out"]:::output1;
+>     %% パターン0: a=0, b=0, sel=0
+>     sel0["sel"]:::input0 -->|<span style="color:#aa0000">0</span>| Nand1_0["Nand"]:::gate;
+>     sel0 -->|<span style="color:#aa0000">0</span>| Nand1_0;
+>     Nand1_0 -->|<span style="color:#00aa00">1</span>| not_sel0;
+>     a0["a"]:::input0 -->|<span style="color:#aa0000">0</span>| Nand2_0["Nand"]:::gate;
+>     not_sel0 -->|<span style="color:#00aa00">1</span>| Nand2_0;
+>     Nand2_0 -->|<span style="color:#00aa00">1</span>| term1_0;
+>     b0["b"]:::input0 -->|<span style="color:#aa0000">0</span>| Nand3_0["Nand"]:::gate;
+>     sel0 -->|<span style="color:#aa0000">0</span>| Nand3_0;
+>     Nand3_0 -->|<span style="color:#00aa00">1</span>| term2_0;
+>     term1_0 -->|<span style="color:#00aa00">1</span>| Nand4_0["Nand"]:::gate;
+>     term2_0 -->|<span style="color:#00aa00">1</span>| Nand4_0;
+>     Nand4_0 -->|<span style="color:#aa0000">0</span>| out0["out"]:::output0;
 > 
->     %% Pattern 1: Sel=1, A=0, B=1
->     Sel1["Sel"]:::input1 -->|<span style="color:#00aa00">1</span>| Nand1_1["Nand"]:::gate;
->     Sel1 -->|<span style="color:#00aa00">1</span>| Nand1_1;
->     Nand1_1 -->|<span style="color:#aa0000">0</span>| Nand2_1["Nand"]:::gate;
->     A1["A"]:::input0 -->|<span style="color:#aa0000">0</span>| Nand2_1;
->     Nand2_1 -->|<span style="color:#00aa00">1</span>| Nand4_1["Nand"]:::gate;
->     Sel1 -->|<span style="color:#00aa00">1</span>| Nand3_1["Nand"]:::gate;
->     B1["B"]:::input1 -->|<span style="color:#00aa00">1</span>| Nand3_1;
->     Nand3_1 -->|<span style="color:#aa0000">0</span>| Nand4_1;
->     Nand4_1 -->|<span style="color:#00aa00">1</span>| Nand5_1["Nand"]:::gate;
->     Nand5_1 -->|<span style="color:#aa0000">0</span>| OUT1["Out"]:::output0;
+>     %% パターン5: a=0, b=1, sel=1
+>     sel5["sel"]:::input1 -->|<span style="color:#00aa00">1</span>| Nand1_5["Nand"]:::gate;
+>     sel5 -->|<span style="color:#00aa00">1</span>| Nand1_5;
+>     Nand1_5 -->|<span style="color:#aa0000">0</span>| not_sel5;
+>     a5["a"]:::input0 -->|<span style="color:#aa0000">0</span>| Nand2_5["Nand"]:::gate;
+>     not_sel5 -->|<span style="color:#aa0000">0</span>| Nand2_5;
+>     Nand2_5 -->|<span style="color:#00aa00">1</span>| term1_5;
+>     b5["b"]:::input1 -->|<span style="color:#00aa00">1</span>| Nand3_5["Nand"]:::gate;
+>     sel5 -->|<span style="color:#00aa00">1</span>| Nand3_5;
+>     Nand3_5 -->|<span style="color:#aa0000">0</span>| term2_5;
+>     term1_5 -->|<span style="color:#00aa00">1</span>| Nand4_5["Nand"]:::gate;
+>     term2_5 -->|<span style="color:#aa0000">0</span>| Nand4_5;
+>     Nand4_5 -->|<span style="color:#00aa00">1</span>| out5["out"]:::output1;
 > 
 >     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
 >     classDef input0 fill:#ff9999,stroke:#000,stroke-width:1px;
@@ -185,63 +210,64 @@ graph LR;
 >     classDef output1 fill:#99ff99,stroke:#000,stroke-width:1px;
 > ```
 
-> [!prove]- Muxの最適化手順
-> **ステップ1：基本論理式の分解**  
-> 初期論理式：
+
+>[!prove]- Muxゲートの最適化手順
+> 以下、MuxゲートをNANDのみで実装する最適化プロセスを **ステップバイステップで図解** します。
+> 
+> ---
+> 
+> ### 最適化前の論理式（基本形）
 > $$
-> \text{Out} = (\lnot Sel \cdot A) + (Sel \cdot B)
+> out = (a \land \neg sel) \lor (b \land sel)
 > $$
 > 
-> **ステップ2：NOTゲートのNAND化**  
-> $\lnot Sel = Sel \uparrow Sel$
 > ```mermaid
 > graph LR
->     Sel["Sel"] --> Nand1["Nand(Sel,Sel)"]:::gate
->     Nand1 --> And1["And"]:::gate
->     A["A"] --> And1
->     Sel --> And2["And"]:::gate
->     B["B"] --> And2
+>     sel["sel"] --> Not["Not"]:::gate
+>     a["a"] --> And1["And"]:::gate
+>     Not --> And1
+>     b["b"] --> And2["And"]:::gate
+>     sel --> And2
 >     And1 --> Or["Or"]:::gate
 >     And2 --> Or
->     Or --> OUT["Out"]
+>     Or --> out["out"]
+> 
+>     classDef gate fill:#ddd,stroke:#000;
 > ```
 > 
-> **ステップ3：AND/ORゲートのNAND化**  
-> - AND: $X \cdot Y = \lnot(X \uparrow Y)$  
-> - OR: $X + Y = \lnot(\lnot X \cdot \lnot Y)$
+> ---
+> 
+> ### 最適化ステップ 1: NOTをNANDで置換
+> NOTゲートをNANDの自己接続で実装します。
+> 
+> $$
+> \neg sel = sel \uparrow sel
+> $$
+> 
 > ```mermaid
 > graph LR
->     Sel["Sel"] --> Nand1["Nand(Sel,Sel)"]:::gate
->     Nand1 --> Nand2["Nand(Nand1,A)"]:::gate
->     Nand2 --> Nand3["Nand(Nand2,Nand2)"]:::gate
->     Sel --> Nand4["Nand(Sel,B)"]:::gate
->     Nand4 --> Nand5["Nand(Nand4,Nand4)"]:::gate
->     Nand3 --> Nand6["Nand(Nand3,Nand5)"]:::gate
->     Nand5 --> Nand6
->     Nand6 --> Nand7["Nand(Nand6,Nand6)"]:::gate
->     Nand7 --> OUT["Out"]
+>     sel["sel"] --> Nand1["Nand(sel,sel)"]:::gate
+>     Nand1 --> not_sel
+>     a["a"] --> And1["And"]:::gate
+>     not_sel --> And1
+>     b["b"] --> And2["And"]:::gate
+>     sel --> And2
+>     And1 --> Or["Or"]:::gate
+>     And2 --> Or
+>     Or --> out["out"]
+> 
+>     classDef gate fill:#ddd,stroke:#000;
 > ```
 > 
-> **ステップ4：信号の共有と最適化**  
-> 中間信号を再利用してゲート数を削減：
+> ---
+> 
+> ### 最適化ステップ 2: ANDをNANDで置換
+> ANDゲートを「NAND + NAND」で実装します。
+> 
+> $$
+> X \land Y = (X \uparrow Y) \uparrow (X \uparrow Y)
+> $$
+> 
 > ```mermaid
 > graph LR
->     Sel["Sel"] --> Nand1["Nand(Sel,Sel)"]:::gate
->     Nand1 --> Nand2["Nand(Nand1,A)"]:::gate
->     Sel --> Nand3["Nand(Sel,B)"]:::gate
->     Nand2 --> Nand4["Nand(Nand2,Nand3)"]:::gate
->     Nand3 --> Nand4
->     Nand4 --> Nand5["Nand(Nand4,Nand4)"]:::gate
->     Nand5 --> OUT["Out"]
-> ```
-> 
-> **最終検証**：
-> | Sel | A | B | Nand1 | Nand2 | Nand3 | Out |
-> |-----|---|---|-------|-------|-------|-----|
-> | 0   | 0 | 0 | 1     | 1     | 1     | 0   |
-> | 1   | 0 | 1 | 0     | 1     | 0     | 1   |
-> 
-> **最適化効果**：
-> - ゲート数：7 → 5
-> - 伝播遅延：4段階 → 3段階
-> - トランジスタ数：28 → 20（CMOS実装時）
+>     sel["sel"] --> Nand1["Nand(sel,sel)"]:::
