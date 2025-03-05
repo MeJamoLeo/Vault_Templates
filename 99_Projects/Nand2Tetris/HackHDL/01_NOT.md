@@ -31,16 +31,13 @@ graph LR;
 
 # Imprementation
 
->[!note] NAND
-> 
+>[!requirement]
+> -  [[00_NAND]]
 
 $$$
-A NAND B=¬(A∧B)A \text{ NAND } B = \neg (A \land B)
+A \text{ NAND } A = \neg (A \land A)
 $$$
 
-#### **2. AA を自身と NAND する**
-
-A NAND A=¬(A∧A)A \text{ NAND } A = \neg (A \land A)
 
 #### **3. ANDの冪等性**
 
