@@ -36,6 +36,10 @@ tags:
 >     Xor3["Xor"]:::gate -->|<span style="color:#a00">0</span>| OUT3["Out"];
 > 
 >     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
+>     classDef input0 fill:#ff9999,stroke:#000,stroke-width:1px;
+>     classDef input1 fill:#99ff99,stroke:#000,stroke-width:1px;
+>     classDef output0 fill:#ff9999,stroke:#000,stroke-width:1px;
+>     classDef output1 fill:#99ff99,stroke:#000,stroke-width:1px;
 > ```
 
 ---
