@@ -11,7 +11,7 @@ tags:
 ---
 # Specification
 
-|A|Not A|
+|A|NOT A|
 |---|---|
 |0|1|
 |1|0|
@@ -22,7 +22,7 @@ graph LR;
     NAND0["Not"]:::gate -->|<span style="color:#0a0">1</span>| OUT0["出力"];
 
     A1["入力 A"] -->|<span style="color:#0a0">1</span>| NAND1;
-    Nand1["Not"]:::gate -->|<span style="color:#a00">0</span>| OUT1["出力"];
+    NAND1["Not"]:::gate -->|<span style="color:#a00">0</span>| OUT1["出力"];
 
     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
 ```
@@ -33,7 +33,7 @@ graph LR;
 
 >[!tip]
 > $$$
-> A \text{ Nand } A = \neg (A \land A)
+> A \text{ NAND } A = \neg (A \land A)
 > $$$
 > 
 > Since,  $A \land A = A$

@@ -11,7 +11,7 @@ tags:
 ---
 # Specification
 
-|A|B|A And B|
+|A|B|A AND B|
 |---|---|---|
 |0|0|0|
 |0|1|0|
@@ -45,7 +45,7 @@ graph LR;
 
 >[!tip]
 > $$$
-> A  \text{ And } B = \neg(A \text{ Nand } B)
+> A  \text{ AND } B = \neg(A \text{ NAND } B)
 > $$$
 
 

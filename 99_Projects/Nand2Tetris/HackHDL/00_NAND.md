@@ -12,7 +12,7 @@ tags:
 
 # Specification
 
-|A|B|A Nand B|
+|A|B|A NAND B|
 |---|---|---|
 |0|0|1|
 |0|1|1|
