@@ -1,11 +1,9 @@
 ---
 tags:
   - "#nand2tetris"
-  - "#nand-gate"
-  - "#truth-table"
-  - "#boolean-algebra"
-  - "#logic-design"
-  - "#hardware-description-language"
+  - "#truth_table"
+  - "#logic_circuit"
+  - "#vhdl"
 ---
 
 # Not $\neg$

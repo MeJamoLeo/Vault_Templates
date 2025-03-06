@@ -1,10 +1,9 @@
 ---
 tags:
-  - "#logic-design"
+  - "#nand2tetris"
+  - "#truth_table"
+  - "#logic_circuit"
   - "#vhdl"
-  - "#hardware-design"
-  - "#nand-gate"
-  - "#digital-electronics"
 ---
 
 # Xor $\oplus$

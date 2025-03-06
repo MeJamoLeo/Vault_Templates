@@ -1,13 +1,9 @@
 ---
 tags:
-  - "#logic-gates"
-  - "#logic-design"
-  - "#boolean-algebra"
-  - "#nand-gate"
-  - "#truth-table"
-  - "#digital-electronics"
-  - "#hardware-design"
-  - "#logic-circuit"
+  - "#nand2tetris"
+  - "#truth_table"
+  - "#logic_circuit"
+  - "#vhdl"
 ---
 
 # Nand $\uparrow$

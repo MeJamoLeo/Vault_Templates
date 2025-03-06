@@ -1,3 +1,12 @@
+---
+tags:
+  - "#nand2tetris"
+  - "#truth_table"
+  - "#logic_circuit"
+  - "#vhdl"
+---
+
+# Mux
 ## Specification
 
 | a | b | sel | out |
