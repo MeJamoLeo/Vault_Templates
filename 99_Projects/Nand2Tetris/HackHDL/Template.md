@@ -6,7 +6,7 @@
 - Or
 - Xor
 - Mux
-
+- Dmux
 
 ===
 
