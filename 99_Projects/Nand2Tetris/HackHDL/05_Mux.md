@@ -156,51 +156,42 @@ PARTS:
 
 ```mermaid
 graph LR;
-    sel["sel"] --> Nand1["Nand"]:::gate
-    sel --> Nand1
-    Nand1 --> not_sel
-    a["a"] --> Nand2["Nand"]:::gate
-    not_sel --> Nand2
-    b["b"] --> Nand3["Nand"]:::gate
-    sel --> Nand3
-    Nand2 --> term1
-    Nand3 --> term2
-    term1 --> Nand4["Nand"]:::gate
-    term2 --> Nand4
-    Nand4 --> out["out"]
+    sel["sel"] --> Nand1["Nand"]:::gate;
+    sel --> Nand1;
+    Nand1 --> Nand2["Nand"]:::gate;
+    a["a"] --> Nand2;
+    b["b"] --> Nand3["Nand"]:::gate;
+    sel --> Nand3;
+    Nand2 --> Nand4["Nand"]:::gate;
+    Nand3 --> Nand4;
+    Nand4 --> out["out"];
     
     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
 ```
 
->[!example]-
+> [!example]-
 > ```mermaid
 > graph LR;
 >     %% パターン0: a=0, b=0, sel=0
 >     sel0["sel"]:::input0 -->|<span style="color:#aa0000">0</span>| Nand1_0["Nand"]:::gate;
 >     sel0 -->|<span style="color:#aa0000">0</span>| Nand1_0;
->     Nand1_0 -->|<span style="color:#00aa00">1</span>| not_sel0;
->     a0["a"]:::input0 -->|<span style="color:#aa0000">0</span>| Nand2_0["Nand"]:::gate;
->     not_sel0 -->|<span style="color:#00aa00">1</span>| Nand2_0;
->     Nand2_0 -->|<span style="color:#00aa00">1</span>| term1_0;
+>     Nand1_0 -->|<span style="color:#00aa00">1</span>| Nand2_0["Nand"]:::gate;
+>     a0["a"]:::input0 -->|<span style="color:#aa0000">0</span>| Nand2_0;
+>     Nand2_0 -->|<span style="color:#00aa00">1</span>| Nand4_0["Nand"]:::gate;
 >     b0["b"]:::input0 -->|<span style="color:#aa0000">0</span>| Nand3_0["Nand"]:::gate;
 >     sel0 -->|<span style="color:#aa0000">0</span>| Nand3_0;
->     Nand3_0 -->|<span style="color:#00aa00">1</span>| term2_0;
->     term1_0 -->|<span style="color:#00aa00">1</span>| Nand4_0["Nand"]:::gate;
->     term2_0 -->|<span style="color:#00aa00">1</span>| Nand4_0;
+>     Nand3_0 -->|<span style="color:#00aa00">1</span>| Nand4_0;
 >     Nand4_0 -->|<span style="color:#aa0000">0</span>| out0["out"]:::output0;
 > 
 >     %% パターン5: a=0, b=1, sel=1
 >     sel5["sel"]:::input1 -->|<span style="color:#00aa00">1</span>| Nand1_5["Nand"]:::gate;
 >     sel5 -->|<span style="color:#00aa00">1</span>| Nand1_5;
->     Nand1_5 -->|<span style="color:#aa0000">0</span>| not_sel5;
->     a5["a"]:::input0 -->|<span style="color:#aa0000">0</span>| Nand2_5["Nand"]:::gate;
->     not_sel5 -->|<span style="color:#aa0000">0</span>| Nand2_5;
->     Nand2_5 -->|<span style="color:#00aa00">1</span>| term1_5;
+>     Nand1_5 -->|<span style="color:#aa0000">0</span>| Nand2_5["Nand"]:::gate;
+>     a5["a"]:::input0 -->|<span style="color:#aa0000">0</span>| Nand2_5;
+>     Nand2_5 -->|<span style="color:#00aa00">1</span>| Nand4_5["Nand"]:::gate;
 >     b5["b"]:::input1 -->|<span style="color:#00aa00">1</span>| Nand3_5["Nand"]:::gate;
 >     sel5 -->|<span style="color:#00aa00">1</span>| Nand3_5;
->     Nand3_5 -->|<span style="color:#aa0000">0</span>| term2_5;
->     term1_5 -->|<span style="color:#00aa00">1</span>| Nand4_5["Nand"]:::gate;
->     term2_5 -->|<span style="color:#aa0000">0</span>| Nand4_5;
+>     Nand3_5 -->|<span style="color:#aa0000">0</span>| Nand4_5;
 >     Nand4_5 -->|<span style="color:#00aa00">1</span>| out5["out"]:::output1;
 > 
 >     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;

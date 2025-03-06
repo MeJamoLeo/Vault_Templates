@@ -5,6 +5,7 @@
 - And
 - Or
 - Xor
+- Mux
 
 
 ===
