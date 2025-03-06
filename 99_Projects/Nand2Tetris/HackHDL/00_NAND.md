@@ -10,6 +10,7 @@ tags:
   - "#logic-circuit"
 ---
 
+# Nand $\uparrow$
 ## Specification
 
 |A|B|A NAND B|

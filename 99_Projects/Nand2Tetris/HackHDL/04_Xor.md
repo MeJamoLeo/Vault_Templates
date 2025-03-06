@@ -7,6 +7,8 @@ tags:
   - "#digital-electronics"
 ---
 
+# Xor $\oplus$
+
 ## Specification
 
 |A|B|A XOR B|

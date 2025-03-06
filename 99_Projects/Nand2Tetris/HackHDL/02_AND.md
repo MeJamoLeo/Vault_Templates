@@ -6,6 +6,9 @@ tags:
   - "#nand-gate"
   - "#digital-electronics"
 ---
+
+# And $\land$
+
 ## Specification
 
 |A|B|A AND B|

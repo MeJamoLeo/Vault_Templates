@@ -1,3 +1,4 @@
+
 ---
 tags:
   - "#nand2tetris"
@@ -7,6 +8,8 @@ tags:
   - "#logic-design"
   - "#hardware-description-language"
 ---
+
+# Not $\neg$
 ## Specification
 
 | A   | NOT A |
