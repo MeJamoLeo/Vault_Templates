@@ -1,29 +1,30 @@
 ---
 tags:
   - "#nand2tetris"
-  - "#nand-gate"
-  - "#truth-table"
-  - "#boolean-algebra"
-  - "#logic-design"
-  - "#hardware-description-language"
+  - "#truth_table"
+  - "#logic_circuit"
+  - "#vhdl"
 ---
+
+# Not $\neg$
 ## Specification
 
-|A|NOT A|
-|---|---|
-|0|1|
-|1|0|
+| A   | NOT A |
+| --- | ----- |
+| 0   | 1     |
+| 1   | 0     |
 
-``` mermaid
-graph LR;
-    A0["A"] -->|<span style="color:#a00">0</span>| NAND0;
-    NAND0["Not"]:::gate -->|<span style="color:#0a0">1</span>| OUT0["Output"];
-
-    A1["A"] -->|<span style="color:#0a0">1</span>| NAND1;
-    NAND1["Not"]:::gate -->|<span style="color:#a00">0</span>| OUT1["Output"];
-
-    classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
-```
+>[!example]-
+> ``` mermaid
+> graph LR;
+>     A0["A"] -->|<span style="color:#a00">0</span>| NAND0;
+>     NAND0["Not"]:::gate -->|<span style="color:#0a0">1</span>| OUT0["Output"];
+> 
+>     A1["A"] -->|<span style="color:#0a0">1</span>| NAND1;
+>     NAND1["Not"]:::gate -->|<span style="color:#a00">0</span>| OUT1["Output"];
+> 
+>     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
+> ```
 
 ---
 
