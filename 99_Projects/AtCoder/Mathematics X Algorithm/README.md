@@ -7,6 +7,7 @@ tags:
   - "#sbcl"
 ---
 [アルゴリズムと数学　演習問題集 - AtCoder](https://atcoder.jp/contests/math-and-algorithm)
+[math-algorithm-book/editorial at main · E869120/math-algorithm-book · GitHub](https://github.com/E869120/math-algorithm-book/tree/main/editorial)
 
 ## `flake.nix`の例
 
