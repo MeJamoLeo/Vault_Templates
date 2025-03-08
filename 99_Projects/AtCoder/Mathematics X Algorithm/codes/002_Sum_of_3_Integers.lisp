@@ -1,3 +1,5 @@
 (defun main ()
-(let ((n ())))
-)
+  (let ((a1 (read)
+		(a2 (read)
+		(a3 (read)))))
+	(format t "~a~%"(+ a1 a2 a3))))
