@@ -69,4 +69,4 @@ tags:
 
 > [!cite]
 > [AtCoderProblems](https://kenkoooo.com/atcoder/#/table/)<br>
-> [個人的なデータ](https://kenkoooo.com/atcoder/#/user/MeJamoLeo?userPageTab=All)
+> [個人的なデータ](https://kenkoooo.com/atcoder/#/user/MeJamoLeo?userPageTab=Alle)
