@@ -48,6 +48,7 @@ tags:
 - **週20時間ペース:** 約7～8週間（約2か月）
 - **週40時間ペース:** 約4週間（約1か月）
 
+>[!false]
 ## 3. 『Land of Lisp』を用いたCommon Lisp学習
 
 **プロジェクト概要:** 『Land of Lisp』は**Common Lispをゲーム作りを通して学ぶ**ユニークな入門書です ([Land of Lisp | No Starch Press](https://nostarch.com/lisp.htm#:~:text=With%20his%20brilliantly%20quirky%20comics,packed%20comic%20book%20interlude)) ([Land of Lisp | No Starch Press](https://nostarch.com/lisp.htm#:~:text=You%27ll%20learn%20to%3A))。コミカルなイラストを交えつつ、リスト操作や再帰といった基本から、マクロやDSL（ドメイン特化言語）、Webサーバー構築まで扱います。各章で少し学んではすぐに簡単なゲームやプログラムを作る流れになっており、楽しみながら進められます。全20章程度でテキストアドベンチャーゲーム「Wizard Adventure」や戦略ゲーム「Dice of Doom」などを完成させる過程で、関数型言語であるLispの思考法に慣れることができます。
