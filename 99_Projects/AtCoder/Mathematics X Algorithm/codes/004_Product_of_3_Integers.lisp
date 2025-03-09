@@ -1,6 +1,4 @@
-(pprint
-  (macroexpand
-    '(let ((product 1))
+(let ((product 1))
        (loop with n = 3 repeat n for a = (read)
              do (setf product (* product a))
-             finally (format t "~A~%" product)))))
+             finally (format t "~A~%" product)))
