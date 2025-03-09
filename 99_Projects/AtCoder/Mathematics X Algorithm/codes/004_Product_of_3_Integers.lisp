@@ -3,8 +3,7 @@
              do (setf product (* product a))
              finally (format t "~A~%" product)))
 
-(loop for i
-    from 0
-    for day
-    in '(monday tuesday wednesday thursday friday saturday sunday)
-    collect (cons i day))
+(loop for i from 0
+      for day in '(monday tuesday wednesday thursday friday saturday sunday)
+      do ()
+      collect (cons i day))
