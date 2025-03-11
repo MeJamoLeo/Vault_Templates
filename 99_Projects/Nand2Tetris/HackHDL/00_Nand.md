@@ -36,4 +36,4 @@ tags:
 > Nand3["Nand"]:::gate -->|<span style="color:#a00">0</span>| OUT3["Output"];
 > 
 > classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
-> ```
+> ```****

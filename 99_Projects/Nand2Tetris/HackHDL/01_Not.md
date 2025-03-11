@@ -34,12 +34,13 @@ tags:
 > $$$
 > A \text{ NAND } A = \neg (A \land A)
 > $$$
-> 
+>  
 > Since,  $A \land A = A$
 > $$$
 > = \neg A
 > $$$
 
+>- [ ] [!]
 ```vhdl
 CHIP Not {
     IN in;
