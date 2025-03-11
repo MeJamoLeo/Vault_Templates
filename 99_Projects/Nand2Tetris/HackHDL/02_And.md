@@ -44,9 +44,10 @@ tags:
 ## Imprementation
 
 >[!tip]
-> $$$
+> [[00_Nand]]
+> $$
 > \neg(A \text{ NAND } B) = A  \text{ AND } B 
-> $$$
+> $$
 
 ```vhdl
 CHIP And {

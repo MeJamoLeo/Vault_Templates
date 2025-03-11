@@ -34,13 +34,20 @@ tags:
 > $$$
 > A \text{ NAND } A = \neg (A \land A)
 > $$$
+> >[!info]-
+> > [[00_Nand]]
+> > NANDにおいて、入力が同じ場合は(0,0)もしくは(1,1)
+> > 
+> > NAND(0,0) = 1, NAND(1,1) = 0
+> > よって、$\neg(A\land A)$
 >  
 > Since,  $A \land A = A$
 > $$$
 > = \neg A
 > $$$
 
->- [ ] [!]
+
+
 ```vhdl
 CHIP Not {
     IN in;
