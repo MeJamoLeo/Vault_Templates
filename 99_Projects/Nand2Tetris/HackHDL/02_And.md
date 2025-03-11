@@ -94,3 +94,28 @@ graph LR;
 > 
 >     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
 > ```
+
+---
+### Nand Version
+
+```vhdl
+CHIP And {
+	IN a, b;
+	OUT out;
+PARTS:
+	Nand(a=a, b=b, out=nandOut);
+	Nand(a=nandOut,b=nandOut, out=nandOut);
+}
+```
+
+```mermaid
+    graph LR;
+    a[a] --> NAND1[NAND];
+    b[b] --> NAND1;
+    NAND1 -->|nandOut| NAND2[NAND（NOTとして使用）];
+    NAND1 -->|nandOut| NAND2;
+    NAND2 --> out[out];
+    
+    classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
+    class NAND1,NAND2 gate;
+```
