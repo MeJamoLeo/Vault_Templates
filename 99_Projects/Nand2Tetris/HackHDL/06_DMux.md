@@ -196,3 +196,92 @@ graph LR;
 > - トランジスタ数：20 → 12個（CMOS実装時）  
 > 
 > この構造はHackコンピュータのメモリユニットで実際に使用され、クロックサイクルあたりの消費電力が25%低減することが実証されています。
+
+
+```mermaid
+flowchart TD
+    %% Frame 1: 基本形（NOTとANDを個別のゲートで実装）
+    subgraph F1 [Frame 1: 基本形]
+      direction LR
+      sel1["sel"]
+      Not["Not"]:::gate
+      in1["in"]
+      And1["And"]:::gate
+      And2["And"]:::gate
+      a["a"]
+      b["b"]
+      
+      sel1 --> Not
+      Not --> And1
+      in1 --> And1
+      in1 --> And2
+      sel1 --> And2
+      And1 --> a
+      And2 --> b
+    end
+
+    %% Frame 2: NOTゲートの置換（NOTをNANDで実装：selを2回入力）
+    subgraph F2 [Frame 2: NOTゲートの置換]
+      direction LR
+      sel2["sel"]
+      NAND_Not["NAND (for Not)"]:::gate
+      in2["in"]
+      And1_2["And"]:::gate
+      And2_2["And"]:::gate
+      a2["a"]
+      b2["b"]
+      
+      sel2 --> NAND_Not
+      NAND_Not --> And1_2
+      in2 --> And1_2
+      in2 --> And2_2
+      sel2 --> And2_2
+      And1_2 --> a2
+      And2_2 --> b2
+    end
+
+    %% Frame 3: ANDゲートの分解（ANDをNAND×2で実現）
+    subgraph F3 [Frame 3: ANDゲートの分解]
+      direction LR
+      sel3["sel"]
+      NAND_Not3["NAND (for Not)"]:::gate
+      in3["in"]
+      NAND_A1["NAND (A用)"]:::gate
+      NAND_A2["NAND (B用)"]:::gate
+      a3["a"]
+      b3["b"]
+      
+      sel3 --> NAND_Not3
+      in3 --> NAND_A1
+      NAND_Not3 --> NAND_A1
+      in3 --> NAND_A2
+      sel3 --> NAND_A2
+      NAND_A1 --> a3
+      NAND_A2 --> b3
+    end
+
+    %% Frame 4: 論理圧縮（中間信号の直接接続によりゲート数削減）
+    subgraph F4 [Frame 4: 論理圧縮]
+      direction LR
+      sel4["sel"]
+      in4["in"]
+      NAND1["NAND1"]:::gate
+      NAND2["NAND2"]:::gate
+      a4["a"]
+      b4["b"]
+      
+      sel4 --> NAND1
+      in4 --> NAND1
+      NAND1 --> a4
+      
+      in4 --> NAND2
+      sel4 --> NAND2
+      NAND2 --> b4
+    end
+
+    %% 配置を横並びに（4コマ漫画風）
+    F1 --- F2 --- F3 --- F4
+
+    classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
+
+```
