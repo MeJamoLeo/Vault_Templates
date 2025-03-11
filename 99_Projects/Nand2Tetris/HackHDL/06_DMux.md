@@ -47,6 +47,8 @@
 >[!tip]
 >$$
 >a = in \land \neg sel \\
+>$$
+>$$
 >b = in \land sel \\
 >$$
 
