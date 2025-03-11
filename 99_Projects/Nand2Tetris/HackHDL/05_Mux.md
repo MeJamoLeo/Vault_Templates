@@ -6,7 +6,7 @@ tags:
   - "#vhdl"
 ---
 # Mux
-選択の魔術師 _Multi Dex_
+選択の魔術師 _Multiplex_
 ## Specification
 
 | a | b | sel | out |
