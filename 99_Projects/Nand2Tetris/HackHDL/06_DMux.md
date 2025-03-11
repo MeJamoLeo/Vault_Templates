@@ -123,15 +123,15 @@ PARTS:
 ```
 
 ```mermaid
-graph LR;
-    sel["sel"] --> Nand1["Nand"]:::gate;
-    sel --> Nand1;
-    Nand1 --> Nand2["Nand"]:::gate;
-    in["in"] --> Nand2;
-    Nand2 --> a["a"];
-    in --> Nand3["Nand"]:::gate;
-    sel --> Nand3;
-    Nand3 --> b["b"];
+graph LR
+    sel["sel"] --> NAND1[NAND]:::gate
+    sel --> NAND1
+    NAND1 -->|"¬sel"| NAND3[NAND]:::gate
+    in["in"] --> NAND2[NAND]:::gate
+    in --> NAND3
+    sel --> NAND2
+    NAND2 -->|"a = ¬(sel ∧ in)"| a["a"]
+    NAND3 -->|"b = ¬(¬sel ∧ in)"| b["b"]
     
     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
 ```
@@ -196,5 +196,3 @@ graph LR;
 > - トランジスタ数：20 → 12個（CMOS実装時）  
 > 
 > この構造はHackコンピュータのメモリユニットで実際に使用され、クロックサイクルあたりの消費電力が25%低減することが実証されています。
-
-以下は、各変換過程と最適化効果を詳しく説明した改訂版です。
