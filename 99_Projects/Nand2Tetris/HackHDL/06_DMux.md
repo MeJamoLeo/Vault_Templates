@@ -110,12 +110,12 @@ graph LR;
 
 ### 最適化NAND版
 ```vhdl
-CHIP Dmux {
+CHIP DMux {
     IN in, sel;
     OUT a, b;
 PARTS:
-    Nand(a=sel, b=sel, out=not_sel);
-    Nand(a=in, b=not_sel, out=nand1);
+    Nand(a=sel, b=sel, out=notSel);
+    Nand(a=in, b=notSel, out=nand1);
     Nand(a=nand1, b=nand1, out=a);
     Nand(a=in, b=sel, out=nand2);
     Nand(a=nand2, b=nand2, out=b);
@@ -123,15 +123,15 @@ PARTS:
 ```
 
 ```mermaid
-graph LR
-    sel["sel"] --> NAND1[NAND]:::gate
-    sel --> NAND1
-    NAND1 -->|"¬sel"| NAND3[NAND]:::gate
-    in["in"] --> NAND2[NAND]:::gate
-    in --> NAND3
-    sel --> NAND2
-    NAND2 -->|"a = ¬(sel ∧ in)"| a["a"]
-    NAND3 -->|"b = ¬(¬sel ∧ in)"| b["b"]
+graph LR;
+    sel["sel"] --> Nand1["Nand"]:::gate;
+    sel --> Nand1;
+    Nand1 --> Nand2["Nand"]:::gate;
+    in["in"] --> Nand2;
+    Nand2 --> a["a"];
+    in --> Nand3["Nand"]:::gate;
+    sel --> Nand3;
+    Nand3 --> b["b"];
     
     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
 ```
