@@ -5,8 +5,8 @@ tags:
   - "#logic_circuit"
   - "#vhdl"
 ---
-
 # Mux
+選択の魔術師 _Multi Dex_
 ## Specification
 
 | a | b | sel | out |
