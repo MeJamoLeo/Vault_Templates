@@ -198,90 +198,164 @@ graph LR;
 > この構造はHackコンピュータのメモリユニットで実際に使用され、クロックサイクルあたりの消費電力が25%低減することが実証されています。
 
 
+---
+
+## 出力 aa の変換（a=in∧¬sela = in \land \neg sel）
+
+1. **元の論理式**  
+    DMuxでは、出力 aa は
+    
+    a=in∧¬sela = in \land \neg sel
+    
+    と定義されます。
+    
+2. **否定（NOT）のNANDによる実装**  
+    NANDゲートを使えば、同じ信号を両入力に与えることでその否定を得られます。
+    
+    ¬sel=sel↑sel\neg sel = sel \uparrow sel
+    
+    と実現できます。
+    
+3. **AND演算の変換（NANDだけでANDを実現する）**  
+    一般に、2入力のANDは二重否定の法則を使って
+    
+    X∧Y=¬(¬(X∧Y))X \land Y = \neg\bigl(\neg(X \land Y)\bigr)
+    
+    と表せます。  
+    ここで、NANDゲートは
+    
+    X↑Y=¬(X∧Y)X \uparrow Y = \neg(X \land Y)
+    
+    なので、
+    
+    X∧Y=(X↑Y)↑(X↑Y)X \land Y = (X \uparrow Y) \uparrow (X \uparrow Y)
+    
+    と、NANDゲート2個を直列に配置することで実現できます。
+    
+4. **具体的な変換手順**
+    
+    - **Step 1:** selsel の否定を求める ¬sel=sel↑sel\neg sel = sel \uparrow sel
+    - **Step 2:** inin と ¬sel\neg sel のNANDを取る temp=in↑(¬sel)=in↑(sel↑sel)\text{temp} = in \uparrow (\neg sel) = in \uparrow (sel \uparrow sel) ※ ここで得られる出力は、実際には temp=¬(in∧¬sel)\text{temp} = \neg(in \land \neg sel) となります。
+    - **Step 3:** ANDの結果を得るために、tempをもう一度NANDゲートで反転する a=temp↑temp=(in↑(sel↑sel))↑(in↑(sel↑sel))a = \text{temp} \uparrow \text{temp} = (in \uparrow (sel \uparrow sel)) \uparrow (in \uparrow (sel \uparrow sel)) これにより、最終的に a=in∧¬sela = in \land \neg sel がNANDのみで実現されます。
+
+---
+
+## 出力 bb の変換（b=in∧selb = in \land sel）
+
+1. **元の論理式**  
+    DMuxでは、出力 bb は
+    
+    b=in∧selb = in \land sel
+    
+    と定義されます。
+    
+2. **AND演算のNAND変換**  
+    AND演算をNANDだけで実現するには、まずNANDゲートで
+    
+    in↑sel=¬(in∧sel)in \uparrow sel = \neg(in \land sel)
+    
+    を求め、その結果をもう一度NANDゲートで反転します。すなわち、
+    
+    b=(in↑sel)↑(in↑sel)b = (in \uparrow sel) \uparrow (in \uparrow sel)
+    
+    となります。
+    
+
+---
+
+## まとめ
+
+- **出力 aa の最終式:**
+    
+    a=(in↑(sel↑sel))↑(in↑(sel↑sel))a = \bigl(in \uparrow (sel \uparrow sel)\bigr) \uparrow \bigl(in \uparrow (sel \uparrow sel)\bigr)
+- **出力 bb の最終式:**
+    
+    b=(in↑sel)↑(in↑sel)b = (in \uparrow sel) \uparrow (in \uparrow sel)
+
+---
+
+## Mermaid図によるステップ別の変換過程
+
+以下のMermaid図は、4段階のフレームで出力 aa と bb の変換過程を示しています。
+
 ```mermaid
 flowchart TD
-    %% Frame 1: 基本形（NOTとANDを個別のゲートで実装）
-    subgraph F1 [Frame 1: 基本形]
+    %% Frame 1: 元のDMux（論理式）
+    subgraph F1 [Frame 1: 元のDMux]
       direction LR
-      sel1["sel"]
-      Not["Not"]:::gate
       in1["in"]
-      And1["And"]:::gate
-      And2["And"]:::gate
-      a["a"]
-      b["b"]
+      sel1["sel"]
+      NOT["NOT（¬sel）"]
+      ANDa["AND (a = in ∧ ¬sel)"]
+      ANDb["AND (b = in ∧ sel)"]
+      a1["a"]
+      b1["b"]
       
-      sel1 --> Not
-      Not --> And1
-      in1 --> And1
-      in1 --> And2
-      sel1 --> And2
-      And1 --> a
-      And2 --> b
+      sel1 --> NOT
+      NOT --> ANDa
+      in1 --> ANDa
+      in1 --> ANDb
+      sel1 --> ANDb
+      ANDa --> a1
+      ANDb --> b1
     end
 
-    %% Frame 2: NOTゲートの置換（NOTをNANDで実装：selを2回入力）
-    subgraph F2 [Frame 2: NOTゲートの置換]
+    %% Frame 2: NOTのNAND変換
+    subgraph F2 [Frame 2: NOTをNANDで実装]
       direction LR
       sel2["sel"]
-      NAND_Not["NAND (for Not)"]:::gate
-      in2["in"]
-      And1_2["And"]:::gate
-      And2_2["And"]:::gate
-      a2["a"]
-      b2["b"]
+      NAND_Not["NAND(sel, sel) = ¬sel"]
       
       sel2 --> NAND_Not
-      NAND_Not --> And1_2
-      in2 --> And1_2
-      in2 --> And2_2
-      sel2 --> And2_2
-      And1_2 --> a2
-      And2_2 --> b2
     end
 
-    %% Frame 3: ANDゲートの分解（ANDをNAND×2で実現）
-    subgraph F3 [Frame 3: ANDゲートの分解]
+    %% Frame 3: ANDをNANDで実装（出力aの場合）
+    subgraph F3 [Frame 3: AND (a = in ∧ ¬sel) をNANDで実現]
       direction LR
-      sel3["sel"]
-      NAND_Not3["NAND (for Not)"]:::gate
       in3["in"]
-      NAND_A1["NAND (A用)"]:::gate
-      NAND_A2["NAND (B用)"]:::gate
+      %% ¬selはF2の出力と共有
+      NAND_A1["NAND( in, ¬sel )"]
+      %% NAND_A1 = ¬(in ∧ ¬sel)
+      NAND_A1_inv["NAND( NAND_A1, NAND_A1 )"]
       a3["a"]
-      b3["b"]
       
-      sel3 --> NAND_Not3
       in3 --> NAND_A1
-      NAND_Not3 --> NAND_A1
-      in3 --> NAND_A2
-      sel3 --> NAND_A2
-      NAND_A1 --> a3
-      NAND_A2 --> b3
+      NAND_Not --- NAND_A1
+      NAND_A1 --> NAND_A1_inv
+      NAND_A1_inv --> a3
     end
 
-    %% Frame 4: 論理圧縮（中間信号の直接接続によりゲート数削減）
-    subgraph F4 [Frame 4: 論理圧縮]
+    %% Frame 4: ANDをNANDで実装（出力bの場合）
+    subgraph F4 [Frame 4: AND (b = in ∧ sel) をNANDで実現]
       direction LR
-      sel4["sel"]
       in4["in"]
-      NAND1["NAND1"]:::gate
-      NAND2["NAND2"]:::gate
-      a4["a"]
+      sel4["sel"]
+      NAND_B1["NAND( in, sel )"]
+      %% NAND_B1 = ¬(in ∧ sel)
+      NAND_B1_inv["NAND( NAND_B1, NAND_B1 )"]
       b4["b"]
       
-      sel4 --> NAND1
-      in4 --> NAND1
-      NAND1 --> a4
-      
-      in4 --> NAND2
-      sel4 --> NAND2
-      NAND2 --> b4
+      in4 --> NAND_B1
+      sel4 --> NAND_B1
+      NAND_B1 --> NAND_B1_inv
+      NAND_B1_inv --> b4
     end
 
-    %% 配置を横並びに（4コマ漫画風）
+    %% フレームを横に並べる
     F1 --- F2 --- F3 --- F4
 
     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
-
 ```
+
+この図では、
+
+- **Frame 1:** 元のDMuxの論理式（NOTとANDを使った構成）
+- **Frame 2:** selsel の否定をNANDで実現する方法
+- **Frame 3:** 出力 aa を実現するために、inin と ¬sel\neg sel をNANDでANDに変換するプロセス
+- **Frame 4:** 同様に出力 bb を実現するために、inin と selsel をNANDで変換するプロセス
+
+それぞれのステップで、NANDゲートのみを用いて、元の論理式がどのように再構成されるかを視覚的に表現しています。
+
+---
+
+以上が、DMuxの変換過程の各ステップを複数の手順に分けて詳細に説明した内容です。
