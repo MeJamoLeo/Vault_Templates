@@ -216,6 +216,8 @@ graph LR;
 >[!prove] Muxゲートの最適化手順
 > 以下、MuxゲートをNANDのみで実装する最適化プロセスを **ステップバイステップで図解** します。
 > 
+>> [!tip] selとNotをAとする
+> 
 > ```mermaid
 > graph LR;
 >     A --> Nand2["And"]:::gate;
@@ -238,13 +240,13 @@ graph LR;
 > A\land B = \neg(\neg(A\land B))
 > $$
 > $$
-> = \neg(A \uparrow B))
+> = \neg(A \uparrow B)
 > $$
 > $$
 > C\land D = \neg(\neg(C\land D))
 > $$
 > $$
-> = \neg(C \uparrow D))
+> = \neg(C \uparrow D)
 > $$
 > - 3. Orに対してド・モルガンの法則を利用
 > $$
