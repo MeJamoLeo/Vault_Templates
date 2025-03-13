@@ -213,91 +213,13 @@ graph LR;
 > ```
 
 
->[!prove]- Muxゲートの最適化手順
+>[!prove] Muxゲートの最適化手順
 > 以下、MuxゲートをNANDのみで実装する最適化プロセスを **ステップバイステップで図解** します。
-> 
-> ---
-> 
-> ### 最適化前の論理式（基本形）
+> 基本形
+
 > $$
-> out = (a \land \neg sel) \lor (b \land sel)
+> (A\land B)\lor(C\land D)
 > $$
 > 
-> ```mermaid
-> graph LR
->     sel["sel"] --> Not["Not"]:::gate;
->     a["a"] --> And1["And"]:::gate;
->     Not --> And1;
->     b["b"] --> And2["And"]:::gate;
->     sel --> And2;
->     And1 --> Or["Or"]:::gate;
->     And2 --> Or;
->     Or --> out["out"];
-> 
->     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
-> ```
-> 
-> ---
-> 
-> ### 最適化ステップ 1: NOTをNANDで置換
-> NOTゲートをNANDの自己接続で実装します。
-> 
 > $$
-> \neg sel = sel \uparrow sel
 > $$
-> 
-> ```mermaid
-> graph LR
->     sel["sel"] --> Nand1["Nand"]:::gate;
->     sel --> Nand1;
->     Nand1 --> Nand2["Nand"]:::gate;
->     a["a"] --> Nand2;
->     b["b"] --> Nand3["Nand"]:::gate;
->     sel --> Nand3;
->     Nand2 --> Nand4["Nand"]:::gate;
->     Nand3 --> Nand4;
->     Nand4 --> out["out"];
->     
->     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
-> ```
-> 
-> ---
-> 
-> ### 最適化ステップ 2: 冗長なNANDを削除
-> 中間信号を排除し、4つのNANDで直接接続：
-> 
-> ```mermaid
-> graph LR
->     sel["sel"] --> Nand1["Nand"]:::gate;
->     sel --> Nand1;
->     Nand1 --> Nand2["Nand"]:::gate;
->     a["a"] --> Nand2;
->     sel --> Nand3["Nand"]:::gate;
->     b["b"] --> Nand3;
->     Nand2 --> Nand4["Nand"]:::gate;
->     Nand3 --> Nand4;
->     Nand4 --> out["out"];
->     
->     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
-> ```
-> 
-> ---
-> 
-> ### 最適化の鍵
-> 1. **NANDの多目的使用**: NOT/AND/ORを全てNANDで表現
-> 2. **信号経路の短縮**: 中間信号を経由せず直接接続
-> 3. **論理圧縮**:
->    - $\text{Nand1} = sel \uparrow sel = \neg sel$
->    - $\text{Nand2} = a \uparrow \neg sel = \neg (a \land \neg sel)$
->    - $\text{Nand3} = b \uparrow sel = \neg (b \land sel)$
->    - $\text{out} = \text{Nand2} \uparrow \text{Nand3} = (a \land \neg sel) \lor (b \land sel)$
-> 
-> ---
-> 
-> ### 最終結論
-> **4つのNANDゲートで完全なMUX動作** を実現。これにより：
-> - 論理ゲート数が **5個 → 4個** に削減
-> - 配線コストが20%低減
-> - 伝播遅延が1段階短縮
-> 
-> この構造は真理値表の全パターンで動作を保証し、ハードウェア効率が大幅に向上します。
