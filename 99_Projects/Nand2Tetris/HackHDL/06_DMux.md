@@ -167,116 +167,81 @@ graph LR;
 > ```
 
 >[!prove]- Dmuxの最適化手順
-> ### 基本形からNAND実装への変換
-> 1. **NOTゲートの置換**  
-> $\neg sel = sel \uparrow sel$ をNANDで実装
+> - 元の式：  
+>   $$ a = in \land \lnot sel $$  
+>   $$ b = in \land sel $$  
 > 
-> 1. **ANDゲートの分解**  
-> $in \land \neg sel = \neg(\neg(in \land \neg sel)) = (in \uparrow \neg sel) \uparrow (in \uparrow \neg sel)$
+> - 目標：  
+>   NANDゲートのみで上記の式を再現する。
 > 
-> 1. **論理圧縮**  
-> 中間信号を直接接続することでNAND5個→3個に削減：
-> ```mermaid
-> graph LR
->     sel["sel"] --> Nand1["Nand"]:::gate;
->     sel --> Nand1;
->     Nand1 --> Nand2["Nand"]:::gate;
->     in["in"] --> Nand2;
->     Nand2 --> a["a"];
->     in --> Nand3["Nand"]:::gate;
->     sel --> Nand3;
->     Nand3 --> b["b"];
+> ---
 > 
->     classDef gate fill:#d0d0d0,stroke:#000;
-> ```
+> ### **Step 1: NOT を NAND で表現**
+> NOTゲートは、NANDゲートの入力に同じ信号を接続することで実現できます：  
+> $$ \lnot X = X \uparrow X \quad \text{(NANDの定義)} $$  
+> したがって、  
+> $$ \lnot sel = sel \uparrow sel. $$
 > 
-> ### 最適化効果
-> - 論理ゲート数：5 → 3個（40%削減）
-> - 伝播遅延：3段階 → 2段階
-> - トランジスタ数：20 → 12個（CMOS実装時）  
+> ---
 > 
-> この構造はHackコンピュータのメモリユニットで実際に使用され、クロックサイクルあたりの消費電力が25%低減することが実証されています。
-
-以下、**NANDのみで構成された回路**が、元のAND/NOTを使った回路と**論理的に等価**であることを、段階的に証明します。
-
----
-
-### **前提条件**
-- 元の式：  
-  $$ a = in \land \lnot sel $$  
-  $$ b = in \land sel $$  
-
-- 目標：  
-  NANDゲートのみで上記の式を再現する。
-
----
-
-### **Step 1: NOT を NAND で表現**
-NOTゲートは、NANDゲートの入力に同じ信号を接続することで実現できます：  
-$$ \lnot X = X \uparrow X \quad \text{(NANDの定義)} $$  
-したがって、  
-$$ \lnot sel = sel \uparrow sel. $$
-
----
-
-### **Step 2: AND を NAND で表現**
-ANDゲートは、NANDゲートの出力をさらにNANDで否定することで実現できます：  
-$$ X \land Y = \lnot (X \uparrow Y) = (X \uparrow Y) \uparrow (X \uparrow Y). $$
-
----
-
-### **Step 3: 出力 $$ a = in \land \lnot sel$$の変換**
-1. **NOT sel の生成**:  
-   $$ \lnot sel = sel \uparrow sel. $$
-
-2. **中間信号 \( nand1 \) の定義**:  
-   $$ nand1 = in \uparrow \lnot sel. $$  
-   これは、  
-   $$ nand1 = \lnot (in \land \lnot sel). $$
-
-3. **最終出力 \( a \) の計算**:  
-   $$ a = nand1 \uparrow nand1. $$  
-   これは、  
-   $$ a = \lnot nand1 = \lnot \lnot (in \land \lnot sel) = in \land \lnot sel. $$
-
----
-
-### **Step 4: 出力 \( b = in \land sel \) の変換**
-1. **中間信号 \( nand2 \) の定義**:  
-   $$ nand2 = in \uparrow sel. $$  
-   これは、  
-   $$ nand2 = \lnot (in \land sel). $$
-
-2. **最終出力 \( b \) の計算**:  
-   $$ b = nand2 \uparrow nand2. $$  
-   これは、  
-   $$ b = \lnot nand2 = \lnot \lnot (in \land sel) = in \land sel. $$
-
----
-
-### **Step 5: 全体の論理式のまとめ**
-- **出力 \( a \)**:  
-  $$ a = (in \uparrow (sel \uparrow sel)) \uparrow (in \uparrow (sel \uparrow sel)) $$  
-  → 最終的に \( a = in \land \lnot sel \)。
-
-- **出力 \( b \)**:  
-  $$ b = (in \uparrow sel) \uparrow (in \uparrow sel) $$  
-  → 最終的に \( b = in \land sel \)。
-
----
-
-### **真理値表による検証**
-| sel | NOT sel | in | \( a = in \land \lnot sel \) | \( b = in \land sel \) |
-|-----|---------|----|-------------------------------|-------------------------|
-| 0   | 1       | 0  | 0                             | 0                       |
-| 0   | 1       | 1  | 1                             | 0                       |
-| 1   | 0       | 0  | 0                             | 0                       |
-| 1   | 0       | 1  | 0                             | 1                       |
-
-- NANDのみの回路でも、上記と同じ真理値表が得られます（具体例は前回答参照）。
-
----
-
-### **結論**
-NANDゲートの組み合わせで、ANDとNOTを再現できます。  
-**両回路の出力 \( a \) と \( b \) は、論理式と真理値表の両方で完全に一致します。**
+> ### **Step 2: AND を NAND で表現**
+> ANDゲートは、NANDゲートの出力をさらにNANDで否定することで実現できます：  
+> $$ X \land Y = \lnot (X \uparrow Y) = (X \uparrow Y) \uparrow (X \uparrow Y). $$
+> 
+> ---
+> %%  %%
+> ### **Step 3: 出力 $$ a = in \land \lnot sel$$の変換**
+> 1. **NOT sel の生成**:  
+>    $$ \lnot sel = sel \uparrow sel. $$
+> 
+> 2. **中間信号 \( nand1 \) の定義**:  
+>    $$ nand1 = in \uparrow \lnot sel. $$  
+>    これは、  
+>    $$ nand1 = \lnot (in \land \lnot sel). $$
+> 
+> 3. **最終出力 \( a \) の計算**:  
+>    $$ a = nand1 \uparrow nand1. $$  
+>    これは、  
+>    $$ a = \lnot nand1 = \lnot \lnot (in \land \lnot sel) = in \land \lnot sel. $$
+> 
+> ---
+> 
+> ### **Step 4: 出力 $$ b = in \land sel $$ の変換**
+> 4. **中間信号 \( nand2 \) の定義**:  
+>    $$ nand2 = in \uparrow sel. $$  
+>    これは、  
+>    $$ nand2 = \lnot (in \land sel). $$
+> 
+> 5. **最終出力 \( b \) の計算**:  
+>    $$ b = nand2 \uparrow nand2. $$  
+>    これは、  
+>    $$ b = \lnot nand2 = \lnot \lnot (in \land sel) = in \land sel. $$
+> 
+> ---
+> 
+> ### **Step 5: 全体の論理式のまとめ**
+> - **出力 \( a \)**:  
+>   $$ a = (in \uparrow (sel \uparrow sel)) \uparrow (in \uparrow (sel \uparrow sel)) $$  
+>   → 最終的に \( a = in \land \lnot sel \)。
+> 
+> - **出力 \( b \)**:  
+>   $$ b = (in \uparrow sel) \uparrow (in \uparrow sel) $$  
+>   → 最終的に \( b = in \land sel \)。
+> 
+> ---
+> 
+> ### **真理値表による検証**
+> | sel | NOT sel | in  | \( a = in \land \lnot sel \) | \( b = in \land sel \) |
+> | --- | ------- | --- | ---------------------------- | ---------------------- |
+> | 0   | 1       | 0   | 0                            | 0                      |
+> | 0   | 1       | 1   | 1                            | 0                      |
+> | 1   | 0       | 0   | 0                            | 0                      |
+> | 1   | 0       | 1   | 0                            | 1                      |
+> 
+> - NANDのみの回路でも、上記と同じ真理値表が得られます（具体例は前回答参照）。
+> 
+> ---
+> 
+> > ### **結論**
+> > NANDゲートの組み合わせで、ANDとNOTを再現できます。  
+> > **両回路の出力 \( a \) と \( b \) は、論理式と真理値表の両方で完全に一致します。**
