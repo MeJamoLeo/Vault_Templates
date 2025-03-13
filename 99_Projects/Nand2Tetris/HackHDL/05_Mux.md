@@ -215,11 +215,23 @@ graph LR;
 
 >[!prove] Muxゲートの最適化手順
 > 以下、MuxゲートをNANDのみで実装する最適化プロセスを **ステップバイステップで図解** します。
-> 基本形
-
+>
+> - 1. 基本形
 > $$
 > (A\land B)\lor(C\land D)
 > $$
-> 
+> - 2. ANDゲートをNANDで表現
 > $$
+> A\land B = \neg(\neg(A\land B))
+> $$
+> $$
+> C\land D = \neg(\neg(C\land D))
+> $$
+> - 3. Orに対してド・モルガンの法則を利用
+> $$
+> X \lor Y = \neg(\neg(X \land Y))
+> $$
+> したがって
+> $$
+> (A\land B)\lor(C\land D) = 
 > $$
