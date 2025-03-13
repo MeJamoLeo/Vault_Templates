@@ -230,29 +230,55 @@ graph LR;
 >     
 >     classDef gate fill:#d0d0d0,stroke:#000,stroke-width:2px;
 > ```
+> ### **Step 1: ド・モルガンの法則を適用**
+> 元の式をド・モルガンの法則で変形します：
+> $$
+> (A \land B) \lor (C \land D) = \lnot \left( \lnot(A \land B) \land \lnot(C \land D) \right)
+> $$
 > 
-> - 1. 基本形
+> ---
+> 
+> ### **Step 2: NAND に置き換え**
+> - **$\lnot X$ の表現**: $\lnot X = X \uparrow X$（NAND の定義）
+> - **$X \land Y$ の表現**: $X \land Y = \lnot(X \uparrow Y) = (X \uparrow Y) \uparrow (X \uparrow Y)$
+> 
+> これらを用いて、Step 1 の式を NAND で表現します：
 > $$
-> (A\land B)\lor(C\land D)
+> \lnot \left( \lnot(A \land B) \land \lnot(C \land D) \right) = \lnot \left( (A \uparrow B) \land (C \uparrow D) \right)
 > $$
-> - 2. ANDゲートをNANDで表現
+> 
+> ---
+> 
+> ### **Step 3: 全体を NAND で表現**
+> 最終的に、$\lnot(X \land Y) = X \uparrow Y$ を適用すると：
 > $$
-> A\land B = \neg(\neg(A\land B))
+> \lnot \left( (A \uparrow B) \land (C \uparrow D) \right) = (A \uparrow B) \uparrow (C \uparrow D)
 > $$
+> 
+> ---
+> 
+> ### **最終結果**
 > $$
-> = \neg(A \uparrow B)
+> (A \land B) \lor (C \land D) = \boxed{ (A \uparrow B) \uparrow (C \uparrow D) }
 > $$
+> 
+> ---
+> 
+> ### **検証例**
+> 1. **$A=1, B=1, C=0, D=0$** のとき：
+>    - $A \uparrow B = 1 \uparrow 1 = 0$
+>    - $C \uparrow D = 0 \uparrow 0 = 1$
+>    - $0 \uparrow 1 = 1$ → 元の式の結果 $1 \lor 0 = 1$ と一致。
+> 
+> 1. **$A=0, B=1, C=0, D=1$** のとき：
+>    - $A \uparrow B = 0 \uparrow 1 = 1$
+>    - $C \uparrow D = 0 \uparrow 1 = 1$
+>    - $1 \uparrow 1 = 0$ → 元の式の結果 $0 \lor 0 = 0$ と一致。
+> 
+> ---
+> 
+> ### **結論**
+> 3 つの NAND ゲートで最適化された表現が得られます：
 > $$
-> C\land D = \neg(\neg(C\land D))
-> $$
-> $$
-> = \neg(C \uparrow D)
-> $$
-> - 3. Orに対してド・モルガンの法則を利用
-> $$
-> X \lor Y = \neg(\neg X \land \neg Y)
-> $$
-> したがって
-> $$
-> (A\land B)\lor(C\land D) =  \neg(\neg((A\land B)\lor(C\land D)))
+> (A \uparrow B) \uparrow (C \uparrow D)
 > $$
